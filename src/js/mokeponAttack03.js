@@ -3,14 +3,15 @@ const divAttack = document.querySelector(`#IdChildAttack`);
 const divEnemyAttack = document.querySelector(`#idEnemyChildAttack`);
 let playAttack;
 let enemyAttack;
+let textDuel;
 //let imageAttack;
 
 //*? === Function Attack Fire, Water and Earth === */
 export const fireAttack = () => {
   playAttack = "Fire Finally!!";
-  imageAttackFire();
-  messageUser();
-  combatDuel();
+  imageAttackFire(); // Images
+  messageUser(); // Message
+  combatDuel(); // Combat
 };
 export const waterAttack = () => {
   playAttack = "Water Bomb!!";
