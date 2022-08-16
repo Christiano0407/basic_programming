@@ -1,0 +1,22 @@
+{
+  "name": "basic_programming",
+  "version": "1.0.0",
+  "description": "javascript_programming",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Christiano0407/basic_programming.git"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "author": "Chris04",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Christiano0407/basic_programming/issues"
+  },
+  "homepage": "https://github.com/Christiano0407/basic_programming#readme"
+}

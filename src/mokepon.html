@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./styleMokepon.css">
+    <title>Mokepon Game</title>
+</head>
+
+<body>
+
+    <main>
+        <h1 class="titleMokepon">Mokepon🔥💧🌍</h1>
+
+        <section id="Select-mascot">
+            <h2 class="mascotSelect">Select your Monster: </h2>
+            <!--Mascot-->
+            <div class="monster-Add">
+                <label for="monsterFire">MonsterFire</label>
+                <input type="radio" name="mascot" id="monsterFire" />
+                <label for="waterBomb">WaterBomb</label>
+                <input type="radio" name="mascot" id="waterBomb" />
+                <label for="punchEarth">PunchEarth</label>
+                <input type="radio" name="mascot" id="punchEarth" />
+            </div>
+            <button id="IdBtnSelect" class="btnSelect">Selection</button>
+
+            <div class="childMonster" id="IdChildMonster"></div>
+            <div id="idMonsterEnemy" class="monsterEnemy"></div>
+            <p class="textAttack">Your select: <span id="playerMonster"></span> and <span is="lifesPlayer">03</span>
+                lifes</p>
+            <p class="textAttack">The enemy select:<span id="enemyMonster"></span> and <span id="lifesEnemey">03</span>
+                lifes</p>
+        </section>
+
+        <section class="select-attack">
+            <h2 class="attack-Select">Select your Attack</h2>
+            <!-- Mokepon List Attack -->
+            <div class="mokeponList">
+                <button id="btnMokeponFire" class="btn btnMokepon">
+                    <p class="textMokepon fire">Attack Fire 🔥</p>
+                </button>
+                <button id="btnMokeponWater" class="btn btnMokepon">
+                    <p class="textMokepon water">Attack Water 💧</p>
+                </button>
+                <button id="btnMokeponEarth" class="btn btnMokepon">
+                    <p class="textMokepon earth">Attack EARTH 🌍🎐</p>
+                </button>
+            </div>
+        </section>
+        <section class="attack-Section">
+            <div id="IdChildAttack" class="childAttack"></div>
+            <div id="idEnemyChildAttack" class="childAttack-Enemy"></div>
+        </section>
+
+        <section id="IDmessage" class="message">
+            <p class="messages-Attacks">Your attack with Fire! Your opponent attack with Earth! Your Winner! </p>
+        </section>
+
+        <section id="IDinit" class="init">
+            <p class="text-new">Your Init a New Game? </p>
+            <button id="IdNewGame" class="new-Game">New Game</button>
+        </section>
+    </main>
+    <!-- Javascript-->
+    <script type="module" src="./appMokepon.js"></script>
+    <script type="module" src="./js/mokepon01.js"></script>
+    <script type="module" src="./js/mokeponElements.js"></script>
+    <script type="module" src="./js/mokeponAttack03.js"></script>
+</body>
+
+</html>
