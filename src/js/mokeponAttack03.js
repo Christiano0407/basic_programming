@@ -10,16 +10,19 @@ export const fireAttack = () => {
   playAttack = "Fire Finally!!";
   imageAttackFire();
   messageUser();
+  combatDuel();
 };
 export const waterAttack = () => {
   playAttack = "Water Bomb!!";
   imageAttackWater();
   messageUser();
+  combatDuel();
 };
 export const earthAttack = () => {
   playAttack = "Rock Smash!!";
   imageAttackEarth();
   messageUser();
+  combatDuel();
 };
 
 export const enemyRandomAttack = () => {
@@ -105,6 +108,26 @@ const randomAttack = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1) + min);
 };
 
+//*! === Duel = Combat === */
+const combatDuel = () => {
+  if (playAttack === enemyAttack) {
+    console.log("empate");
+  } else if (
+    playAttack === "Fire Finally!!" &&
+    enemyAttack === "Arrow Attack"
+  ) {
+    console.log("Play: Winner");
+  } else if (
+    playAttack === "Water Bomb!!" &&
+    enemyAttack === "Thunder Splash!!"
+  ) {
+    console.log("Play: Lose!!");
+  } else if (playAttack === "Rock Smash!!" && enemyAttack === "Rock Bottom") {
+  } else {
+    console.log("Play: Your Lose!! Never, Never Game other part!");
+  }
+};
+//combatDuel();
 //*! === Message */
 function messageUser() {
   let paragraphUser = document.createElement("p");

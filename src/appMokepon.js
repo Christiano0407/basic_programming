@@ -6,6 +6,7 @@ import { checkedAdd } from "./js/mokepon01.js";
 import { fireAttack } from "./js/mokeponAttack03.js";
 import { waterAttack } from "./js/mokeponAttack03.js";
 import { earthAttack } from "./js/mokeponAttack03.js";
+//import { combatDuel } from "./js/mokeponAttack03.js";
 
 //*TODO ===  ===  Code === ===  === === === === === === === === === */
 //** === Init Game === */
