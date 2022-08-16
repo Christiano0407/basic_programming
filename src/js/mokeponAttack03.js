@@ -10,19 +10,19 @@ let textDuel;
 export const fireAttack = () => {
   playAttack = "Fire Finally!!";
   imageAttackFire(); // Images
-  messageUser(); // Message
+  //messageUser(); // Message
   combatDuel(); // Combat
 };
 export const waterAttack = () => {
   playAttack = "Water Bomb!!";
   imageAttackWater();
-  messageUser();
+  //messageUser();
   combatDuel();
 };
 export const earthAttack = () => {
   playAttack = "Rock Smash!!";
   imageAttackEarth();
-  messageUser();
+  //messageUser();
   combatDuel();
 };
 
@@ -32,15 +32,15 @@ export const enemyRandomAttack = () => {
   if (enemyAttackRandomPower == 1) {
     enemyAttack = "Arrow Attack";
     imageAttackEnemyOne();
-    messageAttack();
+    //messageAttack();
   } else if (enemyAttackRandomPower == 2) {
     enemyAttack = "Thunder Splash!!";
     imageAttackEnemyTwo();
-    messageAttack();
+    //messageAttack();
   } else if (enemyAttackRandomPower == 3) {
     enemyAttack == "Rock Bottom";
     imageAttackEnemyThree();
-    messageAttack();
+    //messageAttack();
   } else {
     console.log("Your not a power!");
   }
@@ -112,33 +112,36 @@ const randomAttack = (min, max) => {
 //*! === Duel = Combat === */
 const combatDuel = () => {
   if (playAttack === enemyAttack) {
-    console.log("empate");
+    textDuel = "empate";
   } else if (
     playAttack === "Fire Finally!!" &&
     enemyAttack === "Arrow Attack"
   ) {
-    console.log("Play: Winner");
+    textDuel = "Play: Winner";
   } else if (
     playAttack === "Water Bomb!!" &&
     enemyAttack === "Thunder Splash!!"
   ) {
-    console.log("Play: Lose!!");
+    textDuel = "Play: Lose!!";
   } else if (playAttack === "Rock Smash!!" && enemyAttack === "Rock Bottom") {
   } else {
     console.log("Play: Your Lose!! Never, Never Game other part!");
+    textDuel = "Play: Your Lose!! Never, Never Game other part!";
   }
+  messageUser();
+  messageAttack();
 };
 //combatDuel();
 //*! === Message */
 function messageUser() {
   let paragraphUser = document.createElement("p");
-  paragraphUser.textContent = `User select: ${playAttack}`;
+  paragraphUser.textContent = `User select: ${playAttack} & ${textDuel}`;
   paragraphUser.className = "messageUser";
   divAttack.appendChild(paragraphUser);
 }
 function messageAttack() {
   let paragraph = document.createElement("p");
-  paragraph.textContent = `Enemy select: ${enemyAttack}`;
+  paragraph.textContent = `Enemy select: ${enemyAttack} & ${textDuel}`;
   paragraph.className = "messageEnemy";
   divEnemyAttack.appendChild(paragraph);
 }
