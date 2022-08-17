@@ -18,6 +18,15 @@ main .main--grid {
     clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%);
 }
 
+.grid--image {
+    width: 100%;
+    height: 100vh;
+}
+
+.grid--image figure {}
+
+.grid--image figure .image-mokepon {}
+
 .titleMokepon {
     text-align: center;
     font-size: 5rem;
