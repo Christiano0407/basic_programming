@@ -112,7 +112,7 @@ const randomAttack = (min, max) => {
 //*! === Duel = Combat === */
 const combatDuel = () => {
   if (playAttack === enemyAttack) {
-    textDuel = "empate";
+    textDuel = "Similar Power!!";
   } else if (
     playAttack === "Fire Finally!!" &&
     enemyAttack === "Arrow Attack"

@@ -64,9 +64,10 @@ main .main--grid {
 
 .attack-Select {
     text-align: center;
-    font-size: 2.5rem;
-    font-weight: 700;
+    font-size: 3rem;
+    font-weight: 900;
     margin: 2rem auto;
+    color: var(--clr-mokepon-bg);
 }
 
 .monster-Add {
@@ -93,12 +94,12 @@ main .main--grid {
 
 .textMokepon {
     color: var(--clr-black);
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 700;
 }
 
 .textMokepon:hover {
-    color: #fff;
+    color: #333;
 }
 
 .select-attack {
@@ -114,14 +115,14 @@ main .main--grid {
 }
 
 .textAttack {
-    font-size: 16px;
+    font-size: 1.8rem;
     color: #333;
     font-weight: 500;
 }
 
 span {
-    font-size: 18px;
-    color: #000;
+    font-size: 2.2rem;
+    color: var(--clr-mokepon-bg2);
     font-weight: bold;
     padding: .5rem;
     margin: 1rem auto;
@@ -156,7 +157,7 @@ span {
     justify-content: center;
     align-items: center; */
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     grid-template-rows: auto;
     gap: .5rem;
 }

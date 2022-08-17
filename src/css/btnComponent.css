@@ -21,13 +21,14 @@ button:active {
 
 .btnMokepon {
     padding: 1rem;
-    border: 2px solid #000;
+    border: 2px solid var(--clr-mokepon-bg);
     border-radius: 1rem;
-    background-color: #fff;
+    background-color: var(--clr-mokepon-bg2);
 }
 
 .btnMokepon:hover {
-    background-color: #333;
+    background-color: #fff;
+    color: var(--clr-mokepon-bg2);
 }
 
 .btnMokepon:active {
