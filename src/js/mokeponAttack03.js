@@ -1,6 +1,8 @@
 //** === Attack */
 const divAttack = document.querySelector(`#IdChildAttack`);
 const divEnemyAttack = document.querySelector(`#idEnemyChildAttack`);
+const idChild = document.querySelector("#IDchild");
+const idChildTwo = document.querySelector("#IDchildTwo");
 let playAttack;
 let enemyAttack;
 let textDuel;
@@ -55,7 +57,8 @@ function imageAttackFire() {
   imageFire.width = 100;
   imageFire.height = 100;
   imageFire.className = "fireImage";
-  divAttack.appendChild(imageFire);
+  divAttack.appendChild(idChild);
+  idChild.appendChild(imageFire);
 }
 function imageAttackWater() {
   let imageWater = document.createElement("img");
@@ -64,7 +67,8 @@ function imageAttackWater() {
   imageWater.width = 100;
   imageWater.height = 100;
   imageWater.className = "waterImage";
-  divAttack.appendChild(imageWater);
+  divAttack.appendChild(idChild);
+  idChild.appendChild(imageFire);
 }
 function imageAttackEarth() {
   let imageRock = document.createElement("img");
@@ -73,7 +77,8 @@ function imageAttackEarth() {
   imageRock.width = 100;
   imageRock.height = 100;
   imageRock.className = "rockImage";
-  divAttack.appendChild(imageRock);
+  divAttack.appendChild(idChild);
+  idChild.appendChild(imageFire);
 }
 //*? === Enemy */
 function imageAttackEnemyOne() {
@@ -83,7 +88,8 @@ function imageAttackEnemyOne() {
   imageEnemyOne.width = 100;
   imageEnemyOne.height = 100;
   imageEnemyOne.className = "arrowImage";
-  divEnemyAttack.appendChild(imageEnemyOne);
+  divEnemyAttack.appendChild(idChildTwo);
+  idChildTwo.appendChild(imageEnemyOne);
 }
 function imageAttackEnemyTwo() {
   let imageEnemyTwo = document.createElement("img");
@@ -92,7 +98,8 @@ function imageAttackEnemyTwo() {
   imageEnemyTwo.width = 100;
   imageEnemyTwo.height = 100;
   imageEnemyTwo.className = "enemyImageOne";
-  divEnemyAttack.appendChild(imageEnemyTwo);
+  divEnemyAttack.appendChild(idChildTwo);
+  idChildTwo.appendChild(imageEnemyTwo);
 }
 function imageAttackEnemyThree() {
   let imageEnemyThree = document.createElement("img");
@@ -101,7 +108,8 @@ function imageAttackEnemyThree() {
   imageEnemyThree.width = 100;
   imageEnemyThree.height = 100;
   imageEnemyThree.className = "enemyImageThree";
-  divEnemyAttack.appendChild(imageEnemyThree);
+  divEnemyAttack.appendChild(idChildTwo);
+  idChildTwo.endChild(imageEnemyThree);
 }
 
 //*! Random Enemy Attack === */
@@ -137,11 +145,13 @@ function messageUser() {
   let paragraphUser = document.createElement("p");
   paragraphUser.textContent = `User select: ${playAttack} & ${textDuel}`;
   paragraphUser.className = "messageUser";
-  divAttack.appendChild(paragraphUser);
+  divAttack.appendChild(idChild);
+  idChild.appendChild(paragraphUser);
 }
 function messageAttack() {
   let paragraph = document.createElement("p");
   paragraph.textContent = `Enemy select: ${enemyAttack} & ${textDuel}`;
   paragraph.className = "messageEnemy";
-  divEnemyAttack.appendChild(paragraph);
+  divEnemyAttack.appendChild(idChildTwo);
+  idChildTwo.appendChild(paragraph);
 }
