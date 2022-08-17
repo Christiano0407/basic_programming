@@ -1,3 +1,23 @@
+/* Main  Mokepon */
+main .main--grid {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 1rem;
+}
+
+.main--grid__one {
+    grid-column: 1 / 2;
+    grid-row: auto;
+    background-color: var(--clr-white);
+}
+
+.main--grid__two {
+    background-color: var(--clr-mokepon-bg);
+    clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
 .titleMokepon {
     text-align: center;
     font-size: 5rem;
