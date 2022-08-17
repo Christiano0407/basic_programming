@@ -18,20 +18,40 @@ main .main--grid {
     clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%);
 }
 
-.grid--image {
+.grid--images {
     width: 100%;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.grid--image figure {}
+.grid--image figure {
+    width: 350px;
+    height: 350px;
+}
 
-.grid--image figure .image-mokepon {}
+.grid--image figure .image-mokepon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.title--section {
+    grid-column: 1 / 2;
+}
+
+.title--section__div {
+    width: 100%;
+    padding: 2rem;
+}
 
 .titleMokepon {
     text-align: center;
     font-size: 5rem;
     font-weight: bold;
     margin: 2rem auto;
+    color: var(--clr-mokepon-logo);
 }
 
 .mascotSelect {
