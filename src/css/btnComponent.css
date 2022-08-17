@@ -1,18 +1,22 @@
 button {
     padding: 1rem;
-    border: 2px solid #333;
-    background-color: #fff;
-    color: #000;
+    background-color: var(--clr-mokepon-bg2);
+    color: #fff;
     border-radius: 1rem;
+    border: .2rem solid var(--clr-mokepon-bg2);
 }
 
 button:hover {
-    background-color: #000;
-    color: #fff;
+    background-color: #fff;
+    color: var(--clr-mokepon-bg2);
 }
 
 button:active {
     transform: scale(0.9);
+}
+
+.btnSelect {
+    margin: 2rem auto;
 }
 
 .btnMokepon {
