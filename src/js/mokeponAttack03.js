@@ -3,13 +3,13 @@ const divAttack = document.querySelector(`#IdChildAttack`);
 const divEnemyAttack = document.querySelector(`#idEnemyChildAttack`);
 const idChild = document.querySelector("#IDchild");
 const idChildTwo = document.querySelector("#IDchildTwo");
-//const IdMessage = document.querySelector("#IDmessage");
-const idMessageText = document.querySelector(".message-Attacks");
 //** === Lifes === */
 const addLifePlayer = document.querySelector(`#lifePlayer`);
 const addLifeEnemy = document.querySelector(`#lifeEnemy`);
 let playerLife = 3;
 let enemyLife = 3;
+const idWinner = document.querySelector("#idWinner");
+const combatWinner = document.querySelector(".combat-win");
 //** === General Variables === */
 let playAttack;
 let enemyAttack;
