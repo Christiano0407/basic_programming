@@ -20,7 +20,7 @@ export const waterAdd = () => {
     "https://images.unsplash.com/photo-1596743343697-bd2c1e5a8c81?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80";
   /*  "https://images.pexels.com/photos/1716861/pexels-photo-1716861.jpeg"; */
   img.width = 100;
-  img.height = 10;
+  img.height = 100;
   img.className = "monsterImg";
   divMonster.appendChild(img);
 };
