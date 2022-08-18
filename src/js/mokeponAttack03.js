@@ -155,6 +155,7 @@ const combatDuel = () => {
   }
   messageUser();
   messageAttack();
+  //winnerBattle();
 };
 //combatDuel();
 //*! === Message */
@@ -173,5 +174,12 @@ function messageAttack() {
   idChildTwo.appendChild(paragraph);
 }
 
-// Add
-//idMessageText.innerHTML = `You Attack ${playAttack} and ${}`;
+//Add Winner
+/* function winnerBattle() {
+  if (playerLife === 0) {
+    combatWinner.innerHTML = playerLife;
+  } else if (enemyLife === 0) {
+    console.log("Player: Winner!!");
+    combatWinner.innerHTML = enemyLife;
+  }
+} */
