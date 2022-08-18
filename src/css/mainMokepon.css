@@ -201,11 +201,21 @@ span {
     font-size: 1.2rem;
     font-weight: 900;
     color: #333;
+    margin-left: .5rem;
 }
 
 /* .childAttack-Enemy {
     flex-direction: column;
 } */
-#IDchild {
-    width: 50%;
+#IDchild,
+#IDchildTwo {
+    border-radius: .5rem;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: .5rem;
+    display: flex;
+    align-items: center;
 }

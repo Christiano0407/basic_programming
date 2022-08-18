@@ -1,11 +1,16 @@
-//** === Attack */
+//** === Duel, Message and Variables === */
 const divAttack = document.querySelector(`#IdChildAttack`);
 const divEnemyAttack = document.querySelector(`#idEnemyChildAttack`);
 const idChild = document.querySelector("#IDchild");
 const idChildTwo = document.querySelector("#IDchildTwo");
 //const IdMessage = document.querySelector("#IDmessage");
 const idMessageText = document.querySelector(".message-Attacks");
-
+//** === Lifes === */
+const addLifePlayer = document.querySelector(`#lifePlayer`);
+const addLifeEnemy = document.querySelector(`#lifeEnemy`);
+let playerLife = 3;
+let enemyLife = 3;
+//** === General Variables === */
 let playAttack;
 let enemyAttack;
 let textDuel;
@@ -128,16 +133,25 @@ const combatDuel = () => {
     playAttack === "Fire Finally!!" &&
     enemyAttack === "Arrow Attack"
   ) {
-    textDuel = "Play: Winner";
+    textDuel = "Player: Winner";
+    enemyLife--;
+    addLifeEnemy.innerHTML = enemyLife;
   } else if (
     playAttack === "Water Bomb!!" &&
     enemyAttack === "Thunder Splash!!"
   ) {
-    textDuel = "Play: Lose!!";
+    textDuel = "Player: Lose!!";
+    playerLife--;
+    addLifePlayer.innerHTML = playerLife;
   } else if (playAttack === "Rock Smash!!" && enemyAttack === "Rock Bottom") {
+    textDuel = "Player: Winner!!";
+    enemyLife--;
+    addLifeEnemy.innerHTML = enemyLife;
   } else {
-    console.log("Play: Your Lose!! Never, Never Game other part!");
-    textDuel = "Play: Your Lose!! Never, Never Game other part!";
+    console.log("Player: Your Lose!! Never, Never Game other part!");
+    textDuel = "Player: Your Lose!";
+    playerLife--;
+    addLifePlayer.innerHTML = playerLife;
   }
   messageUser();
   messageAttack();
