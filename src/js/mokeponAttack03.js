@@ -3,6 +3,9 @@ const divAttack = document.querySelector(`#IdChildAttack`);
 const divEnemyAttack = document.querySelector(`#idEnemyChildAttack`);
 const idChild = document.querySelector("#IDchild");
 const idChildTwo = document.querySelector("#IDchildTwo");
+//const IdMessage = document.querySelector("#IDmessage");
+const idMessageText = document.querySelector(".message-Attacks");
+
 let playAttack;
 let enemyAttack;
 let textDuel;
@@ -40,7 +43,7 @@ export const enemyRandomAttack = () => {
     imageAttackEnemyTwo();
     //messageAttack();
   } else if (enemyAttackRandomPower == 3) {
-    enemyAttack == "Rock Bottom";
+    enemyAttack = "Rock Bottom";
     imageAttackEnemyThree();
     //messageAttack();
   } else {
@@ -155,3 +158,6 @@ function messageAttack() {
   divEnemyAttack.appendChild(idChildTwo);
   idChildTwo.appendChild(paragraph);
 }
+
+// Add
+//idMessageText.innerHTML = `You Attack ${playAttack} and ${}`;
