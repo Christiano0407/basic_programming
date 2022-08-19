@@ -9,7 +9,6 @@ const addLifeEnemy = document.querySelector(`#lifeEnemy`);
 let playerLife = 3;
 let enemyLife = 3;
 const idWinner = document.querySelector("#idWinner");
-const combatWinner = document.querySelector(".combat-win");
 //** === General Variables === */
 let playAttack;
 let enemyAttack;
@@ -155,7 +154,7 @@ const combatDuel = () => {
   }
   messageUser();
   messageAttack();
-  //winnerBattle();
+  winnerBattle();
 };
 //combatDuel();
 //*! === Message */
@@ -174,12 +173,15 @@ function messageAttack() {
   idChildTwo.appendChild(paragraph);
 }
 
-//Add Winner
-/* function winnerBattle() {
-  if (playerLife === 0) {
-    combatWinner.innerHTML = playerLife;
-  } else if (enemyLife === 0) {
-    console.log("Player: Winner!!");
-    combatWinner.innerHTML = enemyLife;
+//Add Winner ==>
+const winnerBattle = () => {
+  let combatWinner = document.querySelector(".combat-Win");
+  if (playerLife == 0) {
+    combatWinner.textContent = "Your Lose!! Loser!";
+    idWinner.appendChild(combatWinner);
+  } else if (enemyLife == 0) {
+    combatWinner.textContent = "Your Winner!!";
+    idWinner.appendChild(combatWinner);
   }
-} */
+};
+//winnerBattle();

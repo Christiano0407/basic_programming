@@ -6,6 +6,7 @@ import { enemyOne } from "./mokeponElements.js";
 import { enemyTwo } from "./mokeponElements.js";
 import { enemyThree } from "./mokeponElements.js";
 import { enemyRandomAttack } from "./mokeponAttack03.js";
+//import { winnerBattle } from "./mokeponAttack03.js";
 const monsterFire = document.querySelector(`#monsterFire`);
 const waterBomb = document.querySelector(`#waterBomb`);
 const punchEarth = document.querySelector("#punchEarth");
