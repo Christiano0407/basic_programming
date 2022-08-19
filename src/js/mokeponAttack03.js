@@ -173,15 +173,24 @@ function messageAttack() {
   idChildTwo.appendChild(paragraph);
 }
 
-//Add Winner ==>
+//*! === Add Winner ==> === & Disabled Btn and Attack === */
 const winnerBattle = () => {
   let combatWinner = document.querySelector(".combat-Win");
   if (playerLife == 0) {
     combatWinner.textContent = "Player: Your Lose!! & Enemy: Win!!😡";
     idWinner.appendChild(combatWinner);
+    // = Disabled Player ==
+    let btnSelectMascot = document.getElementById("IdBtnSelect");
+    btnSelectMascot.disabled = true;
+    // === Buttons  and Events ===
+    let btnFire = document.querySelector(`#btnMokeponFire`);
+    btnFire.disabled = true;
+    let btnWater = document.querySelector(`#btnMokeponWater`);
+    btnWater.disabled = true;
+    let btnEarth = document.querySelector(`#btnMokeponEarth`);
+    btnEarth.disabled = true;
   } else if (enemyLife == 0) {
     combatWinner.textContent = "Player: Your Winner 😎!!";
     idWinner.appendChild(combatWinner);
   }
 };
-//winnerBattle();
