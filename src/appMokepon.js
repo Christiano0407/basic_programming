@@ -7,6 +7,8 @@ import { fireAttack } from "./js/mokeponAttack03.js";
 import { waterAttack } from "./js/mokeponAttack03.js";
 import { earthAttack } from "./js/mokeponAttack03.js";
 //import { combatDuel } from "./js/mokeponAttack03.js";
+//** === New Game */
+const btnNewGame = document.querySelector("#idNewGame");
 
 //*TODO ===  ===  Code === ===  === === === === === === === === === */
 //** === Init Game === */
@@ -21,7 +23,15 @@ const initGame = () => {
   let btnEarth = document.querySelector(`#btnMokeponEarth`);
   btnEarth.addEventListener("click", earthAttack);
 };
-
 //*TODO === ===  Attack === === === === === === === === === === ==== === === ===  */
+//*! === Init New Game! === */
+btnNewGame.addEventListener(`click`, () => {
+  console.log("New Game!");
+  refreshGame();
+});
+
+function refreshGame() {
+  location.reload();
+}
 //** === === Init Game Window === === */
 window.addEventListener("load", initGame);

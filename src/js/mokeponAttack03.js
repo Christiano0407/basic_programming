@@ -177,7 +177,7 @@ function messageAttack() {
 const winnerBattle = () => {
   let combatWinner = document.querySelector(".combat-Win");
   if (playerLife == 0) {
-    combatWinner.textContent = "Player: Your Lose!! Loser 😡!";
+    combatWinner.textContent = "Player: Your Lose!! & Enemy: Win!!😡";
     idWinner.appendChild(combatWinner);
   } else if (enemyLife == 0) {
     combatWinner.textContent = "Player: Your Winner 😎!!";
