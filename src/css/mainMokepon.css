@@ -143,9 +143,10 @@ span {
 }
 
 .init .text-new {
-    font-size: 1.8rem;
+    font-size: 3rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
+    color: var(--clr-mokepon-bg);
 }
 
 /* == AppendChild*/
@@ -222,7 +223,8 @@ span {
 }
 
 .combat-Win {
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 900;
-    color: var(--clr-black);
+    color: #333;
+    text-align: center;
 }

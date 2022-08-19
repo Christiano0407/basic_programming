@@ -177,10 +177,10 @@ function messageAttack() {
 const winnerBattle = () => {
   let combatWinner = document.querySelector(".combat-Win");
   if (playerLife == 0) {
-    combatWinner.textContent = "Your Lose!! Loser!";
+    combatWinner.textContent = "Player: Your Lose!! Loser 😡!";
     idWinner.appendChild(combatWinner);
   } else if (enemyLife == 0) {
-    combatWinner.textContent = "Your Winner!!";
+    combatWinner.textContent = "Player: Your Winner 😎!!";
     idWinner.appendChild(combatWinner);
   }
 };
