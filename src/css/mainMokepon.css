@@ -224,3 +224,12 @@ span {
     color: #333;
     text-align: center;
 }
+
+.titleChildAttack {
+    width: 100%;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--clr-mokepon-logo);
+    margin: 1rem auto;
+}
