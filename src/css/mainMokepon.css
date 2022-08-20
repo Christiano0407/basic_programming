@@ -164,9 +164,10 @@ span {
 }
 
 .monsterImg {
-    border-radius: 2rem;
+    border-radius: 1rem;
     padding: 5px;
     object-fit: cover;
+    width: 100%;
 }
 
 .attack-Section,
@@ -179,9 +180,10 @@ span {
 .childAttack-Enemy {
     width: 100%;
     margin: 2rem auto;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
+}
+
+#IDchild,
+#IDchildTwo {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     grid-template-rows: auto;
