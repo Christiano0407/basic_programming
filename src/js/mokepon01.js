@@ -32,6 +32,11 @@ export const checkedAdd = () => {
   }
 
   enemySelectAdd();
+  //> Add Display Attack =>
+  let sectionOneAttack = document.getElementById("secSelectAttack");
+  sectionOneAttack.style.display = "block";
+  let attackImages = document.getElementById("secTwoAttack");
+  attackImages.style.display = "block";
 };
 //*! === Enemy */
 const enemySelectAdd = () => {

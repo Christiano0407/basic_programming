@@ -189,6 +189,10 @@ const winnerBattle = () => {
     btnWater.disabled = true;
     let btnEarth = document.querySelector(`#btnMokeponEarth`);
     btnEarth.disabled = true;
+    let btnNewGame = document.querySelector("#idNewGame");
+    btnNewGame.style.display = "block";
+    let textNewGame = document.getElementById(`textNew`);
+    textNewGame.style.display = "block";
   } else if (enemyLife == 0) {
     combatWinner.textContent = "Player: Your Winner 😎!!";
     idWinner.appendChild(combatWinner);

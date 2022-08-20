@@ -11,6 +11,15 @@ import { earthAttack } from "./js/mokeponAttack03.js";
 //*TODO ===  ===  Code === ===  === === === === === === === === === */
 //** === Init Game === */
 const initGame = () => {
+  // == Display None ==
+  let sectionOneAttack = document.getElementById("secSelectAttack");
+  sectionOneAttack.style.display = "none";
+  let attackImages = document.getElementById("secTwoAttack");
+  attackImages.style.display = "none";
+  let textNewGame = document.getElementById(`textNew`);
+  textNewGame.style.display = "none";
+
+  //> Btn ==
   let btnSelectMascot = document.getElementById("IdBtnSelect");
   btnSelectMascot.addEventListener(`click`, checkedAdd);
   // === Buttons  and Events ===
@@ -22,6 +31,7 @@ const initGame = () => {
   btnEarth.addEventListener("click", earthAttack);
   // === Refres & New Game ===
   let btnNewGame = document.querySelector("#idNewGame");
+  btnNewGame.style.display = "none";
   btnNewGame.addEventListener(`click`, () => {
     refreshGame();
   });
