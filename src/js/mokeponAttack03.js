@@ -60,7 +60,7 @@ export const enemyRandomAttack = () => {
 function imageAttackFire() {
   let imageFire = document.createElement("img");
   imageFire.src =
-    "https://images.unsplash.com/photo-1583248352195-d3a8e766edf2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80";
+    "https://cdn.weasyl.com/~queendin/submissions/1835618/002b7d86fd5ed251c80c41d8a2041ede23075c165b43868b6506a44cb4b47ae0/queendin-charmander-used-ember.png";
   imageFire.width = 100;
   imageFire.height = 100;
   imageFire.className = "fireImage";
@@ -70,7 +70,7 @@ function imageAttackFire() {
 function imageAttackWater() {
   let imageWater = document.createElement("img");
   imageWater.src =
-    "https://images.unsplash.com/photo-1527066236128-2ff79f7b9705?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80";
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUkToZhxZR43t__w21C1WQsVnuD6BuiQB4Pw&usqp=CAU";
   imageWater.width = 100;
   imageWater.height = 100;
   imageWater.className = "waterImage";
@@ -80,7 +80,7 @@ function imageAttackWater() {
 function imageAttackEarth() {
   let imageRock = document.createElement("img");
   imageRock.src =
-    "https://images.unsplash.com/photo-1584715642381-6f1c4b452b1c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80";
+    "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/695f7949-df76-4452-bdf0-130afea52f21/de5cmx5-0793a732-e3e3-40f3-9187-941d090e9503.png/v1/fill/w_1192,h_670,q_70,strp/pikachu_s_quick_attack_by_pokemonsketchartist_de5cmx5-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTA4MCIsInBhdGgiOiJcL2ZcLzY5NWY3OTQ5LWRmNzYtNDQ1Mi1iZGYwLTEzMGFmZWE1MmYyMVwvZGU1Y214NS0wNzkzYTczMi1lM2UzLTQwZjMtOTE4Ny05NDFkMDkwZTk1MDMucG5nIiwid2lkdGgiOiI8PTE5MjAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.CJ1yp_U7peIP7ISYt5FxDFfURYhgeHhou7YEVEg8rfw";
   imageRock.width = 100;
   imageRock.height = 100;
   imageRock.className = "rockImage";
@@ -91,7 +91,7 @@ function imageAttackEarth() {
 function imageAttackEnemyOne() {
   let imageEnemyOne = document.createElement("img");
   imageEnemyOne.src =
-    "https://images.unsplash.com/photo-1563705655508-d8915da702f8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80";
+    "https://images.saymedia-content.com/.image/t_share/MTc0NDU3OTEyMjUxNTkwMjc4/best-pokemon-attack-types.png";
   imageEnemyOne.width = 100;
   imageEnemyOne.height = 100;
   imageEnemyOne.className = "arrowImage";
@@ -101,7 +101,7 @@ function imageAttackEnemyOne() {
 function imageAttackEnemyTwo() {
   let imageEnemyTwo = document.createElement("img");
   imageEnemyTwo.src =
-    "https://images.unsplash.com/photo-1530380774715-d5418b22b2bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80";
+    "https://images.saymedia-content.com/.image/t_share/MTc0NDU3NjUyNjc0NzY2NDcw/worst-pokemon-attacks-of-all-time.png";
   imageEnemyTwo.width = 100;
   imageEnemyTwo.height = 100;
   imageEnemyTwo.className = "enemyImageOne";
@@ -111,7 +111,7 @@ function imageAttackEnemyTwo() {
 function imageAttackEnemyThree() {
   let imageEnemyThree = document.createElement("img");
   imageEnemyThree.src =
-    "https://images.unsplash.com/photo-1514771206769-bd41b0138cc0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80";
+    "https://media.comicbook.com/2017/06/bulbasaur-attack-1003665.jpg";
   imageEnemyThree.width = 100;
   imageEnemyThree.height = 100;
   imageEnemyThree.className = "enemyImageThree";

@@ -231,10 +231,11 @@ span {
 }
 
 .monsterImg {
-    border-radius: 1rem;
+    border-radius: 1.5rem;
     padding: 5px;
     object-fit: cover;
-    width: 100%;
+    width: 150px;
+    height: 150px;
 }
 
 .attack-Section,
