@@ -12,6 +12,8 @@
     --clr-mokepon-bg2: #41BDD9;
     --clr-principal: #C6D93B;
     --clr-secondary: #6DBF1B;
+    /* = Font = */
+    --font-family-principal: 'Silkscreen', cursive;
 }
 
 /** = ===== ====  Css Style General  ======= ======== =*/
