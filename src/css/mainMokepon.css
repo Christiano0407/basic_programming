@@ -92,13 +92,22 @@ main .main--grid {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: column;
 }
 
 .monster-Add label {
-    font-size: 1.2rem;
-    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.label-text {
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 700;
     color: #333;
     font-family: var(--font-family-principal);
+    margin: 1rem auto;
 }
 
 /* === Images === */
@@ -106,9 +115,37 @@ main .main--grid {
 .waterBomb-img,
 .punchEarth-img {
     width: 10rem;
-    height: 10rem;
-    padding: 1rem;
-    outline: 2px solid #333;
+    height: 12rem;
+    /*  padding: 1rem;
+    outline: 2px solid #333; */
+}
+
+.monsterFire-img {
+    background-image: url("../assets/img/mokepon5.png");
+    object-fit: contain;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.waterBomb-img {
+    background-image: url("../assets/img/mokepon4.png");
+    object-fit: contain;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.punchEarth-img {
+    background-image: url("../assets/img/mokepon3.png");
+    object-fit: contain;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+input {
+    margin: .5rem auto;
 }
 
 .mokeponList {
