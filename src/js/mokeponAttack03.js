@@ -190,9 +190,9 @@ const winnerBattle = () => {
     let btnEarth = document.querySelector(`#btnMokeponEarth`);
     btnEarth.disabled = true;
     let btnNewGame = document.querySelector("#idNewGame");
-    btnNewGame.style.display = "block";
+    btnNewGame.style.display = "flex";
     let textNewGame = document.getElementById(`textNew`);
-    textNewGame.style.display = "block";
+    textNewGame.style.display = "flex";
   } else if (enemyLife == 0) {
     combatWinner.textContent = "Player: Your Winner 😎!!";
     idWinner.appendChild(combatWinner);
