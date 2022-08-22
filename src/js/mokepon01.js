@@ -39,6 +39,10 @@ export const checkedAdd = () => {
   attackImages.style.display = "flex";
   let idVersus = document.getElementById(`idVersus`);
   idVersus.style.display = "flex";
+  let IdChildMonster = document.querySelector(`#IdChildMonster`);
+  IdChildMonster.style.display = "flex";
+  let idMonsterEnemy = document.querySelector(`#idMonsterEnemy`);
+  idMonsterEnemy.style.display = "flex";
 };
 //*! === Enemy */
 const enemySelectAdd = () => {
