@@ -162,6 +162,7 @@ function messageUser() {
   let paragraphUser = document.createElement("p");
   paragraphUser.textContent = `User select: ${playAttack} & ${textDuel}`;
   paragraphUser.className = "messageUser";
+  paragraphUser.id = "idMessageUser";
   divAttack.appendChild(idChild);
   idChild.appendChild(paragraphUser);
 }
@@ -169,6 +170,7 @@ function messageAttack() {
   let paragraph = document.createElement("p");
   paragraph.textContent = `Enemy select: ${enemyAttack} & ${textDuel}`;
   paragraph.className = "messageEnemy";
+  paragraph.id = "idMessageEnemy";
   divEnemyAttack.appendChild(idChildTwo);
   idChildTwo.appendChild(paragraph);
 }

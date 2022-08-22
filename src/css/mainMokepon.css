@@ -23,6 +23,8 @@ main .main--grid {
     /*  background-color: var(--clr-mokepon-bg); */
     /*  clip-path: polygon(100% 0, 100% 0, 100% 100%, 0% 100%); */
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .grid--images {
@@ -41,8 +43,8 @@ main .main--grid {
     height: 350px;
     position: absolute;
     z-index: 10;
-    left: 55%;
-    top: 25%;
+    /*  left: 55%;
+    top: 25%; */
 }
 
 .main--grid__two figure .image-mokepon {
@@ -251,8 +253,25 @@ span {
     margin: 2rem auto;
 }
 
-#IDchild,
-#IDchildTwo {
+.childMonster,
+.monsterEnemy {
+    border-radius: .5rem;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: .5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-rows: auto;
+    grid-auto-flow: dense;
+    gap: 1rem;
+    align-items: center;
+}
+
+.child-one,
+.child-two {
     border-radius: .5rem;
     background: rgba(255, 255, 255, 0.25);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);

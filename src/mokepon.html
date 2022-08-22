@@ -10,13 +10,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styleMokepon.css">
+    <link rel="stylesheet" href="../src/css/mediaQueries.css">
     <title>Mokepon Game</title>
 </head>
 
 <body>
 
     <main>
-        <div class="main--grid">
+        <div id="mainGrid" class="main--grid">
             <div class="main--grid__one">
                 <section class="title--section">
                     <div class="title--section__div">
@@ -51,6 +52,7 @@
                         lifes</p>
                     <!-- == Add and Select Mokepons == -->
                     <div class="childMonster" id="IdChildMonster"></div>
+                    <span class="versus" id="idVersus">VS</span>
                     <div id="idMonsterEnemy" class="monsterEnemy"></div>
 
                 </section>
@@ -75,11 +77,11 @@
                     <!-- === Add Attacks Mokepon === -->
                     <div id="IdChildAttack" class="childAttack">
                         <h2 class="titleChildAttack">Player Attack With:</h2>
-                        <div id="IDchild"></div>
+                        <div id="IDchild" class="child-one"></div>
                     </div>
                     <div id="idEnemyChildAttack" class="childAttack-Enemy">
                         <h2 class="titleChildAttack">Enemy Attack With:</h2>
-                        <div id="IDchildTwo"></div>
+                        <div id="IDchildTwo" class="child-two"></div>
                     </div>
                 </section>
 
@@ -92,7 +94,7 @@
                     <button id="idNewGame" class="new-Game">New Game</button>
                 </section>
             </div>
-            <div class="main--grid__two">
+            <div class="main--grid__two" id="mainGridTwo">
                 <figure>
                     <img src="../src/assets/img/pngwing.com.png" class="image-mokepon" alt="mokeponImg">
                 </figure>
