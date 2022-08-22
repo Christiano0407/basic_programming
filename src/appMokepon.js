@@ -18,6 +18,8 @@ const initGame = () => {
   attackImages.style.display = "none";
   let textNewGame = document.getElementById(`textNew`);
   textNewGame.style.display = "none";
+  let idVersus = document.getElementById(`idVersus`);
+  idVersus.style.display = "none";
 
   //> Btn ==
   let btnSelectMascot = document.getElementById("IdBtnSelect");

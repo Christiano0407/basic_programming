@@ -32,6 +32,41 @@
         margin: 0 auto;
         font-size: 1.2rem;
     }
+
+    #idTextAttack {
+        width: 90%;
+        margin: 1rem auto;
+        text-align: center;
+    }
+
+    #idCombatWin {
+        width: 90%;
+        margin: 1rem auto;
+    }
+
+    #textNew {
+        width: 90%;
+        margin: 2rem auto;
+        text-align: center;
+    }
+
+    #IDinit {
+        margin: 1rem auto;
+        padding: .5rem;
+    }
+
+    #btnMokeponFire,
+    #btnMokeponWater,
+    #btnMokeponEarth {
+        padding: .5rem;
+        margin-bottom: 1rem;
+    }
+
+    #idMokeponList {
+        flex-direction: column;
+        width: 50%;
+        margin: 0 auto;
+    }
 }
 
 /* ===> */
