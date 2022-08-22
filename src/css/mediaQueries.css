@@ -1,0 +1,28 @@
+@media (max-width: 370px) {}
+
+/* ==> */
+@media (max-width: 575px) {}
+
+/* ===> */
+@media (min-width: 768px) {}
+
+@media (min-width: 1024px) {}
+
+@media (min-width: 1440px) {}
+
+/*Media Orientation====*/
+@media screen and (orientation: landscape) {
+
+    /*Styles for landscape mode.*/
+    body::after {
+        content: "Landscape";
+    }
+}
+
+@media screen and (orientation: portrait) {
+
+    /* Styles for portrait mode. */
+    body::after {
+        content: "Portrait";
+    }
+}
