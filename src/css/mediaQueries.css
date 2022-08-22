@@ -2,6 +2,15 @@
 
 /* ==> */
 @media (max-width: 575px) {
+    #idTitleMokepon {
+        margin: 1rem auto;
+        font-size: 4rem;
+    }
+
+    #idMascotSelect {
+        margin: 1rem auto;
+    }
+
     #mainGrid {
         grid-template-columns: 1fr;
         grid-auto-flow: row;
