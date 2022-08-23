@@ -131,6 +131,12 @@ main .main--grid {
     background-repeat: no-repeat;
 }
 
+/* ==> Add Color */
+/* label:checked+p {
+    color: var(--clr-mokepon-logo);
+    background-color: red;
+} */
+
 .waterBomb-img {
     background-image: url("../assets/img/mokepon4.png");
     object-fit: contain;
