@@ -34,12 +34,16 @@ const initGame = () => {
   // === Refres & New Game ===
   let btnNewGame = document.querySelector("#idNewGame");
   btnNewGame.style.display = "none";
-  let IdChildMonster = document.querySelector(`#IdChildMonster`);
-  IdChildMonster.style.display = "none";
+  let idChildMonster = document.querySelector(`#IdChildMonster`);
+  idChildMonster.style.display = "none";
   let idMonsterEnemy = document.querySelector(`#idMonsterEnemy`);
   idMonsterEnemy.style.display = "none";
-  /* let textAttack = document.querySelect(`#idTextAttack`);
-  textAttack.style.display = "none"; */
+  //> Text Attack ===
+  let textAttack = document.querySelector(`#idTextAttack`);
+  textAttack.style.display = "none";
+  let textAttackTwo = document.querySelector(`.textAttackTwo`);
+  textAttackTwo.style.display = "none";
+
   // === Refresh ===
   btnNewGame.addEventListener(`click`, () => {
     refreshGame();

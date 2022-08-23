@@ -29,7 +29,7 @@ main .main--grid {
 
 .grid--images {
     width: 100%;
-    clip-path: polygon(100% 0, 100% 0, 100% 100%, 0% 100%);
+    /*  clip-path: polygon(100% 0, 100% 0, 100% 100%, 0% 100%); */
     /*  background-color: var(--clr-mokepon-bg); */
     background-image: url("../assets/img/background03.jpg");
     object-fit: cover;
@@ -113,6 +113,7 @@ main .main--grid {
 }
 
 /* === Images === */
+
 .monsterFire-img,
 .waterBomb-img,
 .punchEarth-img {

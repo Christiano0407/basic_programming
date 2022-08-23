@@ -80,14 +80,20 @@
 
 /* ===> */
 @media (min-width: 768px) {
-    /*  .main--grid__two {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    } */
+    #idTitleMokepon {
+        margin: 1rem auto;
+    }
+
+    #idMascotSelect {
+        margin: 1rem auto;
+    }
 }
 
-@media (min-width: 1024px) {}
+@media (min-width: 1024px) {
+    #idTitleMokepon {
+        font-size: 4.5rem;
+    }
+}
 
 @media (min-width: 1440px) {}
 
