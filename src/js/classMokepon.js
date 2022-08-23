@@ -1,4 +1,9 @@
 //** === Prove POO (Programming Oriented Object) === */
+
+//*! === Variable Mokepon === */
+let myMokepons = [];
+
+//*! === Class === */
 class Mokepon {
   constructor(name, image, life, power) {
     this.name = name;
@@ -27,7 +32,13 @@ let punchEarths = new Mokepon(
   3,
   70
 );
+//*! === Call My Mokepons => Methods === */
+myMokepons.push(monsterPower, waterBombs, punchEarths);
+
+//*! === CALL */
 console.log(monsterPower);
-console.log(monsterPower.name);
+//console.log(monsterPower.name);
 console.log(waterBombs);
 console.log(punchEarths);
+console.log(myMokepons);
+//console.log(myMokepons[0]);
