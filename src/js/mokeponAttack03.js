@@ -1,11 +1,10 @@
-//** === Duel, Message and Variables === */
+//** === Import */
 import { combatDuel } from "./mokeponCombat.js";
-
+//** === Duel, Message and Variables === */
 export const divAttack = document.querySelector(`#IdChildAttack`);
 export const divEnemyAttack = document.querySelector(`#idEnemyChildAttack`);
 export const idChild = document.querySelector("#IDchild");
 export const idChildTwo = document.querySelector("#IDchildTwo");
-
 //** === General Variables === */
 export let playAttack;
 export let enemyAttack;

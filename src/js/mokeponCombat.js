@@ -1,19 +1,24 @@
 //** === Combat Duel  Mokepon ===  */
-//*? === Import & Const, Variable === */
+//*? === Import ==== Do not Repeat Yourself === */
 import { playAttack } from "./mokeponAttack03.js";
 import { enemyAttack } from "./mokeponAttack03.js";
 import { divAttack } from "./mokeponAttack03.js";
 import { divEnemyAttack } from "./mokeponAttack03.js";
 import { idChild } from "./mokeponAttack03.js";
 import { idChildTwo } from "./mokeponAttack03.js";
-
-//*! === Lifes === */
+//*! === Lifes & Variables === */
 const addLifePlayer = document.querySelector(`#lifePlayer`);
 const addLifeEnemy = document.querySelector(`#lifeEnemy`);
+const idWinner = document.querySelector("#idWinner");
+const btnSelectMascot = document.getElementById("IdBtnSelect");
+const btnFire = document.querySelector(`#btnMokeponFire`);
+const btnWater = document.querySelector(`#btnMokeponWater`);
+const btnEarth = document.querySelector(`#btnMokeponEarth`);
+const btnNewGame = document.querySelector("#idNewGame");
+const textNewGame = document.getElementById(`textNew`);
+//*! === General Variable */
 let playerLife = 3;
 let enemyLife = 3;
-const idWinner = document.querySelector("#idWinner");
-//*! === General Variable */
 let textDuel;
 
 //*? === Duel = Combat === */
@@ -74,18 +79,12 @@ const winnerBattle = () => {
     combatWinner.textContent = "Player: Your Lose!! & Enemy: Win!!😡";
     idWinner.appendChild(combatWinner);
     // = Disabled Player ==
-    let btnSelectMascot = document.getElementById("IdBtnSelect");
     btnSelectMascot.disabled = true;
     // === Buttons  and Events ===
-    let btnFire = document.querySelector(`#btnMokeponFire`);
     btnFire.disabled = true;
-    let btnWater = document.querySelector(`#btnMokeponWater`);
     btnWater.disabled = true;
-    let btnEarth = document.querySelector(`#btnMokeponEarth`);
     btnEarth.disabled = true;
-    let btnNewGame = document.querySelector("#idNewGame");
     btnNewGame.style.display = "flex";
-    let textNewGame = document.getElementById(`textNew`);
     textNewGame.style.display = "flex";
   } else if (enemyLife == 0) {
     combatWinner.textContent = "Player: Your Winner 😎!!";

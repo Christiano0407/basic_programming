@@ -1,5 +1,5 @@
 //** === Add Child Elements */
-//*! === Mokepon Monsters */
+//*! === Mokepon Monsters Variables === */
 const divMonster = document.querySelector(`#IdChildMonster`);
 const divEnemy = document.querySelector("#idMonsterEnemy");
 
