@@ -87,6 +87,10 @@
     #idMascotSelect {
         margin: 1rem auto;
     }
+
+    #textNew {
+        text-align: center;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -101,6 +105,7 @@
 
     #textNew {
         font-size: 3.5rem;
+        text-align: center;
     }
 }
 

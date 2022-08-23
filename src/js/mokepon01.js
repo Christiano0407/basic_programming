@@ -43,7 +43,7 @@ export const checkedAdd = () => {
   IdChildMonster.style.display = "flex";
   let idMonsterEnemy = document.querySelector(`#idMonsterEnemy`);
   idMonsterEnemy.style.display = "flex";
-  let textAttack = document.querySelect(`#idTextAttack`);
+  let textAttack = document.querySelector(`#idTextAttack`);
   textAttack.style.display = "flex";
   let textAttackTwo = document.querySelector(`.textAttackTwo`);
   textAttackTwo.style.display = "flex";
