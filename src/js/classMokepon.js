@@ -10,6 +10,7 @@ class Mokepon {
     this.image = image;
     this.life = life;
     this.power = power;
+    this.attack = [];
   }
 }
 
@@ -33,6 +34,12 @@ let punchEarths = new Mokepon(
   70
 );
 //*! === Call My Mokepons => Methods === */
+monsterPower.attack.push({
+  name: "FireAttack",
+  power: 50,
+  level: 2,
+});
+
 myMokepons.push(monsterPower, waterBombs, punchEarths);
 
 //*! === CALL */
