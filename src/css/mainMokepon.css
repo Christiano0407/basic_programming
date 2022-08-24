@@ -15,6 +15,9 @@ main .main--grid {
     /* background-color: var(--clr-white); */
     background-image: url("../assets/img/back02.jpg");
     object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     filter: saturate(0.5);
 }
 
@@ -117,8 +120,10 @@ main .main--grid {
 .monsterFire-img,
 .waterBomb-img,
 .punchEarth-img {
-    width: 10rem;
-    height: 12rem;
+    width: 12.5rem;
+    height: 12.5rem;
+    object-fit: contain;
+    background-size: cover;
     /*  padding: 1rem;
     outline: 2px solid #333; */
 }

@@ -12,17 +12,9 @@ import { monsterFires } from "./classMokepon.js";
 import { waterBombs } from "./classMokepon.js";
 import { punchEarths } from "./classMokepon.js";
 //** === Variables => Do not Repeat Yourself ===  */
-/* const monsterFire = document.querySelector(`#monsterFire`);
-const waterBomb = document.querySelector(`#waterBomb`);
-const punchEarth = document.querySelector("#punchEarth");
-const sectionOneAttack = document.getElementById("secSelectAttack");
-const attackImages = document.getElementById("secTwoAttack");
-const idVersus = document.getElementById(`idVersus`);
-const IdChildMonster = document.querySelector(`#IdChildMonster`);
-const idMonsterEnemy = document.querySelector(`#idMonsterEnemy`);
-const textAttack = document.querySelector(`#idTextAttack`);
-const textAttackTwo = document.querySelector(`.textAttackTwo`); */
 const monsterAdd = document.getElementById(`monsterAdd`);
+//** === Checked & Select ===  */
+const mokeponChecked = document.getElementById(`idMokeponChecked`);
 //* ===  General Variable ===  */
 let playMonster = document.querySelector(`#playerMonster`); // Span del Player =
 let enemyMonster = document.querySelector("#enemyMonster");
@@ -34,7 +26,7 @@ export const checkedAdd = () => {
   myMokepons.forEach((mokepon) => {
     addMokepon += `
         <label for="${mokepon.name}">
-              <input type="radio" name="mascot" class="input-Monster" id="monsterFire" />
+              <input type="radio" name="mascot" class="mokepon-Checked" id="idMokeponChecked" />
               <img class="monsterFire-img" src="${mokepon.image}" alt="${mokepon.name}">
               <p class="label-text">${mokepon.name}</p>
         </label>
@@ -44,10 +36,6 @@ export const checkedAdd = () => {
 };
 
 /* export const checkedAdd = () => {
-  myMokepons.forEach((mokepon) => {
-    console.log(mokepon.name);
-  });
-
   if (monsterFire.checked) {
      alert(`Your Select: MonsterFire 🔥`);
     fireAdd();

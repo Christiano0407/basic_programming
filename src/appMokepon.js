@@ -11,6 +11,7 @@ const attackImages = document.getElementById("secTwoAttack");
 const textNewGame = document.getElementById(`textNew`);
 const idVersus = document.getElementById(`idVersus`);
 const btnSelectMascot = document.getElementById("IdBtnSelect");
+const btnSelectYourMonster = document.getElementById(`idSelectMonster`);
 const btnFire = document.querySelector(`#btnMokeponFire`);
 const btnWater = document.querySelector(`#btnMokeponWater`);
 const btnEarth = document.querySelector(`#btnMokeponEarth`);
@@ -30,6 +31,8 @@ const initGame = () => {
   idVersus.style.display = "none";
   //> Btn ==
   btnSelectMascot.addEventListener(`click`, checkedAdd);
+  // === Btn Select Monster ===
+  btnSelectYourMonster.style.display = "none";
   // === Buttons  and Events ===
   btnFire.addEventListener("click", fireAttack);
   btnWater.addEventListener("click", waterAttack);

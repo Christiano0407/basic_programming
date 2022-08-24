@@ -23,13 +23,13 @@ export let monsterFires = new Mokepon(
 
 export let waterBombs = new Mokepon(
   `WaterBomb`,
-  `https://images.saymedia-content.com/.image/t_share/MTc0NDU3NjUyNjc0NzY2NDcw/worst-pokemon-attacks-of-all-time.png`,
+  `/src/assets/img/mokepon2.png`,
   3,
   60
 );
 export let punchEarths = new Mokepon(
   `PunchEarth`,
-  "https://dam.smashmexico.com.mx/wp-content/uploads/2017/09/03144141/trend-una-arana-con-la-forma-de-pikachu-si-existe-cover.jpg",
+  "/src/assets/img/mokepon3.png",
   3,
   70
 );
