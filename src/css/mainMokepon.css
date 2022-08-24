@@ -94,16 +94,14 @@ main .main--grid {
 .monster-Add {
     width: 100%;
     margin: 2rem auto;
+}
+
+.mokepon-card {
+    width: 90%;
+    margin: 1rem auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-direction: column;
-}
-
-.monster-Add label {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
 }
 
 .label-text {
@@ -120,10 +118,11 @@ main .main--grid {
 .monsterFire-img,
 .waterBomb-img,
 .punchEarth-img {
-    width: 12.5rem;
+    width: 15rem;
     height: 12.5rem;
     object-fit: contain;
     background-size: cover;
+
     /*  padding: 1rem;
     outline: 2px solid #333; */
 }
@@ -135,6 +134,7 @@ main .main--grid {
 } */
 input {
     margin: .5rem auto;
+    background-image: url("../assets/img/pngwing.com.png");
 }
 
 .mokeponList {

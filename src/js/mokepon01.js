@@ -25,11 +25,11 @@ let addMokepon;
 export const checkedAdd = () => {
   myMokepons.forEach((mokepon) => {
     addMokepon += `
-        <label for="${mokepon.name}">
-              <input type="radio" name="mascot" class="mokepon-Checked" id="idMokeponChecked" />
-              <img class="monsterFire-img" src="${mokepon.image}" alt="${mokepon.name}">
-              <p class="label-text">${mokepon.name}</p>
-        </label>
+    <label class="mokepon-card" id="idMokeponCard" for=${mokepon.name}>
+          <img class="monsterFire-img" src=${mokepon.image} alt=${mokepon.name}>
+          <p class="label-text">${mokepon.name}</p>
+          <input type="radio" name="mascot" class="mokepon-Checked" id=${mokepon.name} />
+    </label>
      `;
   });
   monsterAdd.innerHTML = addMokepon;
