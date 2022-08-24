@@ -34,11 +34,24 @@ let punchEarths = new Mokepon(
   70
 );
 //*! === Call My Mokepons => Methods === */
-monsterPower.attack.push({
-  name: "FireAttack",
-  power: 50,
-  level: 2,
-});
+monsterPower.attack.push(
+  { name: "fireAttack 🔥", id: "btnMokeponFire", power: 75, level: 1 },
+  { name: "fireFinally", power: 50, level: 2 },
+  { name: "bombFire", power: 35, level: 3 }
+);
+
+waterBombs.attack.push(
+  { name: "waterBomb 💧", id: "btnMokeponWater", power: 70, level: 1 },
+  { name: "splash", power: 60, level: 3 },
+  { name: "smashSplash", power: 35, level: 3 },
+  { name: "nightWave", power: 25, level: 4 }
+);
+
+punchEarths.attack.push(
+  { name: "rockSmash 🦾", id: "btnMokeponEarth", power: 80, level: 1 },
+  { name: "plantsAttack", power: 40, level: 2 },
+  { name: "BombAir", power: 25, level: 3 }
+);
 
 myMokepons.push(monsterPower, waterBombs, punchEarths);
 
