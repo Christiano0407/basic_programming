@@ -36,28 +36,33 @@ let punchEarths = new Mokepon(
 //*! === Call My Mokepons => Methods === */
 monsterPower.attack.push(
   { name: "fireAttack 🔥", id: "btnMokeponFire", power: 75, level: 1 },
-  { name: "fireFinally", power: 50, level: 2 },
-  { name: "bombFire", power: 35, level: 3 }
+  { name: "fireFinally 🧨", id: "btnMokeponFire", power: 50, level: 2 },
+  { name: "bombFire 🎇", id: "btnMokeponFire", power: 35, level: 3 },
+  { name: "volcanoBomb 🌋", id: "btnMokeponWater", power: 30, level: 4 },
+  { name: "rockFire 🥌", id: "btnMokeponEarth", power: 25, level: 5 }
 );
 
 waterBombs.attack.push(
   { name: "waterBomb 💧", id: "btnMokeponWater", power: 70, level: 1 },
-  { name: "splash", power: 60, level: 3 },
-  { name: "smashSplash", power: 35, level: 3 },
-  { name: "nightWave", power: 25, level: 4 }
+  { name: "splash ♒", id: "btnMokeponWater", power: 60, level: 3 },
+  { name: "smashSplash 🤽‍♂️", id: "btnMokeponWater", power: 35, level: 3 },
+  { name: "nightWave 👿", id: "btnMokeponFire", power: 25, level: 4 },
+  { name: "airSmall 🛩", id: "btnMokeponEarth", power: 20, level: 5 }
 );
 
 punchEarths.attack.push(
   { name: "rockSmash 🦾", id: "btnMokeponEarth", power: 80, level: 1 },
-  { name: "plantsAttack", power: 40, level: 2 },
-  { name: "BombAir", power: 25, level: 3 }
+  { name: "plantsAttack 🌾", id: "btnMokeponEarth", power: 40, level: 2 },
+  { name: "BombAir 💣", id: "btnMokeponEarth", power: 25, level: 3 },
+  { name: "redBomb 💣", id: "btnMokeponFire", power: 20, level: 4 },
+  { name: "waterEarth 🚰", id: "btnMokeponWater", power: 15, level: 5 }
 );
-
+//*! === Var General */
 myMokepons.push(monsterPower, waterBombs, punchEarths);
 
 //*! === CALL */
 console.log(monsterPower);
-//console.log(monsterPower.name);
+console.log(monsterPower.attack);
 console.log(waterBombs);
 console.log(punchEarths);
 console.log(myMokepons);
