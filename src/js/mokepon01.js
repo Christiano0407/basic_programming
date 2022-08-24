@@ -6,8 +6,13 @@ import { enemyOne } from "./mokeponElements.js";
 import { enemyTwo } from "./mokeponElements.js";
 import { enemyThree } from "./mokeponElements.js";
 import { enemyRandomAttack } from "./mokeponAttack03.js";
+//** === Call POO === */
+import { myMokepons } from "./classMokepon.js";
+import { monsterFires } from "./classMokepon.js";
+import { waterBombs } from "./classMokepon.js";
+import { punchEarths } from "./classMokepon.js";
 //** === Variables => Do not Repeat Yourself ===  */
-const monsterFire = document.querySelector(`#monsterFire`);
+/* const monsterFire = document.querySelector(`#monsterFire`);
 const waterBomb = document.querySelector(`#waterBomb`);
 const punchEarth = document.querySelector("#punchEarth");
 const sectionOneAttack = document.getElementById("secSelectAttack");
@@ -16,18 +21,39 @@ const idVersus = document.getElementById(`idVersus`);
 const IdChildMonster = document.querySelector(`#IdChildMonster`);
 const idMonsterEnemy = document.querySelector(`#idMonsterEnemy`);
 const textAttack = document.querySelector(`#idTextAttack`);
-const textAttackTwo = document.querySelector(`.textAttackTwo`);
-//> General Variable
+const textAttackTwo = document.querySelector(`.textAttackTwo`); */
+const monsterAdd = document.getElementById(`monsterAdd`);
+//* ===  General Variable ===  */
 let playMonster = document.querySelector(`#playerMonster`); // Span del Player =
 let enemyMonster = document.querySelector("#enemyMonster");
 let enemyAttack = random(1, 3);
+let addMokepon;
 
 //*! === User*/
 export const checkedAdd = () => {
+  myMokepons.forEach((mokepon) => {
+    addMokepon += `
+        <label for="${mokepon.name}">
+              <input type="radio" name="mascot" class="input-Monster" id="monsterFire" />
+              <img class="monsterFire-img" src="${mokepon.image}" alt="${mokepon.name}">
+              <p class="label-text">${mokepon.name}</p>
+        </label>
+     `;
+  });
+  monsterAdd.innerHTML = addMokepon;
+};
+
+/* export const checkedAdd = () => {
+  myMokepons.forEach((mokepon) => {
+    console.log(mokepon.name);
+  });
+
   if (monsterFire.checked) {
-    alert(`Your Select: MonsterFire 🔥`);
+     alert(`Your Select: MonsterFire 🔥`);
     fireAdd();
     playMonster.innerHTML = "MonsterFire 🔥";
+    console.log(myMokepons[0].life);
+    monsterFire.innerHTML = myMokepons[0].life;
   } else if (waterBomb.checked) {
     alert(`Your Select: WaterBomb 💧`);
     waterAdd();
@@ -39,9 +65,7 @@ export const checkedAdd = () => {
   } else {
     alert("Sorry!! Your Not Select One. Please. select your Mokepon");
   }
-  // = Call Function =
-  enemySelectAdd();
-  //> Add Display Attack =>
+  
   sectionOneAttack.style.display = "flex";
   attackImages.style.display = "flex";
   idVersus.style.display = "flex";
@@ -49,7 +73,7 @@ export const checkedAdd = () => {
   idMonsterEnemy.style.display = "flex";
   textAttack.style.display = "flex";
   textAttackTwo.style.display = "flex";
-};
+}; */
 //*! === Enemy */
 const enemySelectAdd = () => {
   if (enemyAttack == 1) {

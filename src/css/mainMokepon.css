@@ -123,36 +123,11 @@ main .main--grid {
     outline: 2px solid #333; */
 }
 
-.monsterFire-img {
-    background-image: url("../assets/img/mokepon5.png");
-    object-fit: contain;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
 /* ==> Add Color */
 /* label:checked+p {
     color: var(--clr-mokepon-logo);
     background-color: red;
 } */
-
-.waterBomb-img {
-    background-image: url("../assets/img/mokepon4.png");
-    object-fit: contain;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-.punchEarth-img {
-    background-image: url("../assets/img/mokepon3.png");
-    object-fit: contain;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
 input {
     margin: .5rem auto;
 }

@@ -1,7 +1,7 @@
 //** === Prove POO (Programming Oriented Object) === */
 
 //*! === Variable Mokepon === */
-let myMokepons = [];
+export let myMokepons = [];
 
 //*! === Class === */
 class Mokepon {
@@ -14,27 +14,27 @@ class Mokepon {
   }
 }
 
-let monsterPower = new Mokepon(
+export let monsterFires = new Mokepon(
   `MonsterFire`,
-  `https://media.redadn.es/imagenes/pokemaster_338177_pn2.jpg`,
+  `/src/assets/img/mokepon1.png`,
   3,
   65
 );
 
-let waterBombs = new Mokepon(
+export let waterBombs = new Mokepon(
   `WaterBomb`,
-  `https://alfabetajuega.com/hero/2019/03/Squirtle-Looking-Happy.jpg?width=1200&aspect_ratio=1200:631`,
+  `https://images.saymedia-content.com/.image/t_share/MTc0NDU3NjUyNjc0NzY2NDcw/worst-pokemon-attacks-of-all-time.png`,
   3,
   60
 );
-let punchEarths = new Mokepon(
+export let punchEarths = new Mokepon(
   `PunchEarth`,
-  `https://dam.smashmexico.com.mx/wp-content/uploads/2017/09/03144141/trend-una-arana-con-la-forma-de-pikachu-si-existe-cover.jpg`,
+  "https://dam.smashmexico.com.mx/wp-content/uploads/2017/09/03144141/trend-una-arana-con-la-forma-de-pikachu-si-existe-cover.jpg",
   3,
   70
 );
 //*! === Call My Mokepons => Methods === */
-monsterPower.attack.push(
+monsterFires.attack.push(
   { name: "fireAttack 🔥", id: "btnMokeponFire", power: 75, level: 1 },
   { name: "fireFinally 🧨", id: "btnMokeponFire", power: 50, level: 2 },
   { name: "bombFire 🎇", id: "btnMokeponFire", power: 35, level: 3 },
@@ -58,12 +58,14 @@ punchEarths.attack.push(
   { name: "waterEarth 🚰", id: "btnMokeponWater", power: 15, level: 5 }
 );
 //*! === Var General */
-myMokepons.push(monsterPower, waterBombs, punchEarths);
+myMokepons.push(monsterFires, waterBombs, punchEarths);
 
 //*! === CALL */
-console.log(monsterPower);
-console.log(monsterPower.attack);
-console.log(waterBombs);
-console.log(punchEarths);
-console.log(myMokepons);
+//console.log(monsterFire);
+//console.log(myMokepons);
 //console.log(myMokepons[0]);
+/* myMokepons.forEach((mokepon) => {
+  console.log(mokepon.name);
+  console.log(mokepon.attack);
+  console.log(mokepon.power);
+}); */
