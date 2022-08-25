@@ -100,8 +100,9 @@ main .main--grid {
     width: 90%;
     margin: 1rem auto;
     display: flex;
-    justify-content: space-between;
+    /*  justify-content: space-between; */
     align-items: center;
+    flex-direction: column;
 }
 
 .label-text {
@@ -118,13 +119,10 @@ main .main--grid {
 .monsterFire-img,
 .waterBomb-img,
 .punchEarth-img {
-    width: 15rem;
-    height: 12.5rem;
+    width: 12.5rem;
+    height: 10rem;
     object-fit: contain;
     background-size: cover;
-
-    /*  padding: 1rem;
-    outline: 2px solid #333; */
 }
 
 /* ==> Add Color */

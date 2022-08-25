@@ -24,15 +24,15 @@ let addMokepon;
 //*! === User*/
 export const checkedAdd = () => {
   myMokepons.forEach((mokepon) => {
-    addMokepon += `
+    addMokepon = `
     <label class="mokepon-card" id="idMokeponCard" for=${mokepon.name}>
           <img class="monsterFire-img" src=${mokepon.image} alt=${mokepon.name}>
-          <p class="label-text">${mokepon.name}</p>
           <input type="radio" name="mascot" class="mokepon-Checked" id=${mokepon.name} />
+          <p class="label-text">${mokepon.name}</p>
     </label>
      `;
+    monsterAdd.innerHTML += addMokepon;
   });
-  monsterAdd.innerHTML = addMokepon;
 };
 
 /* export const checkedAdd = () => {
