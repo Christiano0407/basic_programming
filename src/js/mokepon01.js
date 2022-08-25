@@ -1,19 +1,25 @@
 //** === Imports === */
-import { fireAdd } from "./mokeponElements.js";
-import { waterAdd } from "./mokeponElements.js";
-import { earthAdd } from "./mokeponElements.js";
 import { enemyOne } from "./mokeponElements.js";
 import { enemyTwo } from "./mokeponElements.js";
 import { enemyThree } from "./mokeponElements.js";
 import { enemyRandomAttack } from "./mokeponAttack03.js";
+import { fireAttack } from "./mokeponAttack03.js";
+import { waterAttack } from "./mokeponAttack03.js";
+import { earthAttack } from "./mokeponAttack03.js";
 //** === Call POO === */
 import { myMokepons } from "./classMokepon.js";
+//** === Call Btn === */
 const btnSelectYourMonster = document.getElementById(`idSelectMonster`);
+const btnWater = document.querySelector(`#btnMokeponWater`);
+const btnEarth = document.querySelector(`#btnMokeponEarth`);
 //** === Variables => Do not Repeat Yourself ===  */
 const monsterAdd = document.getElementById(`monsterAdd`);
 const sectionOneAttack = document.getElementById("secSelectAttack");
+const textAttack = document.querySelector(`#idTextAttack`);
+const textAttackTwo = document.querySelector(`.textAttackTwo`);
 //** === Checked & Select ===  */
 /* const mokeponChecked = document.getElementById(`idMokeponChecked`); */
+const btnFire = document.querySelector(`#btnMokeponFire`);
 //* ===  General Variable ===  */
 let playMonster = document.querySelector(`#playerMonster`); // Span del Player =
 let enemyMonster = document.querySelector("#enemyMonster");
@@ -48,28 +54,31 @@ const checkedMokepon = () => {
   btnSelectYourMonster.addEventListener("click", () => {
     if (inputFire.checked) {
       alert(`Your Select: MonsterFire 🔥`);
-      //fireAdd();
-      //playMonster.innerHTML = "MonsterFire 🔥";
+      btnFire.addEventListener("click", fireAttack);
+      /*  playMonster.innerHTML = mokepon.name; */
       //console.log(myMokepons[0].life);
       //monsterFire.innerHTML = myMokepons[0].life;
     } else if (inputWater.checked) {
       alert(`Your Select: WaterBomb 💧`);
+      btnWater.addEventListener("click", waterAttack);
       //waterAdd();
       //playMonster.innerHTML = "WaterBomb 💧";
     } else if (inputEarth.checked) {
       alert(`Your Select: PunchEarth 🌍🦾`);
+      btnEarth.addEventListener("click", earthAttack);
       //earthAdd();
       //playMonster.innerHTML = "PunchEarth 🦾🌍⚡";
     } else {
       alert("Sorry!! Your Not Select One. Please. select your Mokepon");
     }
     sectionOneAttack.style.display = "flex";
+    textAttack.style.display = "flex";
+    textAttackTwo.style.display = "flex";
     /* attackImages.style.display = "flex";
     idVersus.style.display = "flex";
     IdChildMonster.style.display = "flex";
     idMonsterEnemy.style.display = "flex";
-    textAttack.style.display = "flex";
-    textAttackTwo.style.display = "flex"; */
+     */
   });
 };
 

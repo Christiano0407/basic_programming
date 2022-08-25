@@ -1,5 +1,6 @@
 //** === Import */
 import { combatDuel } from "./mokeponCombat.js";
+import { myMokepons } from "./classMokepon.js";
 //** === Duel, Message and Variables === */
 export const divAttack = document.querySelector(`#IdChildAttack`);
 export const divEnemyAttack = document.querySelector(`#idEnemyChildAttack`);
@@ -10,22 +11,25 @@ export let playAttack;
 export let enemyAttack;
 //*? === Function Attack Fire, Water and Earth === */
 export const fireAttack = () => {
-  playAttack = "Fire Finally!!";
-  imageAttackFire(); // Images
+  console.log(myMokepons[0].attack);
+  //playAttack = myMokepons.attack;
+  //imageAttackFire(); // Images
   //messageUser(); // Message
-  combatDuel(); // Combat
+  //combatDuel(); // Combat
 };
 export const waterAttack = () => {
-  playAttack = "Water Bomb!!";
-  imageAttackWater();
+  console.log(myMokepons[1].attack);
+  //playAttack = "Water Bomb!!";
+  //imageAttackWater();
   //messageUser();
-  combatDuel();
+  //combatDuel();
 };
 export const earthAttack = () => {
-  playAttack = "Rock Smash!!";
-  imageAttackEarth();
+  console.log(myMokepons[2].attack);
+  //playAttack = "Rock Smash!!";
+  //imageAttackEarth();
   //messageUser();
-  combatDuel();
+  //combatDuel();
 };
 
 export const enemyRandomAttack = () => {
