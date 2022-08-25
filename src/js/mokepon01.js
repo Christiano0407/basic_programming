@@ -17,17 +17,19 @@ const monsterAdd = document.getElementById(`monsterAdd`);
 const sectionOneAttack = document.getElementById("secSelectAttack");
 const textAttack = document.querySelector(`#idTextAttack`);
 const textAttackTwo = document.querySelector(`.textAttackTwo`);
+const attackImages = document.getElementById("secTwoAttack");
 //** === Checked & Select ===  */
 /* const mokeponChecked = document.getElementById(`idMokeponChecked`); */
 const btnFire = document.querySelector(`#btnMokeponFire`);
 //* ===  General Variable ===  */
 let playMonster = document.querySelector(`#playerMonster`); // Span del Player =
 let enemyMonster = document.querySelector("#enemyMonster");
-let enemyAttack = random(1, 3);
 let addMokepon;
 let inputFire;
 let inputWater;
 let inputEarth;
+//let enemyAttack = random(1, 3); //Random
+let enemyAttack = random(0, myMokepons.length - 1); // POO => Mokepon
 
 //*! === User*/
 export const checkedAdd = () => {
@@ -67,32 +69,30 @@ const checkedMokepon = () => {
     sectionOneAttack.style.display = "flex";
     textAttack.style.display = "flex";
     textAttackTwo.style.display = "flex";
-    /* attackImages.style.display = "flex";
+    /* 
     idVersus.style.display = "flex";
     IdChildMonster.style.display = "flex";
     idMonsterEnemy.style.display = "flex";
      */
+    enemySelectAdd();
   });
 };
 
 /* checkedMokepon(); */
-//*! === Enemy */
+//*! === Enemy select Attack and Mokepon === */
 const enemySelectAdd = () => {
-  if (enemyAttack == 1) {
+  enemyMonster.innerHTML = myMokepons[enemyAttack].name;
+
+  attackImages.style.display = "flex";
+  /*  if (enemyAttack == 1) {
     enemyMonster.innerHTML = "ThunderLight ⚡";
-    enemyTwo();
-    enemyRandomAttack();
   } else if (enemyAttack == 2) {
     enemyMonster.innerHTML = "BombGreen 🌱";
-    enemyOne();
-    enemyRandomAttack();
   } else if (enemyAttack == 3) {
     enemyMonster.innerHTML = "CocoSmash 🥌";
-    enemyThree();
-    enemyRandomAttack();
   } else {
     alert("Sorry!! Please, select your Mokepon of Attack");
-  }
+  } */
 };
 
 //** === Random Function === */

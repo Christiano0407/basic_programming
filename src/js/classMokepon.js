@@ -57,7 +57,7 @@ punchEarths.attack.push(
   { name: "redBomb 💣", id: "btnMokeponFire", power: 20, level: 4 },
   { name: "waterEarth 🚰", id: "btnMokeponWater", power: 15, level: 5 }
 );
-//*! === Var General */
+//*! === Var General => Key === */
 myMokepons.push(monsterFires, waterBombs, punchEarths);
 
 //*! === CALL */
