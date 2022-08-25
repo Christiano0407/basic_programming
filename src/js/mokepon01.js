@@ -14,7 +14,7 @@ import { punchEarths } from "./classMokepon.js";
 //** === Variables => Do not Repeat Yourself ===  */
 const monsterAdd = document.getElementById(`monsterAdd`);
 //** === Checked & Select ===  */
-const mokeponChecked = document.getElementById(`idMokeponChecked`);
+/* const mokeponChecked = document.getElementById(`idMokeponChecked`); */
 //* ===  General Variable ===  */
 let playMonster = document.querySelector(`#playerMonster`); // Span del Player =
 let enemyMonster = document.querySelector("#enemyMonster");
@@ -32,6 +32,7 @@ export const checkedAdd = () => {
     </label>
      `;
     monsterAdd.innerHTML += addMokepon;
+
   });
 };
 

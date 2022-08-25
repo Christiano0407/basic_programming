@@ -29,9 +29,9 @@ const initGame = () => {
   attackImages.style.display = "none";
   textNewGame.style.display = "none";
   idVersus.style.display = "none";
-  //> Btn ==
+  // >> Btn Init Game ==
   btnSelectMascot.addEventListener(`click`, checkedAdd);
-  // === Btn Select Monster ===
+  // >> Btn Select Monster ===
   btnSelectYourMonster.style.display = "none";
   // === Buttons  and Events ===
   btnFire.addEventListener("click", fireAttack);
