@@ -97,7 +97,8 @@ main .main--grid {
 }
 
 .mokepon-card {
-    width: 90%;
+    width: 35%;
+    border-radius: 1rem;
     margin: 1rem auto;
     display: flex;
     /*  justify-content: space-between; */
@@ -125,14 +126,20 @@ main .main--grid {
     background-size: cover;
 }
 
-/* ==> Add Color */
-/* label:checked+p {
-    color: var(--clr-mokepon-logo);
-    background-color: red;
-} */
 input {
     margin: .5rem auto;
-    background-image: url("../assets/img/pngwing.com.png");
+    display: none;
+}
+
+/* ==> Add Color */
+input:checked+label {
+    /* background-color: #5D8BF4; */
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    /* border-radius: 10px; */
+    border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .mokeponList {

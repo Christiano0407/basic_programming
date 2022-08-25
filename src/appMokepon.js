@@ -12,9 +12,9 @@ const textNewGame = document.getElementById(`textNew`);
 const idVersus = document.getElementById(`idVersus`);
 const btnSelectMascot = document.getElementById("IdBtnSelect");
 const btnSelectYourMonster = document.getElementById(`idSelectMonster`);
-const btnFire = document.querySelector(`#btnMokeponFire`);
+/* const btnFire = document.querySelector(`#btnMokeponFire`);
 const btnWater = document.querySelector(`#btnMokeponWater`);
-const btnEarth = document.querySelector(`#btnMokeponEarth`);
+const btnEarth = document.querySelector(`#btnMokeponEarth`); */
 const btnNewGame = document.querySelector("#idNewGame");
 const idChildMonster = document.querySelector(`#IdChildMonster`);
 const idMonsterEnemy = document.querySelector(`#idMonsterEnemy`);
@@ -34,9 +34,9 @@ const initGame = () => {
   // >> Btn Select Monster ===
   btnSelectYourMonster.style.display = "none";
   // === Buttons  and Events ===
-  btnFire.addEventListener("click", fireAttack);
+  /*  btnFire.addEventListener("click", fireAttack);
   btnWater.addEventListener("click", waterAttack);
-  btnEarth.addEventListener("click", earthAttack);
+  btnEarth.addEventListener("click", earthAttack); */
   // === Refres & New Game ===
   btnNewGame.style.display = "none";
   idChildMonster.style.display = "none";
