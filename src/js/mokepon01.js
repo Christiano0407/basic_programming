@@ -45,7 +45,7 @@ export const checkedAdd = () => {
   checkedMokepon();
   btnSelectYourMonster.style.display = "flex";
 };
-
+//*! === Select my Mokepon === */
 const checkedMokepon = () => {
   //> === id POO === <
   inputFire = document.getElementById(`MonsterFire`);
@@ -53,21 +53,14 @@ const checkedMokepon = () => {
   inputEarth = document.getElementById(`PunchEarth`);
   btnSelectYourMonster.addEventListener("click", () => {
     if (inputFire.checked) {
-      alert(`Your Select: MonsterFire 🔥`);
+      playMonster.innerHTML = inputFire.id;
       btnFire.addEventListener("click", fireAttack);
-      /*  playMonster.innerHTML = mokepon.name; */
-      //console.log(myMokepons[0].life);
-      //monsterFire.innerHTML = myMokepons[0].life;
     } else if (inputWater.checked) {
-      alert(`Your Select: WaterBomb 💧`);
+      playMonster.innerHTML = inputWater.id;
       btnWater.addEventListener("click", waterAttack);
-      //waterAdd();
-      //playMonster.innerHTML = "WaterBomb 💧";
     } else if (inputEarth.checked) {
-      alert(`Your Select: PunchEarth 🌍🦾`);
+      playMonster.innerHTML = inputEarth.id;
       btnEarth.addEventListener("click", earthAttack);
-      //earthAdd();
-      //playMonster.innerHTML = "PunchEarth 🦾🌍⚡";
     } else {
       alert("Sorry!! Your Not Select One. Please. select your Mokepon");
     }
