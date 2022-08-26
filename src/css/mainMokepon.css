@@ -153,8 +153,10 @@ input:checked+label {
 .mokeponList {
     width: 100%;
     margin: 0 auto;
+    flex-direction: column;
     display: flex;
-    justify-content: space-evenly;
+    align-items: center;
+    /* justify-content: space-evenly; */
     margin-top: 2rem;
 }
 
