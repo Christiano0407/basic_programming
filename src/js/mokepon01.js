@@ -61,15 +61,15 @@ const checkedMokepon = () => {
     if (inputFire.checked) {
       playMonster.innerHTML = inputFire.id;
       nameMokeponPlayer = inputFire.id;
-      extraAttacks(nameMokeponPlayer);
+      extraAttacks();
     } else if (inputWater.checked) {
       playMonster.innerHTML = inputWater.id;
       nameMokeponPlayer = inputWater.id;
-      extraAttacks(nameMokeponPlayer);
+      extraAttacks();
     } else if (inputEarth.checked) {
       playMonster.innerHTML = inputEarth.id;
       nameMokeponPlayer = inputEarth.id;
-      extraAttacks(nameMokeponPlayer);
+      extraAttacks();
     } else {
       alert("Sorry!! Your Not Select One. Please. select your Mokepon");
     }
@@ -93,7 +93,7 @@ const enemySelectAdd = () => {
 };
 
 //*! === Attacka Player === */
-function extraAttacks(nameMokeponPlayer) {
+function extraAttacks() {
   let powerAttack;
   myMokepons.forEach((mokepon) => {
     if (nameMokeponPlayer === mokepon.name) {
@@ -103,12 +103,12 @@ function extraAttacks(nameMokeponPlayer) {
     }
 
     //console.log(powerAttack);
-    allAttacks(powerAttack);
   });
+  allAttacks(powerAttack);
 }
 function allAttacks(powerAttack) {
   powerAttack.forEach((attack) => {
-    allAttackMokepon = ` 
+    allAttackMokepon = `
     <button id=${attack.id} class="btn btnMokepon">
             <p class="textMokepon">${attack.name}</p>
     </button>
