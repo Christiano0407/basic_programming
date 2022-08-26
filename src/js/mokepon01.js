@@ -19,9 +19,7 @@ const textAttackTwo = document.querySelector(`.textAttackTwo`);
 const attackImages = document.getElementById("secTwoAttack");
 //** === Checked & Select ===  */
 /* const mokeponChecked = document.getElementById(`idMokeponChecked`); */
-/* const btnFire = document.querySelector(`#btnMokeponFire`);
-const btnWater = document.querySelector(`#btnMokeponWater`);
-const btnEarth = document.querySelector(`#btnMokeponEarth`); */
+
 const containerList = document.getElementById(`idMokeponList`);
 //* ===  General Variable ===  */
 let playMonster = document.querySelector(`#playerMonster`); // Span del Player =
@@ -32,6 +30,9 @@ let inputWater;
 let inputEarth;
 let nameMokeponPlayer;
 let allAttackMokepon;
+let btnFire;
+let btnWater;
+let btnEarth;
 //let enemyAttack = random(1, 3); //Random
 let enemyAttack = random(0, myMokepons.length - 1); // POO => Mokepon
 
@@ -115,6 +116,13 @@ function allAttacks(powerAttack) {
     `;
 
     containerList.innerHTML += allAttackMokepon;
+  });
+  btnFire = document.querySelector(`#btnMokeponFire`);
+  btnWater = document.querySelector(`#btnMokeponWater`);
+  btnEarth = document.querySelector(`#btnMokeponEarth`);
+
+  btnFire.addEventListener("click", () => {
+    console.log("Fire");
   });
 }
 
