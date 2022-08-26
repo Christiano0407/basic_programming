@@ -1,4 +1,4 @@
-//** === Imports === */
+//*? === Imports === */
 /* import { enemyOne } from "./mokeponElements.js";
 import { enemyTwo } from "./mokeponElements.js";
 import { enemyThree } from "./mokeponElements.js";
@@ -33,6 +33,8 @@ let allAttackMokepon;
 let btnFire;
 let btnWater;
 let btnEarth;
+let allButton;
+let userPlayAttack;
 //let enemyAttack = random(1, 3); //Random
 let enemyAttack = random(0, myMokepons.length - 1); // POO => Mokepon
 
@@ -87,12 +89,6 @@ const checkedMokepon = () => {
   });
 };
 
-/* checkedMokepon(); */
-//*! === Enemy select Attack and Mokepon === */
-const enemySelectAdd = () => {
-  enemyMonster.innerHTML = myMokepons[enemyAttack].name;
-};
-
 //*! === Attacka Player === */
 function extraAttacks() {
   let powerAttack;
@@ -107,10 +103,13 @@ function extraAttacks() {
   });
   allAttacks(powerAttack);
 }
+
+//function userContainerAttacks
+//*! === Add ALL Attack & Btn === */
 function allAttacks(powerAttack) {
   powerAttack.forEach((attack) => {
     allAttackMokepon = `
-    <button id=${attack.id} class="btn btnMokepon">
+    <button id=${attack.id} class="btn btnMokepon BAttack">
             <p class="textMokepon">${attack.name}</p>
     </button>
     `;
@@ -120,11 +119,25 @@ function allAttacks(powerAttack) {
   btnFire = document.querySelector(`#btnMokeponFire`);
   btnWater = document.querySelector(`#btnMokeponWater`);
   btnEarth = document.querySelector(`#btnMokeponEarth`);
-
-  btnFire.addEventListener("click", () => {
-    console.log("Fire");
+  allButton = document.querySelectorAll(`.BAttack`);
+  attackSequence();
+}
+//*! === Attack */
+function attackSequence() {
+  allButton.forEach((button) => {
+    button.addEventListener(`click`, (e) => {
+      e.preventDefault();
+      console.log(e.target.textContent);
+    });
   });
 }
+
+/* checkedMokepon(); */
+//*! === Enemy select Attack and Mokepon === */
+const enemySelectAdd = () => {
+  enemyMonster.innerHTML = myMokepons[enemyAttack].name;
+  /* attackSequence(); */
+};
 
 //** === Random Function === */
 function random(min, max) {
