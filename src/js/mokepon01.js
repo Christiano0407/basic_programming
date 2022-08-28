@@ -64,7 +64,8 @@ const checkedMokepon = () => {
     if (inputFire.checked) {
       playMonster.innerHTML = inputFire.id;
       nameMokeponPlayer = inputFire.id;
-      extraAttacks();
+      btnFire = document.querySelector(`#btnMokeponFire`);
+      btnFire.addEventListener("click", extraAttacks);
     } else if (inputWater.checked) {
       playMonster.innerHTML = inputWater.id;
       nameMokeponPlayer = inputWater.id;
@@ -89,16 +90,13 @@ const checkedMokepon = () => {
   });
 };
 
-//*! === Attacka Player === */
+//*! === Attack Player === */
 function extraAttacks() {
   let powerAttack;
   myMokepons.forEach((mokepon) => {
     if (nameMokeponPlayer === mokepon.name) {
       powerAttack = mokepon.attack;
-    } else {
-      console.log("We have Error!");
     }
-
     //console.log(powerAttack);
   });
   allAttacks(powerAttack);
@@ -116,7 +114,7 @@ function allAttacks(powerAttack) {
 
     containerList.innerHTML += allAttackMokepon;
   });
-  btnFire = document.querySelector(`#btnMokeponFire`);
+  /* btnFire = document.querySelector(`#btnMokeponFire`); */
   btnWater = document.querySelector(`#btnMokeponWater`);
   btnEarth = document.querySelector(`#btnMokeponEarth`);
   allButton = document.querySelectorAll(`.BAttack`);

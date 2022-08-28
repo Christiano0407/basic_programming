@@ -26,7 +26,7 @@ const initGame = () => {
   idVersus.style.display = "none";
   // >> Btn Select Monster ===
   btnSelectYourMonster.style.display = "none";
-  // === Refres & New Game ===
+  // === Refresh & New Game ===
   btnNewGame.style.display = "none";
   idChildMonster.style.display = "none";
   idMonsterEnemy.style.display = "none";
