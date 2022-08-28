@@ -13,13 +13,14 @@ const btnSelectMascot = document.getElementById("IdBtnSelect");
 const btnSelectYourMonster = document.getElementById(`idSelectMonster`);
 //** === Variables => Do not Repeat Yourself ===  */
 const monsterAdd = document.getElementById(`monsterAdd`);
+const idMascotTextSelect = document.getElementById(`idMascotSelect`);
+const divBtn = document.getElementById(`divBtn`);
 const sectionOneAttack = document.getElementById("secSelectAttack");
 const textAttack = document.querySelector(`#idTextAttack`);
 const textAttackTwo = document.querySelector(`.textAttackTwo`);
 const attackImages = document.getElementById("secTwoAttack");
 //** === Checked & Select ===  */
 /* const mokeponChecked = document.getElementById(`idMokeponChecked`); */
-
 const containerList = document.getElementById(`idMokeponList`);
 //* ===  General Variable ===  */
 let playMonster = document.querySelector(`#playerMonster`); // Span del Player =
@@ -86,7 +87,11 @@ const checkedMokepon = () => {
     IdChildMonster.style.display = "flex";
     idMonsterEnemy.style.display = "flex";
      */
+    // === Call Enemy Attack ===
     enemySelectAdd();
+    monsterAdd.style.display = "none";
+    idMascotTextSelect.style.display = "none";
+    divBtn.style.display = "none";
   });
 };
 
