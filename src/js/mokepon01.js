@@ -41,7 +41,12 @@ let playerLife = 3;
 let enemyLife = 3;
 export let playerAttacks = [];
 export let allAttackEnemy = [];
+let attackMokeponEnemy;
 //let enemyAttack = random(1, 3); //Random
+//** === Random Function === */
+function random(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
 let enemyAttack = random(0, myMokepons.length - 1); // POO => Mokepon
 
 //*! === User*/
@@ -151,12 +156,15 @@ function attackSequence() {
         console.log("Add Player Attacks");
       }
       console.log(playerAttacks);
+      attackRandomEnemy();
     });
   });
 }
 //*!  === === Enemy select Attack and Mokepon ===  === */
 const enemySelectAdd = () => {
   enemyMonster.innerHTML = myMokepons[enemyAttack].name;
+  attackMokeponEnemy = myMokepons[enemyAttack].attack;
+  //attackSequence();
 };
 
 const attackRandomEnemy = () => {
@@ -173,24 +181,24 @@ const attackRandomEnemy = () => {
 };
 function duelCombat() {
   if (allAttackEnemy == playerAttacks) {
-    textDuel = "not Winner";
+    //textDuel = "not Winner";
   } else if (
     playerAttacks == "fireAttack 🔥" &&
     allAttackEnemy == "rockSmash 🦾"
   ) {
-    textDuel = "Winner!!";
+    //textDuel = "Winner!!";
     messageUser();
     enemyLife--;
   } else if (
     playerAttacks == "waterBomb 💧" &&
     allAttackEnemy == "fireAttack 🔥"
   ) {
-    textDuel = "Winner!!";
+    //textDuel = "Winner!!";
     messageUser();
     messageAttack();
     enemyLife--;
   } else {
-    textDuel = "Your Lose!!";
+    //textDuel = "Your Lose!!";
     messageUser();
     messageAttack();
     playerLife--;
@@ -207,9 +215,9 @@ const winnerBattle = () => {
     // = Disabled Player ==
     btnSelectMascot.disabled = true;
     // === Buttons  and Events ===
-    btnFire.disabled = true;
+    /* btnFire.disabled = true;
     btnWater.disabled = true;
-    btnEarth.disabled = true;
+    btnEarth.disabled = true; */
     btnNewGame.style.display = "flex";
     textNewGame.style.display = "flex";
   } else if (enemyLife == 0) {
@@ -217,8 +225,3 @@ const winnerBattle = () => {
     idWinner.appendChild(combatWinner);
   }
 };
-
-//** === Random Function === */
-function random(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) + min);
-}
