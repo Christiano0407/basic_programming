@@ -134,12 +134,6 @@ function attackSequence() {
         playerAttacks.push(`fireAttack🔥👿`);
         console.log(playerAttacks);
         button.style.background = `#EB1D36`;
-      } else if (e.target.textContent === "fireFinally 🧨") {
-        playerAttacks.push(`fireFinally 🧨🔥`);
-        button.style.background = "#FF1E00";
-      } else if (e.target.textContent === "bombFire 🎇") {
-        playerAttacks.push("bombFire 🔥🎇");
-        button.style.background = "#911F27";
       } else if (e.target.textContent === "waterBomb 💧") {
         playerAttacks.push("waterBomb 💧");
         button.style.background = "#00A19D";
