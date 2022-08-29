@@ -152,8 +152,11 @@ function attackSequence() {
       } else if (e.target.textContent === "rockSmash 🦾") {
         playerAttacks.push("rockSmash 🦾");
         button.style.background = "#77D970";
+      } else if (e.target.textContent === "fireFinally 🧨") {
+        playerAttacks.push("fireFinally 🧨👿");
+        button.style.background = `#EB1D75`;
       } else {
-        console.log("Add Player Attacks");
+        console.log("Please, Add New Player Attack");
       }
       console.log(playerAttacks);
       attackRandomEnemy();
@@ -180,13 +183,15 @@ const attackRandomEnemy = () => {
   duelCombat();
 };
 function duelCombat() {
-  if (allAttackEnemy == playerAttacks) {
+  if (allAttackEnemy === playerAttacks) {
     //textDuel = "not Winner";
+    console.log("Finish WIth Empty");
   } else if (
     playerAttacks == "fireAttack 🔥" &&
     allAttackEnemy == "rockSmash 🦾"
   ) {
     //textDuel = "Winner!!";
+    console.log("Winner");
     messageUser();
     enemyLife--;
   } else if (
@@ -194,11 +199,24 @@ function duelCombat() {
     allAttackEnemy == "fireAttack 🔥"
   ) {
     //textDuel = "Winner!!";
+    console.log("Winner");
     messageUser();
     messageAttack();
     enemyLife--;
+  } else if (
+    playerAttacks == "fireAttack 🔥" &&
+    allAttackEnemy == "fireAttack 🔥"
+  ) {
+    console.log("Empty!!");
+  } else if (
+    playerAttacks == "rockSmash 🦾" &&
+    allAttackEnemy == "waterBomb 💧"
+  ) {
+    console.log("Lose!!");
+    playerLife--;
   } else {
     //textDuel = "Your Lose!!";
+    console.log("Your Lose");
     messageUser();
     messageAttack();
     playerLife--;
@@ -210,7 +228,7 @@ function duelCombat() {
 const winnerBattle = () => {
   let combatWinner = document.querySelector(".combat-Win");
   if (playerLife == 0) {
-    combatWinner.textContent = "Player: Your Lose!! & Enemy: Win!!😡";
+    combatWinner.textContent = "Player: Your Lose!! Your Enemy: Win!!😡";
     idWinner.appendChild(combatWinner);
     // = Disabled Player ==
     btnSelectMascot.disabled = true;
