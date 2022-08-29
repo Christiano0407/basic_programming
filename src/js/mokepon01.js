@@ -42,11 +42,11 @@ let btnEarth;
 let allButton;
 let playerLife = 3;
 let enemyLife = 3;
-export let playerAttacks = [];
-export let allAttackEnemy = [];
+let playerAttacks = [];
+let allAttackEnemy = [];
 let attackMokeponEnemy;
-export let indexPlayer;
-export let indexEnemy;
+let indexPlayer;
+let indexEnemy;
 //let enemyAttack = random(1, 3); //Random
 //*! === Random All === */
 function random(min, max) {
@@ -247,7 +247,7 @@ function duelCombat() {
 //*! === Message */
 function messageUser() {
   let paragraphUser = document.createElement("p");
-  paragraphUser.textContent = `User select: ${playerAttacks}`;
+  paragraphUser.textContent = `User select: ${indexPlayer}`;
   paragraphUser.className = "messageUser";
   paragraphUser.id = "idMessageUser";
   divAttack.appendChild(idChild);
