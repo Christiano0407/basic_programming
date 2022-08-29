@@ -1,9 +1,7 @@
 //*? === Imports === */
 //** === Call POO === */
 import { monsterFires, myMokepons } from "./classMokepon.js";
-import { messageUser } from "./mokeponCombat.js";
-import { messageAttack } from "./mokeponCombat.js";
-import { textDuel } from "./mokeponCombat.js";
+//import { textDuel } from "./mokeponCombat.js";
 //** === Call Btn === */
 const btnSelectYourMonster = document.getElementById(`idSelectMonster`);
 //** === Variables => Do not Repeat Yourself ===  */
@@ -21,6 +19,11 @@ const idWinner = document.querySelector("#idWinner");
 const btnSelectMascot = document.getElementById("IdBtnSelect");
 const btnNewGame = document.querySelector("#idNewGame");
 const textNewGame = document.getElementById(`textNew`);
+//** ===  */
+const divAttack = document.querySelector(`#IdChildAttack`);
+const divEnemyAttack = document.querySelector(`#idEnemyChildAttack`);
+const idChild = document.querySelector("#IDchild");
+const idChildTwo = document.querySelector("#IDchildTwo");
 //** === Checked & Select ===  */
 /* const mokeponChecked = document.getElementById(`idMokeponChecked`); */
 const containerList = document.getElementById(`idMokeponList`);
@@ -42,6 +45,8 @@ let enemyLife = 3;
 export let playerAttacks = [];
 export let allAttackEnemy = [];
 let attackMokeponEnemy;
+export let indexPlayer;
+export let indexEnemy;
 //let enemyAttack = random(1, 3); //Random
 //*! === Random All === */
 function random(min, max) {
@@ -92,11 +97,6 @@ const checkedMokepon = () => {
     sectionOneAttack.style.display = "flex";
     textAttack.style.display = "flex";
     textAttackTwo.style.display = "flex";
-    /*
-    idVersus.style.display = "flex";
-    IdChildMonster.style.display = "flex";
-    idMonsterEnemy.style.display = "flex";
-     */
     // === Call Enemy Attack ===
     enemySelectAdd();
     //enemyRandomAttack();
@@ -144,7 +144,7 @@ function attackSequence() {
       //console.log(e.target.textContent);
       if (e.target.textContent === "fireAttack 🔥") {
         playerAttacks.push(`fireAttack🔥👿`);
-        console.log(playerAttacks);
+        //console.log(playerAttacks);
         button.style.background = `#EB1D36`;
       } else if (e.target.textContent === "waterBomb 💧") {
         playerAttacks.push("waterBomb 💧");
@@ -158,7 +158,7 @@ function attackSequence() {
       } else {
         console.log("Please, Add New Player Attack");
       }
-      console.log(playerAttacks);
+      //console.log(playerAttacks);
       attackRandomEnemy();
     });
   });
@@ -178,10 +178,33 @@ const attackRandomEnemy = () => {
   } else {
     allAttackEnemy.push("rockSmash 🦾");
   }
-  console.log(allAttackEnemy);
-  duelCombat();
+  //console.log(allAttackEnemy);
+  initBattleWar();
 };
+
+function initBattleWar() {
+  if (playerAttacks.length === 5) {
+    duelCombat();
+  }
+  secTwoAttack.style.display = "flex";
+  messageUser();
+  messageAttack();
+}
+
+function indexAllOpponent(player, enemy) {
+  indexPlayer = playerAttacks[player];
+  indexEnemy = allAttackEnemy[enemy];
+}
+
 function duelCombat() {
+  for (let i = 0; i < playerAttacks.length; i++) {
+    //console.log(playerAttacks[i]);
+    if (playerAttacks[i] === allAttackEnemy[i]) {
+      indexAllOpponent(i, i);
+      console.log("Empty!! Nothing Winner!!");
+    }
+  }
+
   if (allAttackEnemy === playerAttacks) {
     //textDuel = "not Winner";
     console.log("Finish WIth Empty");
@@ -191,17 +214,14 @@ function duelCombat() {
   ) {
     //textDuel = "Winner!!";
     console.log("Winner");
-    messageUser();
+    //messageUser();
     enemyLife--;
     addLifeEnemy.innerHTML = enemyLife;
   } else if (
     playerAttacks == "waterBomb 💧" &&
     allAttackEnemy == "fireAttack 🔥"
   ) {
-    //textDuel = "Winner!!";
     console.log("Winner");
-    messageUser();
-    messageAttack();
     enemyLife--;
     addLifeEnemy.innerHTML = enemyLife;
   } else if (
@@ -217,14 +237,29 @@ function duelCombat() {
     playerLife--;
     addLifePlayer.innerHTML = playerLife;
   } else {
-    //textDuel = "Your Lose!!";
     console.log("Your Lose");
-    messageUser();
-    messageAttack();
     playerLife--;
     addLifePlayer.innerHTML = playerLife;
   }
   winnerBattle();
+}
+
+//*! === Message */
+function messageUser() {
+  let paragraphUser = document.createElement("p");
+  paragraphUser.textContent = `User select: ${playerAttacks}`;
+  paragraphUser.className = "messageUser";
+  paragraphUser.id = "idMessageUser";
+  divAttack.appendChild(idChild);
+  idChild.appendChild(paragraphUser);
+}
+function messageAttack() {
+  let paragraph = document.createElement("p");
+  paragraph.textContent = `Enemy select: ${allAttackEnemy}`;
+  paragraph.className = "messageEnemy";
+  paragraph.id = "idMessageEnemy";
+  divEnemyAttack.appendChild(idChildTwo);
+  idChildTwo.appendChild(paragraph);
 }
 
 //*! === Add Winner ==> === & Disabled Btn and Attack === */
@@ -236,9 +271,9 @@ const winnerBattle = () => {
     // = Disabled Player ==
     btnSelectMascot.disabled = true;
     // === Buttons  and Events ===
-    /* btnFire.disabled = true;
+    btnFire.disabled = true;
     btnWater.disabled = true;
-    btnEarth.disabled = true; */
+    btnEarth.disabled = true;
     btnNewGame.style.display = "flex";
     textNewGame.style.display = "flex";
   } else if (enemyLife === 0) {

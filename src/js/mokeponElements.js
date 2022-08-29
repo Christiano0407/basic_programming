@@ -1,7 +1,7 @@
 //** === Add Child Elements */
 //*! === Mokepon Monsters Variables === */
-const divMonster = document.querySelector(`#IdChildMonster`);
-const divEnemy = document.querySelector("#idMonsterEnemy");
+//const divMonster = document.querySelector(`#IdChildMonster`);
+//const divEnemy = document.querySelector("#idMonsterEnemy");
 
 //*! === User */
 export const fireAdd = () => {
