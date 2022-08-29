@@ -194,6 +194,7 @@ function duelCombat() {
     console.log("Winner");
     messageUser();
     enemyLife--;
+    addLifeEnemy.innerHTML = enemyLife;
   } else if (
     playerAttacks == "waterBomb 💧" &&
     allAttackEnemy == "fireAttack 🔥"
@@ -203,6 +204,7 @@ function duelCombat() {
     messageUser();
     messageAttack();
     enemyLife--;
+    addLifeEnemy.innerHTML = enemyLife;
   } else if (
     playerAttacks == "fireAttack 🔥" &&
     allAttackEnemy == "fireAttack 🔥"
@@ -214,12 +216,14 @@ function duelCombat() {
   ) {
     console.log("Lose!!");
     playerLife--;
+    addLifePlayer.innerHTML = playerLife;
   } else {
     //textDuel = "Your Lose!!";
     console.log("Your Lose");
     messageUser();
     messageAttack();
     playerLife--;
+    addLifePlayer.innerHTML = playerLife;
   }
   winnerBattle();
 }
@@ -227,7 +231,7 @@ function duelCombat() {
 //*! === Add Winner ==> === & Disabled Btn and Attack === */
 const winnerBattle = () => {
   let combatWinner = document.querySelector(".combat-Win");
-  if (playerLife == 0) {
+  if (playerLife === 0) {
     combatWinner.textContent = "Player: Your Lose!! Your Enemy: Win!!😡";
     idWinner.appendChild(combatWinner);
     // = Disabled Player ==
@@ -238,7 +242,7 @@ const winnerBattle = () => {
     btnEarth.disabled = true; */
     btnNewGame.style.display = "flex";
     textNewGame.style.display = "flex";
-  } else if (enemyLife == 0) {
+  } else if (enemyLife === 0) {
     combatWinner.textContent = "Player: Your Winner 😎!!";
     idWinner.appendChild(combatWinner);
   }
