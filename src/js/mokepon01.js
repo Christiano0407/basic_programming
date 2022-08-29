@@ -43,7 +43,7 @@ export let playerAttacks = [];
 export let allAttackEnemy = [];
 let attackMokeponEnemy;
 //let enemyAttack = random(1, 3); //Random
-//** === Random Function === */
+//*! === Random All === */
 function random(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
@@ -92,7 +92,7 @@ const checkedMokepon = () => {
     sectionOneAttack.style.display = "flex";
     textAttack.style.display = "flex";
     textAttackTwo.style.display = "flex";
-    /* 
+    /*
     idVersus.style.display = "flex";
     IdChildMonster.style.display = "flex";
     idMonsterEnemy.style.display = "flex";
@@ -178,7 +178,6 @@ const attackRandomEnemy = () => {
   } else {
     allAttackEnemy.push("rockSmash 🦾");
   }
-
   console.log(allAttackEnemy);
   duelCombat();
 };
@@ -187,8 +186,8 @@ function duelCombat() {
     //textDuel = "not Winner";
     console.log("Finish WIth Empty");
   } else if (
-    playerAttacks == "fireAttack 🔥" &&
-    allAttackEnemy == "rockSmash 🦾"
+    playerAttacks === "fireAttack 🔥" &&
+    allAttackEnemy === "rockSmash 🦾"
   ) {
     //textDuel = "Winner!!";
     console.log("Winner");
