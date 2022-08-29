@@ -1,11 +1,10 @@
 //*? === Imports === */
-//import { enemyOne } from "./mokeponElements.js";
-//import { enemyTwo } from "./mokeponElements.js";
-//import { enemyThree } from "./mokeponElements.js";
 //** === Call POO === */
 import { monsterFires, myMokepons } from "./classMokepon.js";
+import { messageUser } from "./mokeponCombat.js";
+import { messageAttack } from "./mokeponCombat.js";
+import { textDuel } from "./mokeponCombat.js";
 //** === Call Btn === */
-const btnSelectMascot = document.getElementById("IdBtnSelect");
 const btnSelectYourMonster = document.getElementById(`idSelectMonster`);
 //** === Variables => Do not Repeat Yourself ===  */
 const monsterAdd = document.getElementById(`monsterAdd`);
@@ -15,6 +14,13 @@ const sectionOneAttack = document.getElementById("secSelectAttack");
 const textAttack = document.querySelector(`#idTextAttack`);
 const textAttackTwo = document.querySelector(`.textAttackTwo`);
 const attackImages = document.getElementById("secTwoAttack");
+//** === Winner & Lifes ===  */
+const addLifePlayer = document.querySelector(`#lifePlayer`);
+const addLifeEnemy = document.querySelector(`#lifeEnemy`);
+const idWinner = document.querySelector("#idWinner");
+const btnSelectMascot = document.getElementById("IdBtnSelect");
+const btnNewGame = document.querySelector("#idNewGame");
+const textNewGame = document.getElementById(`textNew`);
 //** === Checked & Select ===  */
 /* const mokeponChecked = document.getElementById(`idMokeponChecked`); */
 const containerList = document.getElementById(`idMokeponList`);
@@ -31,9 +37,10 @@ let btnFire;
 let btnWater;
 let btnEarth;
 let allButton;
-let playerAttacks = [];
-let lifesPlayer = 3;
-let lifesEnemy = 3;
+let playerLife = 3;
+let enemyLife = 3;
+export let playerAttacks = [];
+export let allAttackEnemy = [];
 //let enemyAttack = random(1, 3); //Random
 let enemyAttack = random(0, myMokepons.length - 1); // POO => Mokepon
 
@@ -150,6 +157,65 @@ function attackSequence() {
 //*!  === === Enemy select Attack and Mokepon ===  === */
 const enemySelectAdd = () => {
   enemyMonster.innerHTML = myMokepons[enemyAttack].name;
+};
+
+const attackRandomEnemy = () => {
+  if (enemyAttack == 0 || enemyAttack == 1) {
+    allAttackEnemy.push("fireAttack 🔥");
+  } else if (enemyAttack == 3 || enemyAttack == 4) {
+    allAttackEnemy.push("waterBomb 💧");
+  } else {
+    allAttackEnemy.push("rockSmash 🦾");
+  }
+
+  console.log(allAttackEnemy);
+  duelCombat();
+};
+function duelCombat() {
+  if (allAttackEnemy == playerAttacks) {
+    textDuel = "not Winner";
+  } else if (
+    playerAttacks == "fireAttack 🔥" &&
+    allAttackEnemy == "rockSmash 🦾"
+  ) {
+    textDuel = "Winner!!";
+    messageUser();
+    enemyLife--;
+  } else if (
+    playerAttacks == "waterBomb 💧" &&
+    allAttackEnemy == "fireAttack 🔥"
+  ) {
+    textDuel = "Winner!!";
+    messageUser();
+    messageAttack();
+    enemyLife--;
+  } else {
+    textDuel = "Your Lose!!";
+    messageUser();
+    messageAttack();
+    playerLife--;
+  }
+  winnerBattle();
+}
+
+//*! === Add Winner ==> === & Disabled Btn and Attack === */
+const winnerBattle = () => {
+  let combatWinner = document.querySelector(".combat-Win");
+  if (playerLife == 0) {
+    combatWinner.textContent = "Player: Your Lose!! & Enemy: Win!!😡";
+    idWinner.appendChild(combatWinner);
+    // = Disabled Player ==
+    btnSelectMascot.disabled = true;
+    // === Buttons  and Events ===
+    btnFire.disabled = true;
+    btnWater.disabled = true;
+    btnEarth.disabled = true;
+    btnNewGame.style.display = "flex";
+    textNewGame.style.display = "flex";
+  } else if (enemyLife == 0) {
+    combatWinner.textContent = "Player: Your Winner 😎!!";
+    idWinner.appendChild(combatWinner);
+  }
 };
 
 //** === Random Function === */
