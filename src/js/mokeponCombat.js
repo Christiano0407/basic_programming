@@ -1,8 +1,9 @@
 //** === Combat Duel  Mokepon ===  */
 //*? === Import ==== Do not Repeat Yourself === */
-import { playAttack } from "./mokeponAttack03.js";
-import { enemyAttack } from "./mokeponAttack03.js";
-import { divAttack } from "./mokeponAttack03.js";
+//import { playAttack } from "./mokeponAttack03.js";
+//import { enemyAttack } from "./mokeponAttack03.js";
+import { myMokepons } from "./classMokepon.js";
+import { divAttack, enemyAttack } from "./mokeponAttack03.js";
 import { divEnemyAttack } from "./mokeponAttack03.js";
 import { idChild } from "./mokeponAttack03.js";
 import { idChildTwo } from "./mokeponAttack03.js";
@@ -17,41 +18,20 @@ const btnEarth = document.querySelector(`#btnMokeponEarth`);
 const btnNewGame = document.querySelector("#idNewGame");
 const textNewGame = document.getElementById(`textNew`);
 //*! === General Variable */
+let playAttack;
+let enemyPowerAttack;
 let playerLife = 3;
 let enemyLife = 3;
 let textDuel;
 
 //*? === Duel = Combat === */
 export const combatDuel = () => {
-  if (playAttack === enemyAttack) {
-    textDuel = "Similar Power!!";
-  } else if (
-    playAttack === "Fire Finally!!" &&
-    enemyAttack === "Arrow Attack"
-  ) {
-    textDuel = "Player: Winner";
-    enemyLife--;
-    addLifeEnemy.innerHTML = enemyLife;
-  } else if (
-    playAttack === "Water Bomb!!" &&
-    enemyAttack === "Thunder Splash!!"
-  ) {
-    textDuel = "Player: Lose!!";
-    playerLife--;
-    addLifePlayer.innerHTML = playerLife;
-  } else if (playAttack === "Rock Smash!!" && enemyAttack === "Rock Bottom") {
-    textDuel = "Player: Winner!!";
-    enemyLife--;
-    addLifeEnemy.innerHTML = enemyLife;
-  } else {
-    console.log("Player: Your Lose!! Never, Never Game other part!");
-    textDuel = "Player: Your Lose!";
-    playerLife--;
-    addLifePlayer.innerHTML = playerLife;
+  if (myMokepons[enemyAttack].name === `MonsterFire`) {
+    console.log("Winn");
   }
-  messageUser();
-  messageAttack();
-  winnerBattle();
+  //messageUser();
+  //messageAttack();
+  //winnerBattle();
 };
 //combatDuel();
 //*! === Message */
@@ -90,4 +70,4 @@ const winnerBattle = () => {
     combatWinner.textContent = "Player: Your Winner 😎!!";
     idWinner.appendChild(combatWinner);
   }
-};
+}; 

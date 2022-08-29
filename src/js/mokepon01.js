@@ -1,11 +1,7 @@
 //*? === Imports === */
-/* import { enemyOne } from "./mokeponElements.js";
-import { enemyTwo } from "./mokeponElements.js";
-import { enemyThree } from "./mokeponElements.js";
-import { enemyRandomAttack } from "./mokeponAttack03.js";
-import { fireAttack } from "./mokeponAttack03.js";
-import { waterAttack } from "./mokeponAttack03.js";
-import { earthAttack } from "./mokeponAttack03.js"; */
+//import { enemyOne } from "./mokeponElements.js";
+//import { enemyTwo } from "./mokeponElements.js";
+//import { enemyThree } from "./mokeponElements.js";
 //** === Call POO === */
 import { monsterFires, myMokepons } from "./classMokepon.js";
 //** === Call Btn === */
@@ -35,7 +31,9 @@ let btnFire;
 let btnWater;
 let btnEarth;
 let allButton;
-let userPlayAttack;
+let playerAttacks = [];
+let lifesPlayer = 3;
+let lifesEnemy = 3;
 //let enemyAttack = random(1, 3); //Random
 let enemyAttack = random(0, myMokepons.length - 1); // POO => Mokepon
 
@@ -89,6 +87,7 @@ const checkedMokepon = () => {
      */
     // === Call Enemy Attack ===
     enemySelectAdd();
+    //enemyRandomAttack();
     monsterAdd.style.display = "none";
     idMascotTextSelect.style.display = "none";
     divBtn.style.display = "none";
@@ -130,16 +129,33 @@ function attackSequence() {
   allButton.forEach((button) => {
     button.addEventListener(`click`, (e) => {
       e.preventDefault();
-      console.log(e.target.textContent);
+      //console.log(e.target.textContent);
+      if (e.target.textContent === "fireAttack 🔥") {
+        playerAttacks.push(`fireAttack🔥👿`);
+        console.log(playerAttacks);
+        button.style.background = `#EB1D36`;
+      } else if (e.target.textContent === "fireFinally 🧨") {
+        playerAttacks.push(`fireFinally 🧨🔥`);
+        button.style.background = "#FF1E00";
+      } else if (e.target.textContent === "bombFire 🎇") {
+        playerAttacks.push("bombFire 🔥🎇");
+        button.style.background = "#911F27";
+      } else if (e.target.textContent === "waterBomb 💧") {
+        playerAttacks.push("waterBomb 💧");
+        button.style.background = "#00A19D";
+      } else if (e.target.textContent === "rockSmash 🦾") {
+        playerAttacks.push("rockSmash 🦾");
+        button.style.background = "#77D970";
+      } else {
+        console.log("Add Player Attacks");
+      }
+      console.log(playerAttacks);
     });
   });
 }
-
-/* checkedMokepon(); */
-//*! === Enemy select Attack and Mokepon === */
+//*!  === === Enemy select Attack and Mokepon ===  === */
 const enemySelectAdd = () => {
   enemyMonster.innerHTML = myMokepons[enemyAttack].name;
-  /* attackSequence(); */
 };
 
 //** === Random Function === */
