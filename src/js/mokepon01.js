@@ -181,67 +181,57 @@ const attackRandomEnemy = () => {
   console.log(allAttackEnemy);
   initBattleWar();
 };
-
+//*! === Init Battle */
 function initBattleWar() {
-  if (playerAttacks.length == 5) {
+  if (playerAttacks.length === 5) {
     duelCombat();
   }
   secTwoAttack.style.display = "flex";
-  //messageUser();
-  //messageAttack();
 }
-
-function indexAllOpponent(player, enemy) {
+//*! === Index */
+function indexBothOfThemOpponent(player, enemy) {
   indexPlayer = playerAttacks[player];
   indexEnemy = allAttackEnemy[enemy];
 }
-
+//*! === Combat */
 function duelCombat() {
-  for (let index = 0; index < playerAttacks.length; index++) {
+  for (let i = 0; i < playerAttacks.length; i++) {
     //console.log(playerAttacks[i]);
-    if (playerAttacks[index] == allAttackEnemy[index]) {
-      indexAllOpponent(index, index);
-      console.log("Empty!! Nothing Winner!!");
+    if (playerAttacks[i] === allAttackEnemy[i]) {
+      indexBothOfThemOpponent(i, i);
+      createMessage("Empty");
+      console.log("Empty");
+    } else if (
+      playerAttacks[i] === "fireAttack 🔥" &&
+      allAttackEnemy[i] === "waterBomb 💧"
+    ) {
+      //createMessage("Player Winner");
+      console.log("Player Win!");
+      indexBothOfThemOpponent(i, i);
+      enemyLife--;
+    } else if (
+      playerAttacks[i] === "waterBomb 💧" &&
+      allAttackEnemy[i] === "rockSmash 🦾"
+    ) {
+      console.log("Win");
+      indexBothOfThemOpponent(i, i);
+      enemyLife--;
+    } else if (
+      playerAttacks[i] === "rockSmash 🦾" &&
+      allAttackEnemy[i] === "fireAttack 🔥"
+    ) {
+      console.log("Lose!");
+      indexBothOfThemOpponent(i, i);
+      playerLife--;
+    } else {
+      console.log("Loser!");
+      indexBothOfThemOpponent(i, i);
+      playerLife--;
     }
   }
 
-  if (allAttackEnemy == playerAttacks) {
-    //textDuel = "not Winner";
-    console.log("Finish WIth Empty");
-  } else if (
-    playerAttacks == "fireAttack 🔥" &&
-    allAttackEnemy == "rockSmash 🦾"
-  ) {
-    //textDuel = "Winner!!";
-    console.log("Winner");
-    //messageUser();
-    enemyLife--;
-    addLifeEnemy.innerHTML = enemyLife;
-  } else if (
-    playerAttacks == "waterBomb 💧" &&
-    allAttackEnemy == "fireAttack 🔥"
-  ) {
-    console.log("Winner");
-    enemyLife--;
-    addLifeEnemy.innerHTML = enemyLife;
-  } else if (
-    playerAttacks == "fireAttack 🔥" &&
-    allAttackEnemy == "fireAttack 🔥"
-  ) {
-    console.log("Empty!!");
-  } else if (
-    playerAttacks == "rockSmash 🦾" &&
-    allAttackEnemy == "waterBomb 💧"
-  ) {
-    console.log("Lose!!");
-    playerLife--;
-    addLifePlayer.innerHTML = playerLife;
-  } else {
-    console.log("Your Lose");
-    playerLife--;
-    addLifePlayer.innerHTML = playerLife;
-  }
-  winnerBattle();
+  // === Call ===
+  winnerBattleLife();
   messageUser();
   messageAttack();
 }
@@ -249,23 +239,32 @@ function duelCombat() {
 //*! === Message */
 function messageUser() {
   let paragraphUser = document.createElement("p");
-  paragraphUser.textContent = `User: ${playerAttacks}`;
+  paragraphUser.textContent = `User: ${playerAttacks} and ${indexPlayer}`;
   paragraphUser.className = "messageUser";
   paragraphUser.id = "idMessageUser";
-  divAttack.appendChild(idChild);
-  idChild.appendChild(paragraphUser);
+  divAttack.append(idChild);
+  idChild.append(paragraphUser);
 }
 function messageAttack() {
   let paragraph = document.createElement("p");
-  paragraph.textContent = `Enemy: ${allAttackEnemy}`;
+  paragraph.textContent = `Enemy: ${allAttackEnemy} and ${indexEnemy}`;
   paragraph.className = "messageEnemy";
   paragraph.id = "idMessageEnemy";
   divEnemyAttack.appendChild(idChildTwo);
   idChildTwo.appendChild(paragraph);
 }
 
+function createMessage(text) {
+  let paragraphMessage = document.createElement("p");
+  paragraphMessage.textContent = text;
+  paragraphMessage.className = "messageCreate";
+  paragraphMessage.id = "idMessageCreate";
+  divAttack.append(idChild);
+  idChild.append(paragraphMessage);
+}
+
 //*! === Add Winner ==> === & Disabled Btn and Attack === */
-const winnerBattle = () => {
+const winnerBattleLife = () => {
   let combatWinner = document.querySelector(".combat-Win");
   if (playerLife === 0) {
     combatWinner.textContent = "Player: Your Lose!! Your Enemy: Win!!😡";

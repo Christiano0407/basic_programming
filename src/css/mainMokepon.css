@@ -301,7 +301,8 @@ span {
 }
 
 .messageEnemy,
-.messageUser {
+.messageUser,
+.messageCreate {
     font-size: 1rem;
     font-weight: 400;
     color: #000;
