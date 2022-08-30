@@ -36,10 +36,10 @@ let inputWater;
 let inputEarth;
 let nameMokeponPlayer;
 let allAttackMokepon;
+let allButton;
 let btnFire;
 let btnWater;
 let btnEarth;
-let allButton;
 let playerVictory = 0;
 let enemyVictory = 0;
 let playerLife = 3;
@@ -83,15 +83,17 @@ const checkedMokepon = () => {
       playMonster.innerHTML = inputFire.id;
       nameMokeponPlayer = inputFire.id;
       btnFire = document.querySelector(`#btnMokeponFire`);
-      btnFire.addEventListener("click", extraAttacks);
+      btnFire.addEventListener(`click`, extraAttacks);
     } else if (inputWater.checked) {
       playMonster.innerHTML = inputWater.id;
       nameMokeponPlayer = inputWater.id;
-      extraAttacks();
+      btnWater = document.getElementById(`btnMokeponWater`);
+      btnWater.addEventListener("click", extraAttacks);
     } else if (inputEarth.checked) {
       playMonster.innerHTML = inputEarth.id;
       nameMokeponPlayer = inputEarth.id;
-      extraAttacks();
+      btnEarth = document.getElementById(`btnMokeponEarth`);
+      btnEarth.addEventListener("click", extraAttacks);
     } else {
       alert("Sorry!! Your Not Select One. Please. select your Mokepon");
     }
@@ -132,9 +134,6 @@ function allAttacks(powerAttack) {
 
     containerList.innerHTML += allAttackMokepon;
   });
-  /* btnFire = document.querySelector(`#btnMokeponFire`); */
-  btnWater = document.querySelector(`#btnMokeponWater`);
-  btnEarth = document.querySelector(`#btnMokeponEarth`);
   allButton = document.querySelectorAll(`.BAttack`);
   attackSequence();
 }
@@ -148,15 +147,22 @@ function attackSequence() {
         playerAttacks.push(`fireAttack🔥👿`);
         //console.log(playerAttacks);
         button.style.background = `#EB1D36`;
+        button.disabled = true;
+        btnFire.disabled = true;
       } else if (e.target.textContent === "waterBomb 💧") {
         playerAttacks.push("waterBomb 💧");
         button.style.background = "#00A19D";
+        button.disabled = true;
+        btnWater.disabled = true;
       } else if (e.target.textContent === "rockSmash 🦾") {
         playerAttacks.push("rockSmash 🦾");
         button.style.background = "#77D970";
+        button.disabled = true;
+        btnEarth.disabled = true;
       } else if (e.target.textContent === "fireFinally 🧨") {
         playerAttacks.push("fireFinally 🧨👿");
         button.style.background = `#EB1D75`;
+        button.disabled = true;
       } else {
         console.log("Please, Add New Player Attack");
       }
@@ -297,9 +303,6 @@ const winnerBattleLife = () => {
     //idWinner.appendChild(combatWinner);
   }
   btnSelectMascot.disabled = true;
-  /* btnFire.disabled = true;
-  btnWater.disabled = true;
-  btnEarth.disabled = true; */
   btnNewGame.style.display = "flex";
   textNewGame.style.display = "flex";
 };
