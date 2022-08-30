@@ -40,6 +40,8 @@ let btnFire;
 let btnWater;
 let btnEarth;
 let allButton;
+let playerVictory = 0;
+let enemyVictory = 0;
 let playerLife = 3;
 let enemyLife = 3;
 let playerAttacks = [];
@@ -199,37 +201,47 @@ function duelCombat() {
     //console.log(playerAttacks[i]);
     if (playerAttacks[i] === allAttackEnemy[i]) {
       indexBothOfThemOpponent(i, i);
-      createMessage("Empty");
-      console.log("Empty");
+      createMessage("Nothing Win!");
+      /* enemyLife--;
+      addLifeEnemy = enemyLife; */
+      playerVictory++;
+      addLifePlayer = playerVictory;
     } else if (
       playerAttacks[i] === "fireAttack 🔥" &&
       allAttackEnemy[i] === "waterBomb 💧"
     ) {
       //createMessage("Player Winner");
-      console.log("Player Win!");
+      console.log("Player Lose!");
       indexBothOfThemOpponent(i, i);
-      addLifeEnemy.innerHTML = enemyLife--;
+      /* addLifePlayer.innerHTML = playerLife--; */
+      enemyVictory += 1;
+      addLifeEnemy.innerHTML = enemyVictory;
     } else if (
       playerAttacks[i] === "waterBomb 💧" &&
       allAttackEnemy[i] === "rockSmash 🦾"
     ) {
       console.log("Win");
       indexBothOfThemOpponent(i, i);
-      addLifePlayer.innerHTML = enemyLife--;
+      /* addLifeEnemy.innerHTML = enemyLife--; */
+      playerVictory += 1;
+      addLifePlayer.innerHTML = playerVictory;
     } else if (
       playerAttacks[i] === "rockSmash 🦾" &&
       allAttackEnemy[i] === "fireAttack 🔥"
     ) {
       console.log("Lose!");
       indexBothOfThemOpponent(i, i);
-      addLifePlayer.innerHTML = playerLife--;
+      /*  addLifePlayer.innerHTML = playerLife--; */
+      enemyVictory++;
+      addLifeEnemy.innerHTML = enemyVictory;
     } else {
       console.log("Loser!");
       indexBothOfThemOpponent(i, i);
-      addLifePlayer.innerHTML = playerLife--;
+      /* addLifePlayer.innerHTML = playerLife--; */
+      enemyVictory++;
+      addLifePlayer.innerHTML = enemyVictory;
     }
   }
-
   // === Call ===
   winnerBattleLife();
   messageUser();
@@ -266,19 +278,28 @@ function createMessage(text) {
 //*! === Add Winner ==> === & Disabled Btn and Attack === */
 const winnerBattleLife = () => {
   let combatWinner = document.querySelector(".combat-Win");
-  if (playerLife === 0) {
+  /* if (playerLife === 0) {
     combatWinner.textContent = "Player: Your Lose!! Your Enemy: Win!!😡";
-    idWinner.appendChild(combatWinner);
     // = Disabled Player ==
-    btnSelectMascot.disabled = true;
     // === Buttons  and Events ===
-    btnFire.disabled = true;
-    btnWater.disabled = true;
-    btnEarth.disabled = true;
-    btnNewGame.style.display = "flex";
-    textNewGame.style.display = "flex";
   } else if (enemyLife === 0) {
     combatWinner.textContent = "Player: Your Winner 😎!!";
     idWinner.appendChild(combatWinner);
+  } */
+  if (playerVictory === enemyVictory) {
+    combatWinner.textContent = "Nothing Winner!";
+    //idWinner.appendChild(combatWinner);
+  } else if (playerVictory > enemyVictory) {
+    combatWinner.textContent = "User Player Win!!";
+    //idWinner.appendChild(combatWinner);
+  } else {
+    combatWinner.textContent = "Your Lose!";
+    //idWinner.appendChild(combatWinner);
   }
+  btnSelectMascot.disabled = true;
+  btnFire.disabled = true;
+  btnWater.disabled = true;
+  btnEarth.disabled = true;
+  btnNewGame.style.display = "flex";
+  textNewGame.style.display = "flex";
 };
