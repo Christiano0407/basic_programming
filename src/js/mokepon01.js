@@ -136,7 +136,7 @@ function allAttacks(powerAttack) {
   allButton = document.querySelectorAll(`.BAttack`);
   attackSequence();
 }
-//*! === Attack */
+//*! === Attack and Color Btn === */
 function attackSequence() {
   allButton.forEach((button) => {
     button.addEventListener(`click`, (e) => {
@@ -158,7 +158,7 @@ function attackSequence() {
       } else {
         console.log("Please, Add New Player Attack");
       }
-      //console.log(playerAttacks);
+      console.log(playerAttacks);
       attackRandomEnemy();
     });
   });
@@ -178,17 +178,17 @@ const attackRandomEnemy = () => {
   } else {
     allAttackEnemy.push("rockSmash 🦾");
   }
-  //console.log(allAttackEnemy);
+  console.log(allAttackEnemy);
   initBattleWar();
 };
 
 function initBattleWar() {
-  if (playerAttacks.length === 5) {
+  if (playerAttacks.length == 5) {
     duelCombat();
   }
   secTwoAttack.style.display = "flex";
-  messageUser();
-  messageAttack();
+  //messageUser();
+  //messageAttack();
 }
 
 function indexAllOpponent(player, enemy) {
@@ -197,20 +197,20 @@ function indexAllOpponent(player, enemy) {
 }
 
 function duelCombat() {
-  for (let i = 0; i < playerAttacks.length; i++) {
+  for (let index = 0; index < playerAttacks.length; index++) {
     //console.log(playerAttacks[i]);
-    if (playerAttacks[i] === allAttackEnemy[i]) {
-      indexAllOpponent(i, i);
+    if (playerAttacks[index] == allAttackEnemy[index]) {
+      indexAllOpponent(index, index);
       console.log("Empty!! Nothing Winner!!");
     }
   }
 
-  if (allAttackEnemy === playerAttacks) {
+  if (allAttackEnemy == playerAttacks) {
     //textDuel = "not Winner";
     console.log("Finish WIth Empty");
   } else if (
-    playerAttacks === "fireAttack 🔥" &&
-    allAttackEnemy === "rockSmash 🦾"
+    playerAttacks == "fireAttack 🔥" &&
+    allAttackEnemy == "rockSmash 🦾"
   ) {
     //textDuel = "Winner!!";
     console.log("Winner");
@@ -242,12 +242,14 @@ function duelCombat() {
     addLifePlayer.innerHTML = playerLife;
   }
   winnerBattle();
+  messageUser();
+  messageAttack();
 }
 
 //*! === Message */
 function messageUser() {
   let paragraphUser = document.createElement("p");
-  paragraphUser.textContent = `User select: ${indexPlayer}`;
+  paragraphUser.textContent = `User: ${playerAttacks}`;
   paragraphUser.className = "messageUser";
   paragraphUser.id = "idMessageUser";
   divAttack.appendChild(idChild);
@@ -255,7 +257,7 @@ function messageUser() {
 }
 function messageAttack() {
   let paragraph = document.createElement("p");
-  paragraph.textContent = `Enemy select: ${allAttackEnemy}`;
+  paragraph.textContent = `Enemy: ${allAttackEnemy}`;
   paragraph.className = "messageEnemy";
   paragraph.id = "idMessageEnemy";
   divEnemyAttack.appendChild(idChildTwo);
