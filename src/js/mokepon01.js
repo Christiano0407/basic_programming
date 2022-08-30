@@ -208,25 +208,25 @@ function duelCombat() {
       //createMessage("Player Winner");
       console.log("Player Win!");
       indexBothOfThemOpponent(i, i);
-      enemyLife--;
+      addLifeEnemy.innerHTML = enemyLife--;
     } else if (
       playerAttacks[i] === "waterBomb 💧" &&
       allAttackEnemy[i] === "rockSmash 🦾"
     ) {
       console.log("Win");
       indexBothOfThemOpponent(i, i);
-      enemyLife--;
+      addLifePlayer.innerHTML = enemyLife--;
     } else if (
       playerAttacks[i] === "rockSmash 🦾" &&
       allAttackEnemy[i] === "fireAttack 🔥"
     ) {
       console.log("Lose!");
       indexBothOfThemOpponent(i, i);
-      playerLife--;
+      addLifePlayer.innerHTML = playerLife--;
     } else {
       console.log("Loser!");
       indexBothOfThemOpponent(i, i);
-      playerLife--;
+      addLifePlayer.innerHTML = playerLife--;
     }
   }
 
