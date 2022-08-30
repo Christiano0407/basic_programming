@@ -204,8 +204,8 @@ function duelCombat() {
       createMessage("Nothing Win!");
       /* enemyLife--;
       addLifeEnemy = enemyLife; */
-      playerVictory++;
-      addLifePlayer = playerVictory;
+      //playerVictory++;
+      //addLifePlayer = playerVictory;
     } else if (
       playerAttacks[i] === "fireAttack 🔥" &&
       allAttackEnemy[i] === "waterBomb 💧"
@@ -297,9 +297,9 @@ const winnerBattleLife = () => {
     //idWinner.appendChild(combatWinner);
   }
   btnSelectMascot.disabled = true;
-  btnFire.disabled = true;
+  /* btnFire.disabled = true;
   btnWater.disabled = true;
-  btnEarth.disabled = true;
+  btnEarth.disabled = true; */
   btnNewGame.style.display = "flex";
   textNewGame.style.display = "flex";
 };
