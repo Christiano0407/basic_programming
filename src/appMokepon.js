@@ -13,12 +13,15 @@ const idChildMonster = document.querySelector(`#IdChildMonster`);
 const idMonsterEnemy = document.querySelector(`#idMonsterEnemy`);
 const textAttack = document.querySelector(`#idTextAttack`);
 const textAttackTwo = document.querySelector(`.textAttackTwo`);
+const idMapSection = document.getElementById(`idMapSection`);
 
 //*TODO ===  ===  Code === ===  === === === === === === === === === */
 //** === Init Game === */
 const initGame = () => {
   // >> Btn Init Game ==
   btnSelectMascot.addEventListener(`click`, checkedAdd);
+  //> === Canvas
+  idMapSection.style.display = "none";
   // == Display None ==
   sectionOneAttack.style.display = "none";
   attackImages.style.display = "none";
