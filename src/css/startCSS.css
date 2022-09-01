@@ -1,0 +1,67 @@
+/** === Import  */
+@import url("./startCSS/mainStart.css");
+@import url("./startCSS/startBtn.css");
+
+/** === Root */
+:root {
+    --clr-white: #fff;
+    --clr-black: #000;
+    --bg-color: #8AA6A3;
+    --clr-mokepon-logo: #D90416;
+    --clr-mokepon-bg: #079DD9;
+    --clr-mokepon-bg2: #41BDD9;
+    --clr-principal: #C6D93B;
+    --clr-secondary: #6DBF1B;
+    /* = Font = */
+    --font-family-principal: 'Silkscreen', cursive;
+}
+
+/** = ===== ====  Css Style General  ======= ======== =*/
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+img {
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+    margin: 2rem auto;
+}
+
+p,
+span {
+    letter-spacing: 0.1rem;
+}
+
+body {
+    width: 100%;
+    background-color: #fff;
+}
+
+main {
+    width: 100%;
+    margin: 0 auto;
+    position: sticky;
+}
