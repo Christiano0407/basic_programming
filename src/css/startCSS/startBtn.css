@@ -1,12 +1,20 @@
 .btn {
     padding: 1.5rem 2rem;
-    font-size: 1rem;
-    font-weight: 900;
-    font-family: var(--font-family-principal);
     border-radius: .5rem;
     border: none;
     background-color: #f2f2f2;
     color: #333;
+}
+
+.btn a {
+    font-weight: 900;
+    font-family: var(--font-family-principal);
+    font-size: 1rem;
+    color: #333;
+}
+
+.btn a:hover {
+    color: #f2f2f2;
 }
 
 .button-game {

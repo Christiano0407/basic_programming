@@ -18,14 +18,6 @@
     position: relative;
 }
 
-.start--grid__two {
-    width: 100%;
-    height: 100vh;
-    grid-column: 2 / 3;
-    grid-row: auto;
-    background-color: blue;
-}
-
 .mokepon-gameImg {
     width: 100%;
     height: 100%;
@@ -63,4 +55,39 @@ figure .mokepon-img {
     font-family: var(--font-family-principal);
     font-weight: 900;
     color: #f2f2f2;
+}
+
+/* === Section Two Image Mookepon === */
+.start--grid__two {
+    width: 100%;
+    height: 100vh;
+    grid-column: 2 / 3;
+    grid-row: auto;
+    position: relative;
+}
+
+.divMokepon-image {
+    width: 100%;
+    height: 100vh;
+    background-color: #00E3CC;
+    position: absolute;
+}
+
+.figure-image {
+    width: 50rem;
+    height: 60rem;
+    /* outline: 4px solid #f2f2f2; */
+    position: relative;
+    top: 10%;
+    left: 75px;
+}
+
+.figure-image .image-mokepon {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    object-fit: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
