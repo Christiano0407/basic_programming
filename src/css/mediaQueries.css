@@ -78,25 +78,30 @@
     }
 }
 
+@media (min-width: 576px) and (max-width: 767px) {}
+
 /* ===> */
 @media (min-width: 768px) {
     #idTitleMokepon {
-        margin: 1rem auto;
+        margin: 2rem auto;
+        font-size: 8rem;
     }
 
     #idMascotSelect {
         margin: 1rem auto;
+        font-size: 2.5rem;
     }
 
     #textNew {
         text-align: center;
     }
+
+    #IdBtnSelect {
+        padding: 1.5rem 3rem;
+    }
 }
 
 @media (min-width: 1024px) {
-    #idTitleMokepon {
-        font-size: 4.5rem;
-    }
 
     #idCombatWin {
         width: 90%;

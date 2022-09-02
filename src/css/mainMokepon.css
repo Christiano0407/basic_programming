@@ -2,68 +2,20 @@
 main .main--grid {
     height: 100vh;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-    gap: 1rem;
-    /*  background-image: url("../assets/img/back01.jpg");
-    object-fit: cover; */
 }
 
 .main--grid__one {
-    grid-column: 1 / 2;
     grid-row: auto;
-    /* background-color: var(--clr-white); */
-    background-image: url("../assets/img/back02.jpg");
+    background-image: url("../assets/img/pokemonArena.jpg");
     object-fit: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    filter: saturate(0.5);
+    filter: saturate(0.6);
 }
 
-.main--grid__two {
-    width: 100%;
-    /*  background-color: var(--clr-mokepon-bg); */
-    /*  clip-path: polygon(100% 0, 100% 0, 100% 100%, 0% 100%); */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.grid--images {
-    width: 100%;
-    /*  clip-path: polygon(100% 0, 100% 0, 100% 100%, 0% 100%); */
-    /*  background-color: var(--clr-mokepon-bg); */
-    background-image: url("../assets/img/background03.jpg");
-    object-fit: cover;
-    height: 100%;
-    position: relative;
-    filter: brightness(0.5);
-}
 
-.main--grid__two figure {
-    width: 350px;
-    height: 350px;
-    position: absolute;
-    z-index: 10;
-    /*  left: 55%;
-    top: 25%; */
-}
-
-.main--grid__two figure .image-mokepon {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.title--section {
-    grid-column: 1 / 2;
-}
-
-.title--section__div {
-    width: 100%;
-    padding: 2rem;
-}
 
 .titleMokepon {
     text-align: center;
@@ -94,6 +46,11 @@ main .main--grid {
 .monster-Add {
     width: 100%;
     margin: 2rem auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-flow: row;
+    grid-template-rows: 1fr;
+    gap: 1rem;
 }
 
 .div-btn {
