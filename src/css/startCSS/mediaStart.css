@@ -25,6 +25,7 @@
     .button-game {
         left: 25%;
         padding: 2rem 3.5rem;
+        top: 22.5%;
     }
 
     .button-game a {
@@ -83,35 +84,35 @@
 
     .figure-image {
         width: 45rem;
-        height: 55rem;
+        height: 50rem;
         top: 20%;
         left: 35px;
     }
 
     .button-game {
-        left: 17.5rem;
+        left: 18rem;
         padding: 2rem 4rem;
+        top: 25%;
     }
 }
 
 @media (min-width: 1440px) {
     .figure-image {
-        width: 70rem;
-        height: 75rem;
-        top: 10%;
-        left: 5px;
+        width: 55rem;
+        height: 60rem;
+        top: 20%;
+        left: 12.5%;
     }
 
     .figure-one {
-        width: 60rem;
-        height: 65rem;
         top: 20%;
-        left: 5%;
+        left: 11rem;
+        width: 50rem;
     }
 
     .button-game {
-        left: 25rem;
-        top: 20%;
+        left: 27.5rem;
+        top: 30%;
     }
 }
 
