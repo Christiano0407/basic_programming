@@ -1,4 +1,23 @@
-@media (max-width: 370px) {}
+@media (max-width: 370px) {
+    #figureOne {
+        width: 250px;
+        height: 250px;
+        top: 25%;
+    }
+
+    #idBtnGame {
+        top: 30%;
+        padding: 1rem 1rem;
+        left: 6rem;
+    }
+
+    #figureImageTwo {
+        top: 30%;
+        left: 40px;
+        width: 25rem;
+        height: 30rem;
+    }
+}
 
 @media (max-width: 575px) {
     .start-grid {
@@ -13,19 +32,20 @@
     }
 
     .mokepon-title {
-        font-size: 8rem;
+        font-size: 5rem;
     }
 
     .figure-one {
         left: 10%;
         width: 450px;
         height: 500px;
+        top: 15%;
     }
 
     .button-game {
         left: 25%;
         padding: 2rem 3.5rem;
-        top: 22.5%;
+        top: 20%;
     }
 
     .button-game a {
@@ -73,13 +93,15 @@
 }
 
 @media (min-width: 1024px) {
-    .mokepon-title {
+    /* .mokepon-title {
         font-size: 7rem;
-    }
+    } */
 
     .figure-one {
         width: 40rem;
         height: 45rem;
+        left: 20%;
+        top: 20%;
     }
 
     .figure-image {
@@ -90,7 +112,7 @@
     }
 
     .button-game {
-        left: 18rem;
+        left: 22.2rem;
         padding: 2rem 4rem;
         top: 25%;
     }
