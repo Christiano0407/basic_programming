@@ -46,6 +46,7 @@ main .main--grid {
 .monster-Add {
     width: 100%;
     margin: 2rem auto;
+    margin-bottom: 3rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-auto-flow: row;
@@ -61,8 +62,11 @@ main .main--grid {
     margin: 1rem auto;
 }
 
+/* === Mokepon Card === */
 .mokepon-card {
-    width: 35%;
+    width: 90%;
+    height: 35rem;
+    background-color: #f2f2f2;
     border-radius: 1rem;
     margin: 1rem auto;
     display: flex;
@@ -71,8 +75,12 @@ main .main--grid {
     flex-direction: column;
 }
 
+.mokepon-card:active {
+    transform: scale(0.9);
+}
+
 .label-text {
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-align: center;
     font-weight: 700;
     color: #333;
@@ -85,9 +93,9 @@ main .main--grid {
 .monsterFire-img,
 .waterBomb-img,
 .punchEarth-img {
-    width: 12.5rem;
-    height: 10rem;
-    object-fit: contain;
+    width: 100%;
+    height: 35rem;
+    object-fit: cover;
     background-size: cover;
 }
 

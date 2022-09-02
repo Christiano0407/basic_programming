@@ -1,5 +1,5 @@
 button {
-    padding: 1rem;
+    padding: 1.5rem 3rem;
     background-color: var(--clr-mokepon-bg2);
     color: #fff;
     border-radius: 1rem;
@@ -16,7 +16,7 @@ button:active {
 }
 
 .btnMokepon {
-    padding: 1rem;
+    padding: 1.5rem 3rem;
     border: 2px solid var(--clr-mokepon-bg);
     border-radius: 1rem;
     background-color: var(--clr-mokepon-bg2);
