@@ -73,6 +73,9 @@ main .main--grid {
     /*  justify-content: space-between; */
     align-items: center;
     flex-direction: column;
+    overflow: hidden;
+    min-width: 24rem;
+    max-width: 320rem;
 }
 
 .mokepon-card:active {
@@ -93,10 +96,18 @@ main .main--grid {
 .monsterFire-img,
 .waterBomb-img,
 .punchEarth-img {
-    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    transition: all 0.3s;
     height: 35rem;
     object-fit: cover;
     background-size: cover;
+}
+
+.mokepon-card:hover .monsterFire-img,
+.waterBomb-img,
+.punchEarth-img {
+    transform: scale(1.3) rotate(5deg);
 }
 
 input {
