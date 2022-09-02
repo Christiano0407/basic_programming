@@ -35,6 +35,7 @@
         grid-column: 1;
         grid-row: 2 / 3;
     }
+
     .figure-image {
         top: 15%;
         left: 40px;
@@ -43,11 +44,44 @@
 
 @media only screen and (max-width: 414px) and (min-width: 736px) {}
 
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+    .mokepon-title {
+        font-size: 5.5rem;
+    }
 
-@media (min-width: 1024px) {}
+    .figure-one {
+        width: 300px;
+        height: 350px;
+        left: 10%;
+        top: 30%;
+    }
 
-@media (min-width: 1440px) {}
+    .button-game {
+        top: 40%;
+        left: 35%;
+    }
+
+    .figure-image {
+        width: 30rem;
+        height: 3.5rem;
+        background-size: contain;
+        object-fit: contain;
+    }
+}
+
+@media (min-width: 1024px) {
+    .figure-image {
+        width: 5rem;
+        height: 5.5rem;
+    }
+}
+
+@media (min-width: 1440px) {
+    .figure-image {
+        width: 6rem;
+        height: 6.5rem;
+    }
+}
 
 /*Media Orientation====*/
 @media screen and (orientation: landscape) {
