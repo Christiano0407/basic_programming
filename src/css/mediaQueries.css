@@ -90,6 +90,7 @@
     #idMascotSelect {
         margin: 1rem auto;
         font-size: 2.5rem;
+        font-weight: 500;
     }
 
     #textNew {
@@ -98,6 +99,15 @@
 
     #IdBtnSelect {
         padding: 1.5rem 3rem;
+    }
+
+    .mokepon-card {
+        height: 45rem;
+        width: 80%;
+    }
+
+    .label-text {
+        font-size: 1.6rem;
     }
 }
 
@@ -111,6 +121,20 @@
     #textNew {
         font-size: 3.5rem;
         text-align: center;
+    }
+
+    .mokepon-card {
+        height: 45rem;
+        width: 90%;
+    }
+
+    .monsterFire-img {
+        height: 37.5rem;
+    }
+
+    .label-text {
+        font-size: 1.8rem;
+
     }
 }
 

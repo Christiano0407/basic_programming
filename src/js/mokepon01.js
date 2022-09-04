@@ -55,7 +55,9 @@ export const checkedAdd = () => {
           <input type="radio" name="mascot" class="mokepon-Checked" id=${mokepon.name} />
     <label class="mokepon-card" id="idMokeponCard" for=${mokepon.name}>
           <img class="monsterFire-img" src=${mokepon.image} alt=${mokepon.name}>
-          <p class="label-text">${mokepon.name}</p>
+          <div class="card-animation" id="idCardAnimation">
+            <p class="label-text">${mokepon.name}</p>
+          </div>
     </label>
      `;
     //> DOM ===

@@ -59,7 +59,7 @@ main .main--grid {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin: 1rem auto;
+    margin: 2rem auto;
 }
 
 /* === Mokepon Card === */
@@ -125,15 +125,20 @@ main .main--grid {
 }
 
 /* = animation = */
-/* .mokepon-card:hover::after {
-    content: " ";
+.card-animation {
+    height: 5rem;
     width: 90%;
-    height: 35%;
-    background-color: black;
-    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .card-animation:hover {
     position: relative;
-    z-index: 10;
-    position: relative
+    overflow: hidden;
+    height: 100px;
+    transform: scaleY(1.1);
+    transition: all 03s ease;
 } */
 
 input {
