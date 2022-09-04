@@ -81,6 +81,7 @@ main .main--grid {
 
 .mokepon-card:active {
     transform: scale(0.9);
+    filter: grayscale(1);
 }
 
 /* === Change Color Card ===*/
