@@ -1,6 +1,7 @@
 /** === Import  */
 @import url("./startCSS/mainStart.css");
 @import url("./startCSS/startBtn.css");
+@import url("./mokeponCard.css");
 
 /** === Root */
 :root {
@@ -10,7 +11,7 @@
     --clr-mokepon-logo: #D90416;
     --clr-mokepon-bg: #079DD9;
     --clr-mokepon-bg2: #41BDD9;
-    --clr-two-section: #00E3CC; 
+    --clr-two-section: #00E3CC;
     --clr-principal: #C6D93B;
     --clr-secondary: #6DBF1B;
     /* = Font = */
