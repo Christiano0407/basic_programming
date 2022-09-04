@@ -124,6 +124,18 @@ main .main--grid {
     transform: scale(1.3) rotate(5deg);
 }
 
+/* = animation = */
+/* .mokepon-card:hover::after {
+    content: " ";
+    width: 90%;
+    height: 35%;
+    background-color: black;
+    border-radius: 5px;
+    position: relative;
+    z-index: 10;
+    position: relative
+} */
+
 input {
     margin: .5rem auto;
     display: none;
