@@ -19,7 +19,7 @@ const btnSelectMascot = document.getElementById("IdBtnSelect");
 /* const mokeponChecked = document.getElementById(`idMokeponChecked`); */
 export const containerList = document.getElementById(`idMokeponList`);
 const idTitleMokepon = document.getElementById(`idTitleMokepon`);
-//*! === Section CANVAS === */
+//** === === Section CANVAS === >>> */
 const idMapSection = document.getElementById(`idMapSection`);
 const map = document.querySelector(`#idMap`);
 //* ===  General Variable ===  */
@@ -37,7 +37,7 @@ export let btnWater;
 export let btnEarth;
 export let playerAttacks = [];
 export let allAttackEnemy = [];
-//*! === CANVAS */
+//**  === === CANVAS  === === >>> */
 let pencil = map.getContext("2d");
 
 //let enemyAttack = random(1, 3); //Random
@@ -97,14 +97,14 @@ const checkedMokepon = () => {
     btnSelectMascot.disabled = true;
     sectionOneAttack.style.display = "flex";
     idTitleMokepon.style.display = "none";
-    //> === Canvas ===
+    //> === Canvas === >>>>>>>>>
     idMapSection.style.display = "flex";
     let imageMokeponFire = new Image();
     //imageMokeponFire.src = `/src/assets/img/mokepon1.png`;
     imageMokeponFire.src = monsterFires.image;
     //pencil.fillRect(5, 10, 50, 25);
-    pencil.drawImage(imageMokeponFire, 20, 40, 100, 75);
-    //> === display
+    pencil.drawImage(imageMokeponFire, 20, 40, 75, 50);
+    //> === display >>>>>>>>>
     textAttack.style.display = "flex";
     textAttackTwo.style.display = "flex";
     monsterAdd.style.display = "none";

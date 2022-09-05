@@ -1,5 +1,22 @@
+/* === Section Canvas === */
+.map-mokepon {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 1rem auto;
+}
+
+.titleMap {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #f2f2f2;
+    margin: 1rem auto;
+}
+
 /* === Canvas === */
 .map-canvas {
+    width: 80rem;
+    height: 40rem;
     flex-direction: column;
     align-items: center;
     justify-content: center;

@@ -337,16 +337,3 @@ span {
     font-family: var(--font-family-principal);
 }
 
-/* === Section Canvas === */
-.map-mokepon {
-    flex-direction: column;
-    width: 100%;
-    margin: 1rem auto;
-}
-
-.titleMap {
-    font-size: 2rem;
-    font-weight: 900;
-    color: #f2f2f2;
-    margin: 1rem auto;
-}

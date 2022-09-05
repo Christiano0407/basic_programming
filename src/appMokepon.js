@@ -20,7 +20,7 @@ const idMapSection = document.getElementById(`idMapSection`);
 const initGame = () => {
   // >> Btn Init Game ==
   btnSelectMascot.addEventListener(`click`, checkedAdd);
-  //> === Canvas
+  //> === Canvas ===> >>>>
   idMapSection.style.display = "none";
   // == Display None ==
   sectionOneAttack.style.display = "none";
