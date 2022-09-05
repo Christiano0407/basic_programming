@@ -11,6 +11,8 @@ const btnMoveMokeponLeft = document.getElementById("idBtnMoveMokeponLeft");
 const btnMoveMokeponTop = document.getElementById("idBtnMoveMokeponTop");
 const btnMoveMokeponBottom = document.getElementById("idBtnMoveMokeponBottom");
 //const moveBtn = document.getElementById("#idMoveBtn");
+//** === General Variables ===  */
+let interval;
 //**  === === CANVAS  === === >>> */
 let pencil = map.getContext("2d");
 
@@ -28,6 +30,8 @@ class Mokepon {
     this.height = 25;
     this.mapImage = new Image();
     this.mapImage.src = image;
+    this.fastX = 0;
+    this.fastY = 0;
   }
 }
 
@@ -86,31 +90,10 @@ myMokepons.push(monsterFires, waterBombs, punchEarths);
   console.log(mokepon.attack);
   console.log(mokepon.power);
 }); */
-//*! === Canvas Map */
-export const selectCanvasMokepon = () => {
-  // === Canvas ===
-  idMapSection.style.display = "flex";
-  //let imageMokeponFire = new Image();
-  //imageMokeponFire.src = `/src/assets/img/mokepon1.png`;
-  //imageMokeponFire.src = monsterFires.image;
-  //pencil.fillRect(5, 10, 50, 25);
-  //pencil.drawImage(imageMokeponFire, 20, 40, 75, 50);
-};
-//*! === Events Btn === */
-btnMoveMokepon.addEventListener("click", () => {
-  moveMokeponTravelRight();
-});
-btnMoveMokeponLeft.addEventListener("click", () => {
-  moveMokeponTravelLeft();
-});
-btnMoveMokeponTop.addEventListener("click", () => {
-  moveMokeponTravelTop();
-});
-btnMoveMokeponBottom.addEventListener("click", () => {
-  moveMokeponTravelBottom();
-});
 //*! === Draw Mokepon POO ===  */
 function drawMokepon() {
+  monsterFires.x += monsterFires.fastX;
+  monsterFires.y += monsterFires.fastY;
   pencil.clearRect(0, 0, map.width, map.height); // ===> Clear my Canvas <===
   pencil.drawImage(
     monsterFires.mapImage,
@@ -120,21 +103,64 @@ function drawMokepon() {
     monsterFires.height
   );
 }
+//*! === Canvas Map */
+export const selectCanvasMokepon = () => {
+  // === Canvas ===
+  idMapSection.style.display = "flex";
+  //let imageMokeponFire = new Image();
+  //imageMokeponFire.src = `/src/assets/img/mokepon1.png`;
+  //imageMokeponFire.src = monsterFires.image;
+  //pencil.fillRect(5, 10, 50, 25);
+  //pencil.drawImage(imageMokeponFire, 20, 40, 75, 50);
+  interval = setInterval(drawMokepon, 50);
+};
+//*! === Events Btn Move === */
+btnMoveMokepon.addEventListener("mouseover", () => {
+  moveMokeponTravelRight();
+});
+btnMoveMokeponLeft.addEventListener("mouseover", () => {
+  moveMokeponTravelLeft();
+});
+btnMoveMokeponTop.addEventListener("mouseover", () => {
+  moveMokeponTravelTop();
+});
+btnMoveMokeponBottom.addEventListener("mouseover", () => {
+  moveMokeponTravelBottom();
+});
+//*! === Event Btn Stop  === */
+btnMoveMokepon.addEventListener("mouseup", () => {
+  stopMoveMokepon();
+});
+btnMoveMokeponLeft.addEventListener("mouseup", () => {
+  stopMoveMokepon();
+});
+btnMoveMokeponTop.addEventListener("mouseup", () => {
+  stopMoveMokepon();
+});
+btnMoveMokeponBottom.addEventListener("mouseup", () => {
+  stopMoveMokepon();
+});
+
 //*! === Function Btn Mokepon ===  */
 const moveMokeponTravelRight = () => {
-  monsterFires.x += 5;
-  drawMokepon();
+  monsterFires.fastX = 5;
+  //drawMokepon();
 };
 
 const moveMokeponTravelLeft = () => {
-  monsterFires.x -= 5;
-  drawMokepon();
+  monsterFires.fastX = -5;
+  //drawMokepon();
 };
 const moveMokeponTravelTop = () => {
-  monsterFires.y -= 5;
-  drawMokepon();
+  monsterFires.fastY = -5;
+  //drawMokepon();
 };
 const moveMokeponTravelBottom = () => {
-  monsterFires.y += 5;
-  drawMokepon();
+  monsterFires.fastY = 5;
+  //drawMokepon();
+};
+//*! === Stop Move Mokepon === */
+const stopMoveMokepon = () => {
+  monsterFires.fastX = 0;
+  monsterFires.fastY = 0;
 };
