@@ -30,3 +30,7 @@ button:active {
 .btnMokepon:active {
     transform: scale(0.9);
 }
+
+.move-mokepon {
+    padding: 1rem;
+}

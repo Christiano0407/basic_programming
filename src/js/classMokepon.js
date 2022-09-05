@@ -15,6 +15,9 @@ const btnMoveMokeponBottom = document.getElementById("idBtnMoveMokeponBottom");
 let interval;
 //**  === === CANVAS  === === >>> */
 let pencil = map.getContext("2d");
+let arenaBackground = new Image();
+arenaBackground.src = "/src/assets/img/pokemonArena02.jpg";
+//arenaBackground.style.background = "object-fit";
 
 //*! === Class === */
 class Mokepon {
@@ -26,8 +29,8 @@ class Mokepon {
     this.attack = [];
     this.x = 20;
     this.y = 30;
-    this.width = 50;
-    this.height = 25;
+    this.width = 75;
+    this.height = 50;
     this.mapImage = new Image();
     this.mapImage.src = image;
     this.fastX = 0;
@@ -95,6 +98,7 @@ function drawMokepon() {
   monsterFires.x += monsterFires.fastX;
   monsterFires.y += monsterFires.fastY;
   pencil.clearRect(0, 0, map.width, map.height); // ===> Clear my Canvas <===
+  pencil.drawImage(arenaBackground, 0, 0, map.width, map.height);
   pencil.drawImage(
     monsterFires.mapImage,
     monsterFires.x,
@@ -112,9 +116,7 @@ export const selectCanvasMokepon = () => {
   //imageMokeponFire.src = monsterFires.image;
   //pencil.fillRect(5, 10, 50, 25);
   //pencil.drawImage(imageMokeponFire, 20, 40, 75, 50);
-  window.addEventListener("keydown", touchInitKey);
-  window.addEventListener("keyup", stopMoveMokepon);
-  interval = setInterval(drawMokepon, 50);
+  touchKeyMap();
 };
 //*! === Events Btn Move === */
 btnMoveMokepon.addEventListener("mouseover", () => {
@@ -169,7 +171,27 @@ const stopMoveMokepon = () => {
   monsterFires.fastY = 0;
 };
 
+//*! === Load Window Key Touch MOve and Stop === */
+const touchKeyMap = () => {
+  map.width = 800;
+  map.height = 400;
+  window.addEventListener("keydown", touchInitKey);
+  window.addEventListener("keyup", stopMoveMokepon);
+  interval = setInterval(drawMokepon, 50);
+};
+
 //*! Touch Init Key === */
 const touchInitKey = (e) => {
-  console.log(e.key);
+  //console.log(e.key);
+  if (e.key === "ArrowRight") {
+    moveMokeponTravelRight();
+  } else if (e.key === "ArrowLeft") {
+    moveMokeponTravelLeft();
+  } else if (e.key === "ArrowUp") {
+    moveMokeponTravelTop();
+  } else if (e.key === "ArrowDown") {
+    moveMokeponTravelBottom();
+  } else {
+    console.log("Error Key");
+  }
 };
