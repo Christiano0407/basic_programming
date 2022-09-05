@@ -112,6 +112,8 @@ export const selectCanvasMokepon = () => {
   //imageMokeponFire.src = monsterFires.image;
   //pencil.fillRect(5, 10, 50, 25);
   //pencil.drawImage(imageMokeponFire, 20, 40, 75, 50);
+  window.addEventListener("keydown", touchInitKey);
+  window.addEventListener("keyup", stopMoveMokepon);
   interval = setInterval(drawMokepon, 50);
 };
 //*! === Events Btn Move === */
@@ -141,6 +143,8 @@ btnMoveMokeponBottom.addEventListener("mouseup", () => {
   stopMoveMokepon();
 });
 
+//*TODO ===> Event Key (keyup, keydown) ==> Teclado ===  */
+
 //*! === Function Btn Mokepon ===  */
 const moveMokeponTravelRight = () => {
   monsterFires.fastX = 5;
@@ -163,4 +167,9 @@ const moveMokeponTravelBottom = () => {
 const stopMoveMokepon = () => {
   monsterFires.fastX = 0;
   monsterFires.fastY = 0;
+};
+
+//*! Touch Init Key === */
+const touchInitKey = (e) => {
+  console.log(e.key);
 };
