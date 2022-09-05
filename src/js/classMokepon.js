@@ -7,6 +7,9 @@ export let myMokepons = [];
 const idMapSection = document.getElementById(`idMapSection`);
 const map = document.querySelector(`#idMap`);
 const btnMoveMokepon = document.getElementById("idBtnMoveMokepon");
+const btnMoveMokeponLeft = document.getElementById("idBtnMoveMokeponLeft");
+const btnMoveMokeponTop = document.getElementById("idBtnMoveMokeponTop");
+const btnMoveMokeponBottom = document.getElementById("idBtnMoveMokeponBottom");
 //const moveBtn = document.getElementById("#idMoveBtn");
 //**  === === CANVAS  === === >>> */
 let pencil = map.getContext("2d");
@@ -21,8 +24,8 @@ class Mokepon {
     this.attack = [];
     this.x = 20;
     this.y = 30;
-    this.width = 100;
-    this.height = 75;
+    this.width = 50;
+    this.height = 25;
     this.mapImage = new Image();
     this.mapImage.src = image;
   }
@@ -93,11 +96,20 @@ export const selectCanvasMokepon = () => {
   //pencil.fillRect(5, 10, 50, 25);
   //pencil.drawImage(imageMokeponFire, 20, 40, 75, 50);
 };
-
+//*! === Events Btn === */
 btnMoveMokepon.addEventListener("click", () => {
-  moveMokeponTravel();
+  moveMokeponTravelRight();
 });
-
+btnMoveMokeponLeft.addEventListener("click", () => {
+  moveMokeponTravelLeft();
+});
+btnMoveMokeponTop.addEventListener("click", () => {
+  moveMokeponTravelTop();
+});
+btnMoveMokeponBottom.addEventListener("click", () => {
+  moveMokeponTravelBottom();
+});
+//*! === Draw Mokepon POO ===  */
 function drawMokepon() {
   pencil.clearRect(0, 0, map.width, map.height); // ===> Clear my Canvas <===
   pencil.drawImage(
@@ -108,8 +120,21 @@ function drawMokepon() {
     monsterFires.height
   );
 }
-//> Call Button ===
-const moveMokeponTravel = () => {
+//*! === Function Btn Mokepon ===  */
+const moveMokeponTravelRight = () => {
   monsterFires.x += 5;
+  drawMokepon();
+};
+
+const moveMokeponTravelLeft = () => {
+  monsterFires.x -= 5;
+  drawMokepon();
+};
+const moveMokeponTravelTop = () => {
+  monsterFires.y -= 5;
+  drawMokepon();
+};
+const moveMokeponTravelBottom = () => {
+  monsterFires.y += 5;
   drawMokepon();
 };

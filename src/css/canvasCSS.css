@@ -13,6 +13,14 @@
     margin: 1rem auto;
 }
 
+.div-canvas {
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto;
+}
+
 /* === Canvas === */
 .map-canvas {
     width: 80rem;
