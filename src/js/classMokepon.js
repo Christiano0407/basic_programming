@@ -1,8 +1,8 @@
 //** === Prove POO (Programming Oriented Object) === */
-
+//** === Import  */
+import { nameMokeponPlayer } from "./mokepon01.js";
 //*! === Variable Mokepon === */
 export let myMokepons = [];
-
 //** === === Section CANVAS === >>> */
 const idMapSection = document.getElementById(`idMapSection`);
 const map = document.querySelector(`#idMap`);
@@ -13,6 +13,8 @@ const btnMoveMokeponBottom = document.getElementById("idBtnMoveMokeponBottom");
 //const moveBtn = document.getElementById("#idMoveBtn");
 //** === General Variables ===  */
 let interval;
+let mokeponPlayerCanvas;
+//console.log(mokeponPlayerCanvas);
 //**  === === CANVAS  === === >>> */
 let pencil = map.getContext("2d");
 let arenaBackground = new Image();
@@ -95,16 +97,16 @@ myMokepons.push(monsterFires, waterBombs, punchEarths);
 }); */
 //*! === Draw Mokepon POO ===  */
 function drawMokepon() {
-  monsterFires.x += monsterFires.fastX;
-  monsterFires.y += monsterFires.fastY;
+  mokeponPlayerCanvas.x += mokeponPlayerCanvas.fastX;
+  mokeponPlayerCanvas.y += mokeponPlayerCanvas.fastY;
   pencil.clearRect(0, 0, map.width, map.height); // ===> Clear my Canvas <===
   pencil.drawImage(arenaBackground, 0, 0, map.width, map.height);
   pencil.drawImage(
-    monsterFires.mapImage,
-    monsterFires.x,
-    monsterFires.y,
-    monsterFires.width,
-    monsterFires.height
+    mokeponPlayerCanvas.mapImage,
+    mokeponPlayerCanvas.x,
+    mokeponPlayerCanvas.y,
+    mokeponPlayerCanvas.width,
+    mokeponPlayerCanvas.height
   );
 }
 //*! === Canvas Map */
@@ -149,32 +151,33 @@ btnMoveMokeponBottom.addEventListener("mouseup", () => {
 
 //*! === Function Btn Mokepon ===  */
 const moveMokeponTravelRight = () => {
-  monsterFires.fastX = 5;
+  mokeponPlayerCanvas.fastX = 5;
   //drawMokepon();
 };
 
 const moveMokeponTravelLeft = () => {
-  monsterFires.fastX = -5;
+  mokeponPlayerCanvas.fastX = -5;
   //drawMokepon();
 };
 const moveMokeponTravelTop = () => {
-  monsterFires.fastY = -5;
+  mokeponPlayerCanvas.fastY = -5;
   //drawMokepon();
 };
 const moveMokeponTravelBottom = () => {
-  monsterFires.fastY = 5;
+  mokeponPlayerCanvas.fastY = 5;
   //drawMokepon();
 };
 //*! === Stop Move Mokepon === */
 const stopMoveMokepon = () => {
-  monsterFires.fastX = 0;
-  monsterFires.fastY = 0;
+  mokeponPlayerCanvas.fastX = 0;
+  mokeponPlayerCanvas.fastY = 0;
 };
 
 //*! === Load Window Key Touch MOve and Stop === */
 const touchKeyMap = () => {
   map.width = 800;
   map.height = 400;
+  mokeponPlayerCanvas = mokeponCanvas(nameMokeponPlayer);
   window.addEventListener("keydown", touchInitKey);
   window.addEventListener("keyup", stopMoveMokepon);
   interval = setInterval(drawMokepon, 50);
@@ -195,3 +198,18 @@ const touchInitKey = (e) => {
     console.log("Error Key");
   }
 };
+
+//*! === Call Select Mokepon Player In CANVAS === */
+function mokeponCanvas() {
+  /* myMokepons.forEach((mokepon) => {
+    if (nameMokeponPlayer === mokepon.name) {
+      return mokepon;
+    }
+  }); */
+
+  for (let i = 0; i < myMokepons.length; i++) {
+    if (nameMokeponPlayer === myMokepons[i].name) {
+      return myMokepons[i];
+    }
+  }
+}

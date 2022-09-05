@@ -27,12 +27,7 @@ let allButton;
 //*! === Attack Player === */
 export const extraAttacks = () => {
   let powerAttack;
-  myMokepons.forEach((mokepon) => {
-    if (nameMokeponPlayer === mokepon.name) {
-      powerAttack = mokepon.attack;
-    }
-    //console.log(powerAttack);
-  });
+  
   allAttacks(powerAttack);
 };
 
