@@ -6,6 +6,7 @@ export let myMokepons = [];
 //** === === Section CANVAS === >>> */
 const idMapSection = document.getElementById(`idMapSection`);
 const map = document.querySelector(`#idMap`);
+const btnMoveMokepon = document.getElementById("idBtnMoveMokepon");
 //const moveBtn = document.getElementById("#idMoveBtn");
 //**  === === CANVAS  === === >>> */
 let pencil = map.getContext("2d");
@@ -91,8 +92,11 @@ export const selectCanvasMokepon = () => {
   //imageMokeponFire.src = monsterFires.image;
   //pencil.fillRect(5, 10, 50, 25);
   //pencil.drawImage(imageMokeponFire, 20, 40, 75, 50);
-  moveMokeponTravel();
 };
+
+btnMoveMokepon.addEventListener("click", () => {
+  moveMokeponTravel();
+});
 
 function drawMokepon() {
   pencil.clearRect(0, 0, map.width, map.height); // ===> Clear my Canvas <===
@@ -106,6 +110,6 @@ function drawMokepon() {
 }
 //> Call Button ===
 const moveMokeponTravel = () => {
-  monsterFires.x = monsterFires.x + 5;
+  monsterFires.x += 5;
   drawMokepon();
 };

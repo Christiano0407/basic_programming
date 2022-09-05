@@ -96,6 +96,7 @@ const checkedMokepon = () => {
     idTitleMokepon.style.display = "none";
     // === CANVAS ===
     selectCanvasMokepon();
+    
     //> === display >>>>>>>>>
     textAttack.style.display = "flex";
     textAttackTwo.style.display = "flex";
