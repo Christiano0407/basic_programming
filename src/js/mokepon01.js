@@ -3,6 +3,7 @@
 import { monsterFires, myMokepons } from "./classMokepon.js";
 import { extraAttacks } from "./mokeponElements.js";
 import { enemySelectAdd } from "./mokeponElements.js";
+import { selectCanvasMokepon } from "./classMokepon.js";
 //import { textDuel } from "./mokeponCombat.js";
 //** === Call Btn === */
 const btnSelectYourMonster = document.getElementById(`idSelectMonster`);
@@ -19,9 +20,7 @@ const btnSelectMascot = document.getElementById("IdBtnSelect");
 /* const mokeponChecked = document.getElementById(`idMokeponChecked`); */
 export const containerList = document.getElementById(`idMokeponList`);
 const idTitleMokepon = document.getElementById(`idTitleMokepon`);
-//** === === Section CANVAS === >>> */
-const idMapSection = document.getElementById(`idMapSection`);
-const map = document.querySelector(`#idMap`);
+
 //* ===  General Variable ===  */
 let playMonster = document.querySelector(`#playerMonster`); // Span del Player =
 export let enemyMonster = document.querySelector("#enemyMonster");
@@ -37,8 +36,6 @@ export let btnWater;
 export let btnEarth;
 export let playerAttacks = [];
 export let allAttackEnemy = [];
-//**  === === CANVAS  === === >>> */
-let pencil = map.getContext("2d");
 
 //let enemyAttack = random(1, 3); //Random
 //*! === Random All === */
@@ -97,13 +94,8 @@ const checkedMokepon = () => {
     btnSelectMascot.disabled = true;
     sectionOneAttack.style.display = "flex";
     idTitleMokepon.style.display = "none";
-    //> === Canvas === >>>>>>>>>
-    idMapSection.style.display = "flex";
-    let imageMokeponFire = new Image();
-    //imageMokeponFire.src = `/src/assets/img/mokepon1.png`;
-    imageMokeponFire.src = monsterFires.image;
-    //pencil.fillRect(5, 10, 50, 25);
-    pencil.drawImage(imageMokeponFire, 20, 40, 75, 50);
+    // === CANVAS ===
+    selectCanvasMokepon();
     //> === display >>>>>>>>>
     textAttack.style.display = "flex";
     textAttackTwo.style.display = "flex";

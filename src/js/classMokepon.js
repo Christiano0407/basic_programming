@@ -3,6 +3,13 @@
 //*! === Variable Mokepon === */
 export let myMokepons = [];
 
+//** === === Section CANVAS === >>> */
+const idMapSection = document.getElementById(`idMapSection`);
+const map = document.querySelector(`#idMap`);
+//const moveBtn = document.getElementById("#idMoveBtn");
+//**  === === CANVAS  === === >>> */
+let pencil = map.getContext("2d");
+
 //*! === Class === */
 class Mokepon {
   constructor(name, image, life, power) {
@@ -11,6 +18,12 @@ class Mokepon {
     this.life = life;
     this.power = power;
     this.attack = [];
+    this.x = 20;
+    this.y = 30;
+    this.width = 100;
+    this.height = 75;
+    this.mapImage = new Image();
+    this.mapImage.src = image;
   }
 }
 
@@ -69,3 +82,30 @@ myMokepons.push(monsterFires, waterBombs, punchEarths);
   console.log(mokepon.attack);
   console.log(mokepon.power);
 }); */
+//*! === Canvas Map */
+export const selectCanvasMokepon = () => {
+  // === Canvas ===
+  idMapSection.style.display = "flex";
+  //let imageMokeponFire = new Image();
+  //imageMokeponFire.src = `/src/assets/img/mokepon1.png`;
+  //imageMokeponFire.src = monsterFires.image;
+  //pencil.fillRect(5, 10, 50, 25);
+  //pencil.drawImage(imageMokeponFire, 20, 40, 75, 50);
+  moveMokeponTravel();
+};
+
+function drawMokepon() {
+  pencil.clearRect(0, 0, map.width, map.height); // ===> Clear my Canvas <===
+  pencil.drawImage(
+    monsterFires.mapImage,
+    monsterFires.x,
+    monsterFires.y,
+    monsterFires.width,
+    monsterFires.height
+  );
+}
+//> Call Button ===
+const moveMokeponTravel = () => {
+  monsterFires.x = monsterFires.x + 5;
+  drawMokepon();
+};
