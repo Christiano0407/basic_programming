@@ -60,13 +60,14 @@ span {
 body {
     width: 100%;
     background-color: #fff;
+    /*  position: fixed;
+    overflow: hidden; */
 }
 
 main {
     width: 100%;
     margin: 0 auto;
-    /*  height: 100vh; */
-    position: sticky;
+    height: 100vh;
 }
 
 section {

@@ -14,9 +14,6 @@ main .main--grid {
     filter: saturate(0.6);
 }
 
-
-
-
 .titleMokepon {
     text-align: center;
     font-size: 3.5rem;
@@ -39,7 +36,7 @@ main .main--grid {
     text-align: center;
     font-size: 3rem;
     font-weight: 900;
-    margin: 2rem auto;
+    margin: 1rem auto;
     color: var(--clr-mokepon-bg);
 }
 
@@ -182,7 +179,7 @@ input:checked+label {
 
 .select-attack {
     width: 100%;
-    margin: 0 auto;
+    margin: 1rem auto;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -190,8 +187,10 @@ input:checked+label {
 
 .textAttack,
 .textAttackTwo {
+    width: 90%;
     display: flex;
     align-items: center;
+    margin: 0 auto;
     font-size: 1.4rem;
     color: #333;
     font-weight: 400;
@@ -199,7 +198,7 @@ input:checked+label {
 }
 
 span {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     color: var(--clr-mokepon-bg2);
     font-weight: bold;
     padding: .5rem;
@@ -336,4 +335,18 @@ span {
     color: var(--clr-mokepon-logo);
     margin: 1rem auto;
     font-family: var(--font-family-principal);
+}
+
+/* === Section Canvas === */
+.map-mokepon {
+    flex-direction: column;
+    width: 100%;
+    margin: 1rem auto;
+}
+
+.titleMap {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #f2f2f2;
+    margin: 1rem auto;
 }
