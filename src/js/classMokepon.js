@@ -25,18 +25,18 @@ arenaBackground.src = "/src/assets/img/pokemonArena02.jpg";
 
 //*! === Class === */
 class Mokepon {
-  constructor(name, image, life, power) {
+  constructor(name, image, life, power, imageCanvas, x = 10, y = 10) {
     this.name = name;
     this.image = image;
     this.life = life;
     this.power = power;
     this.attack = [];
-    this.x = 70;
-    this.y = 160;
+    this.x = x;
+    this.y = y;
     this.width = 100;
     this.height = 50;
     this.mapImage = new Image();
-    this.mapImage.src = image;
+    this.mapImage.src = imageCanvas;
     this.fastX = 0;
     this.fastY = 0;
   }
@@ -46,20 +46,23 @@ export let monsterFires = new Mokepon(
   `MonsterFire`,
   `/src/assets/img/mokepon1.png`,
   3,
-  65
+  65,
+  `/src/assets/img/mokepon1.png`
 );
 
 export let waterBombs = new Mokepon(
   `WaterBomb`,
   `/src/assets/img/mokepon2.png`,
   3,
-  60
+  60,
+  `/src/assets/img/mokepon2.png`
 );
 export let punchEarths = new Mokepon(
   `PunchEarth`,
   "/src/assets/img/mokepon3.png",
   3,
-  70
+  70,
+  `/src/assets/img/mokepon3.png`
 );
 //*! === Call My Mokepons => Methods === */
 monsterFires.attack.push(
