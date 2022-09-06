@@ -1,6 +1,7 @@
 //** === Prove POO (Programming Oriented Object) === */
 //** === Import  */
 import { nameMokeponPlayer } from "./mokepon01.js";
+import { enemySelectAdd } from "./mokeponElements.js";
 //*! === Variable Mokepon === */
 export let myMokepons = [];
 //** === === Section CANVAS === >>> */
@@ -15,6 +16,7 @@ const idDivCanvas = document.querySelector("#idDivCanvas");
 //** === General Variables ===  */
 let interval;
 let mokeponPlayerCanvas;
+let mokeponEnemyCanvas;
 //console.log(mokeponPlayerCanvas);
 //**  === === CANVAS  === === >>> */
 let pencil = map.getContext("2d");
@@ -40,6 +42,10 @@ class Mokepon {
     this.fastX = 0;
     this.fastY = 0;
   }
+  // = Methods =
+  drawMokepon() {
+    pencil.drawImage(this.mapImage, this.x, this.y, this.width, this.height);
+  }
 }
 
 export let monsterFires = new Mokepon(
@@ -64,6 +70,36 @@ export let punchEarths = new Mokepon(
   70,
   `/src/assets/img/mokepon3.png`
 );
+//*? === Enemy */
+export let monsterFiresEnemy = new Mokepon(
+  `MonsterFire`,
+  `/src/assets/img/mokeponCha.png`,
+  5,
+  95,
+  `/src/assets/img/mokeponCha.png`,
+  550,
+  250
+);
+
+export let waterBombsEnemy = new Mokepon(
+  `WaterBomb`,
+  `/src/assets/img/mokepon4.png`,
+  2,
+  70,
+  `/src/assets/img/mokepon4.png`,
+  400,
+  160
+);
+export let punchEarthsEnemy = new Mokepon(
+  `PunchEarth`,
+  "/src/assets/img/mokepon3.png",
+  5,
+  80,
+  `/src/assets/img/mokepon3.png`,
+  600,
+  120
+);
+
 //*! === Call My Mokepons => Methods === */
 monsterFires.attack.push(
   { name: "fireAttack 🔥", id: "btnMokeponFire", power: 75, level: 1 },
@@ -106,13 +142,10 @@ function drawMokepon() {
   mokeponPlayerCanvas.y += mokeponPlayerCanvas.fastY;
   pencil.clearRect(0, 0, map.width, map.height); // ===> Clear my Canvas <===
   pencil.drawImage(arenaBackground, 0, 0, map.width, map.height);
-  pencil.drawImage(
-    mokeponPlayerCanvas.mapImage,
-    mokeponPlayerCanvas.x,
-    mokeponPlayerCanvas.y,
-    mokeponPlayerCanvas.width,
-    mokeponPlayerCanvas.height
-  );
+  mokeponPlayerCanvas.drawMokepon();
+  monsterFiresEnemy.drawMokepon();
+  waterBombsEnemy.drawMokepon();
+  punchEarthsEnemy.drawMokepon();
   idDivCanvas.style.display = "none"; // === Change Btn Mouseover ===
 }
 //*! === Canvas Map */
