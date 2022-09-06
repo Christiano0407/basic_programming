@@ -149,6 +149,8 @@ function drawMokepon() {
   //collisionMokepon();
   if (mokeponPlayerCanvas.fastX !== 0 || mokeponPlayerCanvas.fastY !== 0) {
     collisionAllMokepon(monsterFiresEnemy);
+    collisionAllMokepon(waterBombsEnemy);
+    collisionAllMokepon(punchEarthsEnemy);
   }
   idDivCanvas.style.display = "none"; // === Change Btn Mouseover ===
 }
@@ -299,5 +301,6 @@ function collisionAllMokepon(enemy) {
   ) {
     return;
   }
-  console.log("Collision!!!");
+  stopMoveMokepon();
+  console.log("Collision! With: " + " " + enemy.name);
 }
