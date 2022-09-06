@@ -147,6 +147,7 @@ function drawMokepon() {
   waterBombsEnemy.drawMokepon();
   punchEarthsEnemy.drawMokepon();
   idDivCanvas.style.display = "none"; // === Change Btn Mouseover ===
+  collisionMokepon();
 }
 //*! === Canvas Map */
 export const selectCanvasMokepon = () => {
@@ -252,3 +253,23 @@ function mokeponCanvas() {
     }
   }
 }
+
+//*! === Intersection Collision === */
+const collisionMokepon = () => {
+  if (
+    mokeponPlayerCanvas.x + mokeponPlayerCanvas.width > monsterFiresEnemy.x &&
+    mokeponPlayerCanvas.y + mokeponPlayerCanvas.height > monsterFiresEnemy.y
+  ) {
+    console.log("Collision With monsterFiresEnemy");
+  } else if (
+    mokeponPlayerCanvas.x + mokeponPlayerCanvas.width > waterBombsEnemy.x &&
+    mokeponPlayerCanvas.y + mokeponPlayerCanvas.height > waterBombsEnemy.y
+  ) {
+    console.log("Collision With waterBombsEnemy");
+  } else if (
+    mokeponPlayerCanvas.x + mokeponPlayerCanvas.width > punchEarthsEnemy.x &&
+    mokeponPlayerCanvas.y + mokeponPlayerCanvas.height > punchEarthsEnemy.y
+  ) {
+    console.log("Collision With punchEarthsEnemy");
+  }
+};
