@@ -21,6 +21,7 @@ let pencil = map.getContext("2d");
 let arenaBackground = new Image();
 arenaBackground.src = "/src/assets/img/pokemonArena02.jpg";
 //arenaBackground.style.background = "object-fit";
+//arenaBackground.imageSmoothingQuality = "low";
 
 //*! === Class === */
 class Mokepon {
@@ -30,9 +31,9 @@ class Mokepon {
     this.life = life;
     this.power = power;
     this.attack = [];
-    this.x = 20;
-    this.y = 30;
-    this.width = 75;
+    this.x = 70;
+    this.y = 160;
+    this.width = 100;
     this.height = 50;
     this.mapImage = new Image();
     this.mapImage.src = image;

@@ -8,6 +8,7 @@ import { duelCombat } from "./mokeponAttack03.js";
 import { btnFire, btnWater, btnEarth } from "./mokepon01.js";
 //*! === Mokepon Monsters Variables === */
 const attackImages = document.getElementById("secTwoAttack");
+const idButtonUserAttack = document.querySelector("#idBtnUserAttack");
 //*! === Variable General === */
 let attackMokeponEnemy;
 let allAttackMokepon;
@@ -54,6 +55,7 @@ function allAttacks(powerAttack) {
   });
   allButton = document.querySelectorAll(`.BAttack`);
   attackSequence();
+  idButtonUserAttack.style.display = "none";
 }
 //*! === Attack and Color Btn === */
 function attackSequence() {
