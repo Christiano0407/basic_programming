@@ -27,7 +27,16 @@ let allButton;
 //*! === Attack Player === */
 export const extraAttacks = () => {
   let powerAttack;
-  
+  /*  for (let i = 0; i < myMokepons.length; i++) {
+    if (nameMokeponPlayer === myMokepons[i].name) {
+      powerAttack = myMokepons[i].attack;
+    }
+  } */
+  myMokepons.forEach((mokepon) => {
+    if (nameMokeponPlayer === mokepon.name) {
+      powerAttack = mokepon.attack;
+    }
+  });
   allAttacks(powerAttack);
 };
 

@@ -11,6 +11,7 @@ const btnMoveMokeponLeft = document.getElementById("idBtnMoveMokeponLeft");
 const btnMoveMokeponTop = document.getElementById("idBtnMoveMokeponTop");
 const btnMoveMokeponBottom = document.getElementById("idBtnMoveMokeponBottom");
 //const moveBtn = document.getElementById("#idMoveBtn");
+const idDivCanvas = document.querySelector("#idDivCanvas");
 //** === General Variables ===  */
 let interval;
 let mokeponPlayerCanvas;
@@ -108,6 +109,7 @@ function drawMokepon() {
     mokeponPlayerCanvas.width,
     mokeponPlayerCanvas.height
   );
+  idDivCanvas.style.display = "none";
 }
 //*! === Canvas Map */
 export const selectCanvasMokepon = () => {
