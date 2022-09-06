@@ -110,7 +110,7 @@ function drawMokepon() {
     mokeponPlayerCanvas.width,
     mokeponPlayerCanvas.height
   );
-  idDivCanvas.style.display = "none";
+  idDivCanvas.style.display = "none"; // === Change Btn Mouseover ===
 }
 //*! === Canvas Map */
 export const selectCanvasMokepon = () => {

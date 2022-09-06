@@ -60,8 +60,8 @@ span {
 body {
     width: 100%;
     background-color: #fff;
-    /*  position: fixed;
-    overflow: hidden; */
+    position: fixed;
+    overflow: hidden;
 }
 
 main {
