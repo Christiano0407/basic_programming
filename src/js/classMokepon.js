@@ -146,8 +146,11 @@ function drawMokepon() {
   monsterFiresEnemy.drawMokepon();
   waterBombsEnemy.drawMokepon();
   punchEarthsEnemy.drawMokepon();
+  //collisionMokepon();
+  if (mokeponPlayerCanvas.fastX !== 0 || mokeponPlayerCanvas.fastY !== 0) {
+    collisionAllMokepon(monsterFiresEnemy);
+  }
   idDivCanvas.style.display = "none"; // === Change Btn Mouseover ===
-  collisionMokepon();
 }
 //*! === Canvas Map */
 export const selectCanvasMokepon = () => {
@@ -255,10 +258,12 @@ function mokeponCanvas() {
 }
 
 //*! === Intersection Collision === */
+//*? === Collision Option (A) === */
 const collisionMokepon = () => {
   if (
-    mokeponPlayerCanvas.x + mokeponPlayerCanvas.width > monsterFiresEnemy.x &&
-    mokeponPlayerCanvas.y + mokeponPlayerCanvas.height > monsterFiresEnemy.y
+    (mokeponPlayerCanvas.x + mokeponPlayerCanvas.width > monsterFiresEnemy.x &&
+      mokeponPlayerCanvas.y + mokeponPlayerCanvas.y,
+    mokeponPlayerCanvas.height > monsterFiresEnemy.y)
   ) {
     console.log("Collision With monsterFiresEnemy");
   } else if (
@@ -273,3 +278,26 @@ const collisionMokepon = () => {
     console.log("Collision With punchEarthsEnemy");
   }
 };
+
+//*? === Collision Option (B) === */
+function collisionAllMokepon(enemy) {
+  const topEnemy = enemy.y;
+  const downEnemy = enemy.y + enemy.height;
+  const rightEnemy = enemy.x + enemy.width;
+  const leftEnemy = enemy.x;
+
+  const topUserMokepon = mokeponPlayerCanvas.y;
+  const downUserMokepon = mokeponPlayerCanvas.y + mokeponPlayerCanvas.height;
+  const rightUserMokepon = mokeponPlayerCanvas.x + mokeponPlayerCanvas.width;
+  const leftUserMokepon = mokeponPlayerCanvas.x;
+
+  if (
+    downUserMokepon < topEnemy ||
+    topUserMokepon > downEnemy ||
+    rightUserMokepon < leftEnemy ||
+    leftUserMokepon > rightEnemy
+  ) {
+    return;
+  }
+  console.log("Collision!!!");
+}
