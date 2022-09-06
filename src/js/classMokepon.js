@@ -13,6 +13,9 @@ const btnMoveMokeponTop = document.getElementById("idBtnMoveMokeponTop");
 const btnMoveMokeponBottom = document.getElementById("idBtnMoveMokeponBottom");
 //const moveBtn = document.getElementById("#idMoveBtn");
 const idDivCanvas = document.querySelector("#idDivCanvas");
+const sectionOneAttack = document.getElementById("secSelectAttack");
+const textAttack = document.querySelector(`#idTextAttack`);
+const textAttackTwo = document.querySelector(`.textAttackTwo`);
 //** === General Variables ===  */
 let interval;
 let mokeponPlayerCanvas;
@@ -303,4 +306,10 @@ function collisionAllMokepon(enemy) {
   }
   stopMoveMokepon();
   console.log("Collision! With: " + " " + enemy.name);
+  // === Display ===
+  enemySelectAdd(enemy);
+  textAttack.style.display = "flex";
+  textAttackTwo.style.display = "flex";
+  sectionOneAttack.style.display = "flex";
+  map.style.display = "none";
 }

@@ -179,7 +179,7 @@ input:checked+label {
 
 .select-attack {
     width: 100%;
-    margin: 1rem auto;
+    margin: 2rem auto;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -336,4 +336,3 @@ span {
     margin: 1rem auto;
     font-family: var(--font-family-principal);
 }
-

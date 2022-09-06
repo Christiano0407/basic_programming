@@ -2,7 +2,6 @@
 //** === Call POO === */
 import { monsterFires, myMokepons } from "./classMokepon.js";
 import { extraAttacks } from "./mokeponElements.js";
-import { enemySelectAdd } from "./mokeponElements.js";
 import { selectCanvasMokepon } from "./classMokepon.js";
 //import { textDuel } from "./mokeponCombat.js";
 //** === Call Btn === */
@@ -11,9 +10,6 @@ const btnSelectYourMonster = document.getElementById(`idSelectMonster`);
 const monsterAdd = document.getElementById(`monsterAdd`);
 const idMascotTextSelect = document.getElementById(`idMascotSelect`);
 const divBtn = document.getElementById(`divBtn`);
-const sectionOneAttack = document.getElementById("secSelectAttack");
-const textAttack = document.querySelector(`#idTextAttack`);
-const textAttackTwo = document.querySelector(`.textAttackTwo`);
 //** === Winner & Lifes ===  */
 const btnSelectMascot = document.getElementById("IdBtnSelect");
 //** === Checked & Select ===  */
@@ -90,16 +86,12 @@ const checkedMokepon = () => {
     }
     // === Call Enemy Attack ===
     // extraAttacks();
-    enemySelectAdd();
     btnSelectMascot.disabled = true;
-    sectionOneAttack.style.display = "flex";
     idTitleMokepon.style.display = "none";
     // === CANVAS ===
     selectCanvasMokepon();
-    
+
     //> === display >>>>>>>>>
-    textAttack.style.display = "flex";
-    textAttackTwo.style.display = "flex";
     monsterAdd.style.display = "none";
     idMascotTextSelect.style.display = "none";
     divBtn.style.display = "none";
