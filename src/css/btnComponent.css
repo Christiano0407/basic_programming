@@ -32,5 +32,6 @@ button:active {
 }
 
 .move-mokepon {
-    padding: 1rem;
+    padding: 1.5rem 3rem;
+    text-align: center;
 }
