@@ -82,10 +82,10 @@ function attackSequence() {
       } else {
         console.log("Please, Add New Player Attack");
       }
-      console.log(playerAttacks);
       btnColorFire();
       btnColorWater();
       btnColorEarth();
+      console.log(playerAttacks);
       attackRandomEnemy();
     });
   });

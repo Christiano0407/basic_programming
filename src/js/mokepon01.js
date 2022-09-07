@@ -39,9 +39,10 @@ export let allAttackEnemy = [];
 function random(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
+//*! ===> Enemy Attack Random Key === */
 export let enemyAttack = random(0, myMokepons.length - 1); // POO => Mokepon
 
-//*TODO === === === 01 */
+//*TODO === === === === === ===  01 */
 //*! === User*/
 export const checkedAdd = () => {
   myMokepons.forEach((mokepon) => {
