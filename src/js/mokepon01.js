@@ -12,7 +12,6 @@ const idMascotTextSelect = document.getElementById(`idMascotSelect`);
 const divBtn = document.getElementById(`divBtn`);
 //** === Winner & Lifes ===  */
 const btnSelectMascot = document.getElementById("IdBtnSelect");
-console.log(btnSelectMascot);
 //** === Checked & Select ===  */
 /* const mokeponChecked = document.getElementById(`idMokeponChecked`); */
 export const containerList = document.getElementById(`idMokeponList`);

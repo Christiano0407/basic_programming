@@ -82,10 +82,10 @@ function attackSequence() {
       } else {
         console.log("Please, Add New Player Attack");
       }
+      console.log(playerAttacks);
       btnColorFire();
       btnColorWater();
       btnColorEarth();
-      console.log(playerAttacks);
       attackRandomEnemy();
     });
   });
@@ -143,7 +143,7 @@ function btnColorWater() {
     });
   });
 }
-//*! === Btn Earth Color === */
+//*! === Btn Earth === */
 function btnColorEarth() {
   allButton.forEach((button) => {
     button.addEventListener("click", (e) => {

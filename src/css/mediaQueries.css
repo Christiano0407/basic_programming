@@ -108,8 +108,15 @@
     .label-text {
         font-size: 1.6rem;
     }
+
     .titleMap {
         font-size: 3rem;
+    }
+
+    #IDinit {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
 

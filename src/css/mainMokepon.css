@@ -283,6 +283,7 @@ span {
 .child-one,
 .child-two {
     width: 90%;
+    padding: 1rem;
     margin: 0 auto;
     border-radius: .5rem;
     background: rgba(255, 255, 255, 0.25);
@@ -320,9 +321,9 @@ span {
 }
 
 .combat-Win {
-    font-size: 2rem;
+    font-size: 4rem;
     font-weight: 700;
-    color: #333;
+    color: var(--clr-mokepon-logo);
     text-align: center;
     font-family: var(--font-family-principal);
 }
@@ -332,7 +333,7 @@ span {
     text-align: center;
     font-size: 1.8rem;
     font-weight: 700;
-    color: var(--clr-mokepon-logo);
+    color: var(--clr-mokepon-bg);
     margin: 1rem auto;
     font-family: var(--font-family-principal);
 }

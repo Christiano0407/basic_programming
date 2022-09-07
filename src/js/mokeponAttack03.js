@@ -16,6 +16,7 @@ const divEnemyAttack = document.querySelector(`#idEnemyChildAttack`);
 const idChild = document.querySelector("#IDchild");
 const idChildTwo = document.querySelector("#IDchildTwo");
 const btnSelectMascot = document.getElementById("IdBtnSelect");
+const secSelectAttack = document.getElementById("secSelectAttack");
 //*! === General Variable === */
 let indexPlayer;
 let indexEnemy;
@@ -68,6 +69,20 @@ export const duelCombat = () => {
       /*  addLifePlayer.innerHTML = playerLife--; */
       enemyVictory++;
       addLifeEnemy.innerHTML = enemyVictory;
+    } else if (
+      playerAttacks[i] === "fireAttack 🔥" &&
+      allAttackEnemy[i] === "splash ♒"
+    ) {
+      indexBothOfThemOpponent(i, i);
+      playerVictory += 1;
+      addLifePlayer.innerHTML = playerVictory;
+    } else if (
+      playerAttacks[i] === "fireAttack 🔥" &&
+      allAttackEnemy[i] === "plantsAttack 🌾"
+    ) {
+      indexBothOfThemOpponent(i, i);
+      playerVictory += 1;
+      addLifePlayer.innerHTML = playerVictory;
     } else {
       console.log("Loser!");
       indexBothOfThemOpponent(i, i);
@@ -111,6 +126,7 @@ function createMessage(text) {
 
 //*! === Add Winner ==> === & Disabled Btn and Attack === */
 const winnerBattleLife = () => {
+  secSelectAttack.style.display = "none";
   let combatWinner = document.querySelector(".combat-Win");
   /* if (playerLife === 0) {
     combatWinner.textContent = "Player: Your Lose!! Your Enemy: Win!!😡";
