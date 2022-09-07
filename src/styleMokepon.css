@@ -62,12 +62,12 @@ body {
     background-color: #fff;
     position: fixed;
     overflow: hidden;
+    min-height: 100vh;
 }
 
 main {
     width: 100%;
     margin: 0 auto;
-    height: 100vh;
 }
 
 section {

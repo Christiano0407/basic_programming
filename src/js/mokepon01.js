@@ -12,6 +12,7 @@ const idMascotTextSelect = document.getElementById(`idMascotSelect`);
 const divBtn = document.getElementById(`divBtn`);
 //** === Winner & Lifes ===  */
 const btnSelectMascot = document.getElementById("IdBtnSelect");
+console.log(btnSelectMascot);
 //** === Checked & Select ===  */
 /* const mokeponChecked = document.getElementById(`idMokeponChecked`); */
 export const containerList = document.getElementById(`idMokeponList`);
@@ -58,6 +59,9 @@ export const checkedAdd = () => {
   });
   checkedMokepon();
   btnSelectYourMonster.style.display = "flex";
+  btnSelectMascot.disabled = true;
+  btnSelectMascot.style.display = "none";
+  idTitleMokepon.style.display = "none";
 };
 //*! === Select my Mokepon === */
 const checkedMokepon = () => {
@@ -86,8 +90,6 @@ const checkedMokepon = () => {
     }
     // === Call Enemy Attack ===
     // extraAttacks();
-    btnSelectMascot.disabled = true;
-    idTitleMokepon.style.display = "none";
     // === CANVAS ===
     selectCanvasMokepon();
 

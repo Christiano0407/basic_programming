@@ -10,7 +10,8 @@
     font-size: 2rem;
     font-weight: 900;
     color: #f2f2f2;
-    margin: 1rem auto;
+    margin: 2rem auto;
+    font-family: var(--font-family-principal);
 }
 
 .div-canvas {
