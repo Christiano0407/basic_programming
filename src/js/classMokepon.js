@@ -221,10 +221,31 @@ const stopMoveMokepon = () => {
   mokeponPlayerCanvas.fastY = 0;
 };
 
-//*! === Load Window Key Touch MOve and Stop === */
+//*! === Load Window Key Touch MOve and Stop ===  / Media Queries Canvas === */
+let heightNewMap;
+let widthOfMap = window.innerWidth - 20;
+heightNewMap = (widthOfMap * 400) / 800;
+let maxWidthMap;
+
+if (widthOfMap > maxWidthMap) {
+  widthOfMap = maxWidthMap - 20;
+}
+
+if (window.innerWidth < 576 || window.innerHeight < 768) {
+  maxWidthMap = 350;
+}
+
+if (window.innerWidth < 768 || window.innerHeight < 1024) {
+  maxWidthMap = 800;
+}
+
+if (window.innerWidth < 1440 || window.innerHeight < 1920) {
+  maxWidthMap = 1024;
+}
+
 const touchKeyMap = () => {
-  map.width = 800;
-  map.height = 400;
+  map.width = widthOfMap;
+  map.height = heightNewMap;
   mokeponPlayerCanvas = mokeponCanvas(nameMokeponPlayer);
   window.addEventListener("keydown", touchInitKey);
   window.addEventListener("keyup", stopMoveMokepon);
