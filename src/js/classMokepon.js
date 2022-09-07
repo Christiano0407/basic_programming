@@ -1,6 +1,6 @@
 //** === Prove POO (Programming Oriented Object) === */
 //** === Import  */
-import { nameMokeponPlayer } from "./mokepon01.js";
+import { enemyAttack, nameMokeponPlayer } from "./mokepon01.js";
 import { enemySelectAdd } from "./mokeponElements.js";
 //*! === Variable Mokepon === */
 export let myMokepons = [];
@@ -27,8 +27,17 @@ let arenaBackground = new Image();
 arenaBackground.src = "/src/assets/img/pokemonArena02.jpg";
 //arenaBackground.style.background = "object-fit";
 //arenaBackground.imageSmoothingQuality = "low";
+//let randomCanvas = random(0, myMokepons.length - 1);
+/* function aleatorio(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+} */
+function randomCanvas(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+/* this.x = randomCanvas(0, map.width - this.width);
+this.y = randomCanvas(0, map.height - this.height); */
 
-//*! === Class === */
+//*! === === === Class ===  === === ===*/
 class Mokepon {
   constructor(name, image, life, power, imageCanvas, x = 10, y = 10) {
     this.name = name;
@@ -36,8 +45,8 @@ class Mokepon {
     this.life = life;
     this.power = power;
     this.attack = [];
-    this.x = x;
-    this.y = y;
+    this.x = randomCanvas(x, 600);
+    this.y = randomCanvas(y, 400);
     this.width = 100;
     this.height = 50;
     this.mapImage = new Image();
@@ -79,9 +88,9 @@ export let monsterFiresEnemy = new Mokepon(
   `/src/assets/img/mokeponCha.png`,
   5,
   95,
-  `/src/assets/img/mokeponCha.png`,
-  550,
-  250
+  `/src/assets/img/mokeponCha.png`
+  /* 550,
+  250 */
 );
 
 export let waterBombsEnemy = new Mokepon(
@@ -89,18 +98,18 @@ export let waterBombsEnemy = new Mokepon(
   `/src/assets/img/mokepon4.png`,
   2,
   70,
-  `/src/assets/img/mokepon4.png`,
-  400,
-  160
+  `/src/assets/img/mokepon4.png`
+  /* 400,
+  160 */
 );
 export let punchEarthsEnemy = new Mokepon(
   `PunchEarth`,
   "/src/assets/img/mokepon3.png",
   5,
   80,
-  `/src/assets/img/mokepon3.png`,
-  600,
-  120
+  `/src/assets/img/mokepon3.png`
+  /* 600,
+  120 */
 );
 
 //*! === Call My Mokepons => Methods === */
