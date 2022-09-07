@@ -57,7 +57,7 @@ function allAttacks(powerAttack) {
   attackSequence();
   idButtonUserAttack.style.display = "none";
 }
-//*! === Attack and Color Btn === */
+//*! === Attack and Color Btn / And Btn Original Color === */
 function attackSequence() {
   allButton.forEach((button) => {
     button.addEventListener(`click`, (e) => {
@@ -79,26 +79,104 @@ function attackSequence() {
         button.style.background = "#77D970";
         button.disabled = true;
         btnEarth.disabled = true;
-      } else if (e.target.textContent === "fireFinally 🧨") {
-        playerAttacks.push("fireFinally 🧨👿");
-        button.style.background = `#EB1D75`;
-        button.disabled = true;
       } else {
         console.log("Please, Add New Player Attack");
       }
       console.log(playerAttacks);
+      btnColorFire();
+      btnColorWater();
+      btnColorEarth();
       attackRandomEnemy();
     });
   });
 }
-//*TODO === === === 03 */
+
+//** === === Conditional Btn Color === === */
+//*! === Btn Fire Color === */
+function btnColorFire() {
+  allButton.forEach((button) => {
+    button.addEventListener("click", (e) => {
+      e.preventDefault();
+      if (e.target.textContent === "fireFinally 🧨") {
+        playerAttacks.push("fireFinally 🧨👿");
+        button.style.background = `#E50000`;
+        button.style.color = "#f2f2f2";
+        button.disabled = true;
+      } else if (e.target.textContent === "bombFire 🎇") {
+        playerAttacks.push("bombFire 🎇");
+        button.style.background = "#990000";
+        button.disabled = true;
+      } else if (e.target.textContent === "volcanoBomb 🌋") {
+        playerAttacks.push("volcanoBomb 🌋");
+        button.style.background = "#A60000";
+        button.disabled = true;
+      } else if (e.target.textContent === "rockFire 🥌") {
+        playerAttacks.push("rockFire 🥌");
+        button.style.background = "#7F0000";
+        button.disabled = true;
+      }
+    });
+  });
+}
+//*! === Btn Water Color === */
+function btnColorWater() {
+  allButton.forEach((button) => {
+    button.addEventListener("click", (e) => {
+      e.preventDefault();
+      if (e.target.textContent === "splash ♒") {
+        playerAttacks.push("splash ♒");
+        button.style.background = "#0A42C4";
+        button.disabled = true;
+      } else if (e.target.textContent === "smashSplash 🤽‍♂️") {
+        playerAttacks.push("smashSplash 🤽‍♂️");
+        button.style.background = "#0061AD";
+        button.disabled = true;
+      } else if (e.target.textContent === "nightWave 👿") {
+        playerAttacks.push("nightWave 👿");
+        button.style.background = "#0AA5C4";
+        button.disabled = true;
+      } else if (e.target.textContent === "airSmall 🛩") {
+        playerAttacks.push("airSmall 🛩");
+        button.style.background = "#09BAA8";
+        button.disabled = true;
+      }
+    });
+  });
+}
+//*! === Btn Earth Color === */
+function btnColorEarth() {
+  allButton.forEach((button) => {
+    button.addEventListener("click", (e) => {
+      e.preventDefault();
+      if (e.target.textContent === "plantsAttack 🌾") {
+        playerAttacks.push("plantsAttack 🌾");
+        button.style.background = "#3B7302";
+        button.disabled = true;
+      } else if (e.target.textContent === "BombAir 💣") {
+        playerAttacks.push("BombAir 💣");
+        button.style.background = "#65A603";
+        button.disabled = true;
+      } else if (e.target.textContent === "redBomb 💣") {
+        playerAttacks.push("redBomb 💣");
+        button.style.background = "#9BBF65";
+        button.disabled = true;
+      } else if ((e.target.textContent = "waterEarth 🚰")) {
+        playerAttacks.push("waterEarth 🚰");
+        button.style.background = "#EBF2B3";
+        button.disabled = true;
+      }
+    });
+  });
+}
+
+//*TODO === === === 03 === === === */
 //*!  === === Enemy select Attack and Mokepon ===  === */
 export const enemySelectAdd = () => {
   enemyMonster.innerHTML = myMokepons[enemyAttack].name;
   attackMokeponEnemy = myMokepons[enemyAttack].attack;
   //attackSequence();
 };
-
+//*!  === Attack Random Enemy === */
 const attackRandomEnemy = () => {
   if (enemyAttack == 0 || enemyAttack == 1) {
     allAttackEnemy.push("fireAttack 🔥");
