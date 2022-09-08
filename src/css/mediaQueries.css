@@ -1,4 +1,115 @@
-@media (max-width: 370px) {}
+@media (max-width: 370px) {
+    #idTitleMokepon {
+        font-size: 1.5rem;
+    }
+
+    #idMascotSelect {
+        margin: 1rem auto;
+    }
+
+    #mainGrid {
+        grid-template-columns: 1fr;
+        grid-auto-flow: row;
+    }
+
+    #idMainGridOne {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #mainGridTwo {
+        display: none;
+    }
+
+    #IdChildMonster,
+    #idMonsterEnemy {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #IDchild,
+    #IDchildTwo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #idMessageUser,
+    #idMessageEnemy {
+        width: 50%;
+        text-align: center;
+        margin: 0 auto;
+        font-size: 1.2rem;
+    }
+
+    #idTextAttack {
+        width: 90%;
+        margin: 1rem auto;
+        text-align: center;
+    }
+
+    #idCombatWin {
+        width: 90%;
+        margin: 1rem auto;
+    }
+
+    #textNew {
+        margin: 2rem auto;
+        text-align: center;
+    }
+
+    #IDinit {
+        margin: 1rem auto;
+        padding: .5rem;
+    }
+
+    #btnMokeponFire,
+    #btnMokeponWater,
+    #btnMokeponEarth {
+        padding: .5rem;
+        margin-bottom: 1rem;
+    }
+
+    #idMokeponList {
+        flex-direction: column;
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    #monsterAdd {
+        grid-template-columns: 1fr;
+    }
+
+    #idMokeponCard {
+        height: 15rem;
+    }
+
+    #idDivBtnMoveMokepon {
+        width: 350px;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        margin: 3rem auto;
+    }
+
+    #idDivCanvas {
+        width: 100%;
+    }
+
+    #idTitleMap {
+        font-size: 1.5rem;
+    }
+
+    #IDinit {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        width: 90%;
+    }
+}
 
 /* ==> */
 @media (max-width: 575px) {
