@@ -27,6 +27,8 @@ let mokeponEnemyCanvas;
 let pencil = map.getContext("2d");
 let arenaBackground = new Image();
 arenaBackground.src = "/src/assets/img/pokemonArena02.jpg";
+let arcadeBattle = new Image();
+arcadeBattle.src = "/src/assets/img/arcade01.jpg";
 //arenaBackground.style.background = "object-fit";
 //arenaBackground.imageSmoothingQuality = "low";
 //let randomCanvas = random(0, myMokepons.length - 1);
