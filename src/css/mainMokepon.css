@@ -5,6 +5,10 @@ main .main--grid {
 }
 
 .main--grid__one {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     grid-row: auto;
     background-image: url("../assets/img/pokemonArena.jpg");
     object-fit: cover;

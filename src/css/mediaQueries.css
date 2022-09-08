@@ -140,6 +140,11 @@
     #idDivCanvas {
         width: 100%;
     }
+
+    #idTitleMokepon {
+        margin: 2rem auto;
+        font-size: 6rem;
+    }
 }
 
 /* ===> */

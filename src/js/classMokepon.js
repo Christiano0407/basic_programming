@@ -18,6 +18,7 @@ const textAttack = document.querySelector(`#idTextAttack`);
 const textAttackTwo = document.querySelector(`.textAttackTwo`);
 const btnEnemyAttack = document.querySelector("#idBtnMoveMokepon");
 const idDivBtnMokepon = document.querySelector("#idDivBtnMoveMokepon");
+const idMainGridOne = document.querySelector("#idMainGridOne");
 //** === General Variables ===  */
 let interval;
 let mokeponPlayerCanvas;
@@ -169,6 +170,7 @@ function drawMokepon() {
     collisionAllMokepon(punchEarthsEnemy);
   }
   /*   idDivCanvas.style.display = "none"; */ // === Change Btn Mouseover ===
+  idMainGridOne.style.backgroundImage = "url(/src/assets/img/arcade01.jpg)";
 }
 //*! === Canvas Map */
 export const selectCanvasMokepon = () => {
@@ -349,4 +351,5 @@ function collisionAllMokepon(enemy) {
   textAttackTwo.style.display = "flex";
   sectionOneAttack.style.display = "flex";
   map.style.display = "none";
+  idMainGridOne.style.backgroundImage = "url(/src/assets/img/pokemonArena.jpg)";
 }
