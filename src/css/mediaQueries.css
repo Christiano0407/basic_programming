@@ -116,7 +116,31 @@
 
 }
 
-@media (min-width: 576px) and (max-width: 767px) {}
+@media (min-width: 576px) and (max-width: 767px) {
+    #monsterAdd {
+        grid-template-columns: 1fr;
+    }
+
+    #idMokeponCard {
+        height: 17.5rem;
+    }
+
+    #idTitleMap {
+        font-size: 3.5rem;
+    }
+
+    #idDivBtnMoveMokepon {
+        width: 40rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 2.5rem;
+    }
+
+    #idDivCanvas {
+        width: 100%;
+    }
+}
 
 /* ===> */
 @media (min-width: 768px) {
