@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/Christiano0407/basic_programming/issues"
   },
-  "homepage": "https://github.com/Christiano0407/basic_programming#readme"
+  "homepage": "https://github.com/Christiano0407/basic_programming#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
 }
