@@ -76,6 +76,15 @@
         width: 50%;
         margin: 0 auto;
     }
+
+    #monsterAdd {
+        grid-template-columns: 1fr;
+    }
+
+    #idMokeponCard {
+        height: 17.5rem;
+
+    }
 }
 
 @media (min-width: 576px) and (max-width: 767px) {}
