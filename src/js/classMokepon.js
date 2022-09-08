@@ -17,6 +17,7 @@ const sectionOneAttack = document.getElementById("secSelectAttack");
 const textAttack = document.querySelector(`#idTextAttack`);
 const textAttackTwo = document.querySelector(`.textAttackTwo`);
 const btnEnemyAttack = document.querySelector("#idBtnMoveMokepon");
+const idDivBtnMokepon = document.querySelector("#idDivBtnMoveMokepon");
 //** === General Variables ===  */
 let interval;
 let mokeponPlayerCanvas;
@@ -340,6 +341,7 @@ function collisionAllMokepon(enemy) {
   // === Display ===
   enemySelectAdd(enemy);
   btnEnemyAttack.style.display = "none";
+  idDivBtnMokepon.style.display = "none";
   idDivCanvas.style.display = "none"; // === Change Btn Mouseover ===
   textAttack.style.display = "flex";
   textAttackTwo.style.display = "flex";

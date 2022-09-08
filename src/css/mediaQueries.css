@@ -16,6 +16,13 @@
         grid-auto-flow: row;
     }
 
+    #idMainGridOne {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
     #mainGridTwo {
         display: none;
     }
@@ -54,7 +61,6 @@
     }
 
     #textNew {
-        width: 90%;
         margin: 2rem auto;
         text-align: center;
     }
@@ -83,8 +89,31 @@
 
     #idMokeponCard {
         height: 17.5rem;
-
     }
+
+    #idDivBtnMoveMokepon {
+        width: 350px;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        margin: 3rem auto;
+    }
+
+    #idDivCanvas {
+        width: 100%;
+    }
+
+    #idTitleMap {
+        font-size: 3rem;
+    }
+
+    #IDinit {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        width: 90%;
+    }
+
 }
 
 @media (min-width: 576px) and (max-width: 767px) {}
