@@ -4,9 +4,23 @@ const express = require("express");
 //** === Create App Backend Mokepon Game === */
 const app = express();
 
-//*! === Call Request and Response === Client === */
-app.get("/", (req, res) => {
-  res.send("Welcome a Mokepon Game!");
+//*? === Create List Players === */
+const players = [];
+//*? === Create Class Player => User */
+class Player {
+  constructor(id) {
+    this.id = id;
+  }
+}
+
+//*! === Call Request and Response === Client*/
+//*! Create Endpoint => Rout */
+app.get("/join", (req, res) => {
+  const id = `${Math.random()}`;
+  const player = new Player(id);
+  players.push(player);
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.send(id);
 });
 
 //** === Call Server === */

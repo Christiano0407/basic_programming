@@ -40,7 +40,24 @@ const initGame = () => {
   btnNewGame.addEventListener(`click`, () => {
     refreshGame();
   });
+
+  // => Backend ===
+  joinedPlayer();
 };
+//** === Call Backend > Fetch  === */
+//"http://localhost:8080/join"
+//https://christiano0407-basic-programming-g5w7v69grrvfp4g7-8080.githubpreview.dev/
+const joinedPlayer = () => {
+  fetch("http://localhost:8080/join").then(function (res) {
+    //console.log(res);
+    if (res.ok) {
+      res.text().then(function (response) {
+        console.log(response);
+      });
+    }
+  });
+};
+
 //** === ===  Attack === === === === === === === === === === ==== === === ===  */
 //*! === Init New Game! === */
 function refreshGame() {
