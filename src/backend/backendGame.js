@@ -22,6 +22,7 @@ app.get("/join", (req, res) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.send(id);
 });
+// === Access-Control-Allow-Origin: * ===
 
 //** === Call Server === */
 app.listen(8080, () => {
