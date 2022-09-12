@@ -22,6 +22,11 @@ class Player {
   }
 }
 
+//*! === ROOT General === */
+/* app.get(`/`, function (req, res) {
+  res.send(`ROOT`);
+}); */
+
 //*! === Create New Mokepon => ID */
 class Mokepon {
   constructor(name) {
