@@ -41,7 +41,6 @@ const initGame = () => {
   btnNewGame.addEventListener(`click`, () => {
     refreshGame();
   });
-
   // => Backend ===
   joinedPlayer();
 };

@@ -16,6 +16,17 @@ class Player {
   constructor(id) {
     this.id = id;
   }
+  // = Method =
+  assignMokepon(mokepon) {
+    this.mokepon = mokepon;
+  }
+}
+
+//*! === Create New Mokepon => ID */
+class Mokepon {
+  constructor(name) {
+    this.name = name;
+  }
 }
 
 //*! === Call Request and Response === Client*/
@@ -33,10 +44,17 @@ app.get("/join", (req, res) => {
 // :playerId => Call Var
 app.post("/mokepon/:playerId", (req, res) => {
   const playerId = req.params.playerId || " ";
+  const nameMokepon = req.body.mokepon || " ";
+  const mokepon = new Mokepon(nameMokepon);
+  const playerIndex = players.findIndex((player) => playerId === player);
+  if (playerIndex >= 0) {
+    players[playerIndex].assignMokepon(mokepon);
+  }
   console.log(players);
   console.log(playerId);
   res.end();
 });
+// findIndex => Buscar si exist ==
 
 //** === === Call Server === ===*/
 app.listen(8080, () => {
