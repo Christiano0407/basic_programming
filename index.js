@@ -25,7 +25,7 @@ class Player {
 
 //*! === ROOT General === */
 /* app.get(`/`, function (req, res) {
-  res.sendFile(path.resolve(__dirname, `mokepon.html`));
+  res.sendFile(path.resolve(__dirname, `/src/mokepon.html`));
 }); */
 
 //*! === Create New Mokepon => ID */
