@@ -1,6 +1,7 @@
 //** === Backend Express Call Server / CORS ===  */
 const express = require("express");
 const cors = require("cors");
+//const path = require("path");
 
 //** === Create App Backend Mokepon Game === */
 const app = express();
@@ -24,7 +25,7 @@ class Player {
 
 //*! === ROOT General === */
 /* app.get(`/`, function (req, res) {
-  res.send(`ROOT`);
+  res.sendFile(path.resolve(__dirname, `mokepon.html`));
 }); */
 
 //*! === Create New Mokepon => ID */
