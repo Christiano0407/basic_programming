@@ -1,7 +1,7 @@
 //** === Backend Express Call Server / CORS ===  */
 const express = require("express");
 const cors = require("cors");
-//const path = require("path");
+const path = require("path");
 
 //** === Create App Backend Mokepon Game === */
 const app = express();
@@ -22,11 +22,11 @@ class Player {
     this.mokepon = mokepon;
   }
 }
-
+// => Resolve Bug
 //*! === ROOT General === */
-/* app.get(`/`, function (req, res) {
-  res.sendFile(path.resolve(__dirname, `/src/mokepon.html`));
-}); */
+app.get("/", function (req, res) {
+  res.sendFile(path.resolve(__dirname, "./src/mokepon.html"));
+});
 
 //*! === Create New Mokepon => ID */
 class Mokepon {
