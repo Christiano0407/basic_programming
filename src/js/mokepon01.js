@@ -32,6 +32,8 @@ export let btnWater;
 export let btnEarth;
 export let playerAttacks = [];
 export let allAttackEnemy = [];
+// ===> Backend POST ===
+export let playerId = null;
 
 //let enemyAttack = random(1, 3); //Random
 //*! === Random All === */
@@ -88,6 +90,9 @@ const checkedMokepon = () => {
     } else {
       alert("Sorry!! Your Not Select One. Please. select your Mokepon");
     }
+    //=== Backend PlayerId ===
+    selectionMokepon(playMonster);
+
     // === Call Enemy Attack ===
     // extraAttacks();
     // === CANVAS ===
@@ -97,5 +102,18 @@ const checkedMokepon = () => {
     monsterAdd.style.display = "none";
     idMascotTextSelect.style.display = "none";
     divBtn.style.display = "none";
+  });
+};
+
+//*! === Backend POST === */
+const selectionMokepon = (playerMonster) => {
+  fetch(`http://localhost:8080/mokepon/${playerId}`, {
+    method: "post",
+    headers: {
+      "content-type": "application/json",
+    },
+    body: JSON.stringify({
+      mokepon: playerMonster,
+    }),
   });
 };

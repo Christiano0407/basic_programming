@@ -1,8 +1,13 @@
-//** === Backend Express Call Server ===  */
+//** === Backend Express Call Server / CORS ===  */
 const express = require("express");
+const cors = require("cors");
 
 //** === Create App Backend Mokepon Game === */
 const app = express();
+//*? === Use and Exit Problem of CORS (Router) */
+app.use(cors());
+//*? === Call o Use POST */
+app.use(express.json());
 
 //*? === Create List Players === */
 const players = [];
@@ -24,7 +29,16 @@ app.get("/join", (req, res) => {
 });
 // === Access-Control-Allow-Origin: * ===
 
-//** === Call Server === */
+//*! === Two Server / Req & Res === */
+// :playerId => Call Var
+app.post("/mokepon/:playerId", (req, res) => {
+  const playerId = req.params.playerId || " ";
+  console.log(players);
+  console.log(playerId);
+  res.end();
+});
+
+//** === === Call Server === ===*/
 app.listen(8080, () => {
   console.log("Hello!! Welcome Mokepon VideoGame!");
 });

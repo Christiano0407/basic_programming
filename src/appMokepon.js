@@ -1,6 +1,7 @@
 //*TODO === Mokepon Variables === Don´t Repeat Yourself ===  ===  ===  ===  === === === */
 //** === Import  Conditionals === */
 import { checkedAdd } from "./js/mokepon01.js";
+import { playerId } from "./js/mokepon01.js";
 //** === All Variables === */
 const sectionOneAttack = document.getElementById("secSelectAttack");
 const attackImages = document.getElementById("secTwoAttack");
@@ -44,7 +45,7 @@ const initGame = () => {
   // => Backend ===
   joinedPlayer();
 };
-//** === Call Backend > Fetch  === */
+//** === Call Backend > Fetch GET === */
 //"http://localhost:8080/join"
 //https://christiano0407-basic-programming-g5w7v69grrvfp4g7-8080.githubpreview.dev/
 const joinedPlayer = () => {
@@ -53,6 +54,7 @@ const joinedPlayer = () => {
     if (res.ok) {
       res.text().then(function (response) {
         console.log(response);
+        playerId = response;
       });
     }
   });
