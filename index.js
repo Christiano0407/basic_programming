@@ -24,16 +24,17 @@ class Player {
     this.mokepon = mokepon;
   }
 }
-// => Resolve Bug
+
+//*! === Call and Search All Carpet Public === */
+//app.use(express.static("src"));
+app.use(express.static(__dirname + "/src"));
 //*! === ROOT General === */
-/* app.get("/", function (req, res) {
+/* app.get("/mokepon", (req, res) => {
   res.sendFile(path.resolve(__dirname, "./src/mokepon.html"));
-  res.end();
-  res.sendFile("./src/appMokepon.js", {
-    root: path.join(__dirname, "./src/mokepon.html"),
-  });
 }); */
-/* app.use(express.static(__dirname + "./src")); */
+/* app.get("/styleMokepon.css", (req, res) => {
+  res.sendFile(__dirname + "/src/styleMokepon.css");
+}); */
 
 //*! === Create New Mokepon => ID */
 class Mokepon {
