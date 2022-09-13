@@ -2,6 +2,7 @@
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
+const { dirname } = require("path");
 
 //** === Create App Backend Mokepon Game === */
 const app = express();
@@ -24,9 +25,13 @@ class Player {
 }
 // => Resolve Bug
 //*! === ROOT General === */
-app.get("/", function (req, res) {
+/* app.get("/", function (req, res) {
   res.sendFile(path.resolve(__dirname, "./src/mokepon.html"));
-});
+  res.end();
+  res.sendFile("./src/appMokepon.js", {
+    root: path.join(__dirname, "./src/mokepon.html"),
+  });
+}); */
 
 //*! === Create New Mokepon => ID */
 class Mokepon {
