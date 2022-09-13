@@ -1,6 +1,7 @@
 //** === Backend Express Call Server / CORS ===  */
 const express = require("express");
 const cors = require("cors");
+const port = 8080;
 const path = require("path");
 const { dirname } = require("path");
 
@@ -32,6 +33,7 @@ class Player {
     root: path.join(__dirname, "./src/mokepon.html"),
   });
 }); */
+/* app.use(express.static(__dirname + "./src")); */
 
 //*! === Create New Mokepon => ID */
 class Mokepon {
@@ -68,6 +70,6 @@ app.post("/mokepon/:playerId", (req, res) => {
 // findIndex => Buscar si exist ==
 
 //** === === Call Server === ===*/
-app.listen(8080, () => {
-  console.log("Hello!! Welcome Mokepon VideoGame!");
+app.listen(port, () => {
+  console.log("Hello!! Welcome Mokepon VideoGame!", port);
 });
