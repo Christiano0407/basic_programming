@@ -54,7 +54,7 @@ app.get("/join", (req, res) => {
 });
 // === Access-Control-Allow-Origin: * ===
 
-//*! === Two Server / Req & Res === */
+//*! === Two Server / Req & Res === Mandar a Backend === */
 // :playerId => Call Var
 app.post("/mokepon/:playerId", (req, res) => {
   const playerId = req.params.playerId || " ";
