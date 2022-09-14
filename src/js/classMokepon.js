@@ -1,7 +1,8 @@
 //** === Prove POO (Programming Oriented Object) === */
 //** === Import  */
-import { enemyAttack, nameMokeponPlayer } from "./mokepon01.js";
+import { enemyAttack, nameMokeponPlayer, playerId } from "./mokepon01.js";
 import { enemySelectAdd } from "./mokeponElements.js";
+import { playerId } from "./mokepon01.js";
 //*! === Variable Mokepon === */
 export let myMokepons = [];
 //** === === Section CANVAS === >>> */
@@ -154,12 +155,16 @@ myMokepons.push(monsterFires, waterBombs, punchEarths);
   console.log(mokepon.power);
 }); */
 //*! === Draw Mokepon POO ===  */
+//> Call API => Backend
 function drawMokepon() {
   mokeponPlayerCanvas.x += mokeponPlayerCanvas.fastX;
   mokeponPlayerCanvas.y += mokeponPlayerCanvas.fastY;
   pencil.clearRect(0, 0, map.width, map.height); // ===> Clear my Canvas <===
   pencil.drawImage(arenaBackground, 0, 0, map.width, map.height);
   mokeponPlayerCanvas.drawMokepon();
+
+  callPosition(mokeponPlayerCanvas.x, mokeponPlayerCanvas.y);
+
   monsterFiresEnemy.drawMokepon();
   waterBombsEnemy.drawMokepon();
   punchEarthsEnemy.drawMokepon();
@@ -172,6 +177,21 @@ function drawMokepon() {
   /*   idDivCanvas.style.display = "none"; */ // === Change Btn Mouseover ===
   idMainGridOne.style.backgroundImage = "url(/src/assets/img/arcade01.jpg)";
 }
+
+//*! === Call Position / Post */
+const callPosition = (x, y) => {
+  fetch(`http://localhost:8080/mokepon/${playerId}/position`, {
+    method: "post",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      x,
+      y,
+    }),
+  });
+};
+
 //*! === Canvas Map */
 export const selectCanvasMokepon = () => {
   // === Canvas ===

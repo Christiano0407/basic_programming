@@ -23,6 +23,11 @@ class Player {
   assignMokepon(mokepon) {
     this.mokepon = mokepon;
   }
+
+  positionActualization(x, y) {
+    this.x = x;
+    this.y = y;
+  }
 }
 
 //*! === Call and Search All Carpet Public === */
