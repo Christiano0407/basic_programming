@@ -189,6 +189,12 @@ const callPosition = (x, y) => {
       x,
       y,
     }),
+  }).then(function (res) {
+    if (res.ok) {
+      res.json().then(function ({ enemies }) {
+        console.log(enemies);
+      });
+    }
   });
 };
 

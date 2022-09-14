@@ -116,4 +116,7 @@ const selectionMokepon = (playerMonster) => {
       mokepon: playerMonster,
     }),
   });
+  /*  .then(function(res) {
+    if()
+  }) */
 };
