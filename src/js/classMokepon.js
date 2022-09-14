@@ -2,7 +2,7 @@
 //** === Import  */
 import { enemyAttack, nameMokeponPlayer, playerId } from "./mokepon01.js";
 import { enemySelectAdd } from "./mokeponElements.js";
-import { playerId } from "./mokepon01.js";
+//import { playerId } from "./mokepon01.js";
 //*! === Variable Mokepon === */
 export let myMokepons = [];
 //** === === Section CANVAS === >>> */

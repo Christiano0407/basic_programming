@@ -31,12 +31,12 @@ class Player {
 }
 
 //*! === Call and Search All Carpet Public === */
-//app.use(express.static("src"));
+//app.use(express.static("src")); => ("public")
 app.use(express.static(__dirname + "/src"));
 //*! === ROOT General === */
-/* app.get("/mokepon", (req, res) => {
+app.get("/mokepon", (req, res) => {
   res.sendFile(path.resolve(__dirname, "./src/mokepon.html"));
-}); */
+});
 /* app.get("/styleMokepon.css", (req, res) => {
   res.sendFile(__dirname + "/src/styleMokepon.css");
 }); */
