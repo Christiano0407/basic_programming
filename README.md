@@ -6,6 +6,48 @@ Programming and javascript Vanilla.
 
 - [Platzi](https://platzi.com/home)
 
+## Design System
+
+### Palette Color
+
+> Palette Color
+    --clr-white: #fff;
+    --clr-black: #000;
+    --bg-color: #8AA6A3;
+    --clr-mokepon-logo: #D90416;
+    --clr-mokepon-bg: #079DD9;
+    --clr-mokepon-bg2: #41BDD9;
+    --clr-principal: #C6D93B;
+    --clr-secondary: #6DBF1B;
+
+### Font
+
+> Font Family:
+
+- 'Silkscreen', cursive
+
+## Developer Tools
+
+> MDN Developer
+
+- [MDN](https://developer.mozilla.org/es/)
+
+> Express Js
+
+- [express](http://expressjs.com/)
+
+> Vite
+
+- [vite](https://vitejs.dev/)
+
+> npm
+
+- [npm](https://www.npmjs.com/)
+
+> EJS (Motor de plantilla)
+
+- [EJS](https://ejs.co/#install)
+
 ## MIT LICENSE
 
 MIT License
