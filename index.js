@@ -70,6 +70,20 @@ app.post("/mokepon/:playerId", (req, res) => {
 });
 // findIndex => Buscar si exist ==
 
+//*! === Third Server / Position Req & Res ===  */
+// ==> Rest API
+app.post("mokepon/:playerId/position", (req, res) => {
+  const playerId = req.params.playerId || " ";
+  const x = req.body.x || 0;
+  const y = req.body.y || 0;
+
+  const playerIndex = players.findIndex((player) => playerId === player.id);
+  if (playerIndex >= 0) {
+    players[playerIndex].positionActualization(x, y);
+  }
+  res.end();
+});
+
 //** === === Call Server === ===*/
 app.listen(port, () => {
   console.log("Hello!! Welcome Mokepon VideoGame!", port);
