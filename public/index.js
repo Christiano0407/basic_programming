@@ -34,6 +34,8 @@ class Player {
 //app.use(express.static("src")); => ("public")
 app.use(express.static(__dirname + "public"));
 app.use(express.static(__dirname + "/public/style.css"));
+app.use(express.static(__dirname + "/public/src/css/startCSS"));
+app.use(express.static(__dirname + "/public/src/css"));
 
 //*! === ROOT General === */
 app.get("/", (req, res) => {
@@ -44,6 +46,9 @@ app.get("/mokepon", (req, res) => {
 });
 app.get("style.css", (req, res) => {
   res.sendFile(__dirname + "/public/style.css");
+});
+app.get("style.css", (req, res) => {
+  res.sendFile(__dirname + "/public/src/css/startCSS");
 });
 
 //*! === Create New Mokepon => ID */
