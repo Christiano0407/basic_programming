@@ -1,6 +1,6 @@
 //*? === Imports === */
 //** === Call POO === */
-import { monsterFires, myMokepons } from "./classMokepon.js";
+import { myMokepons } from "./classMokepon.js";
 import { extraAttacks } from "./mokeponElements.js";
 import { selectCanvasMokepon } from "./classMokepon.js";
 //import { textDuel } from "./mokeponCombat.js";
