@@ -33,6 +33,8 @@ class Player {
 //*! === Call and Search All Carpet Public === */
 //app.use(express.static("src")); => ("public")
 app.use(express.static(__dirname + "public"));
+app.use(express.static(__dirname + "/public/style.css"));
+
 //*! === ROOT General === */
 app.get("/", (req, res) => {
   res.sendFile(path.resolve(__dirname, ".index.html"));
@@ -40,9 +42,9 @@ app.get("/", (req, res) => {
 app.get("/mokepon", (req, res) => {
   res.sendFile(path.resolve(__dirname, "./src/mokepon.html"));
 });
-/* app.get("/style.css", (req, res) => {
-  res.sendFile(__dirname + "./style.css");
-}); */
+app.get("style.css", (req, res) => {
+  res.sendFile(__dirname + "/public/style.css");
+});
 
 //*! === Create New Mokepon => ID */
 class Mokepon {
