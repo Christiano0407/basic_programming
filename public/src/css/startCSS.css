@@ -1,7 +1,7 @@
 /** === Import  */
-@import url("./startCSS/mainStart.css");
-@import url("./startCSS/startBtn.css");
-@import url("./mokeponCard.css");
+@import url("../css/startCSS/mainStart.css");
+@import url("../css/startCSS/startBtn.css");
+@import url("../css/mokeponCard.css");
 
 /** === Root */
 :root {

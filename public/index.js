@@ -35,11 +35,11 @@ class Player {
 app.use(express.static(__dirname + "/public"));
 //*! === ROOT General === */
 app.get("/mokepon", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "./src/mokepon.html"));
+  res.sendFile(path.resolve(__dirname, "./index.html"));
 });
-/* app.get("/styleMokepon.css", (req, res) => {
-  res.sendFile(__dirname + "/src/styleMokepon.css");
-}); */
+app.get("/public/style.css", (req, res) => {
+  res.sendFile(__dirname + "./style.css");
+});
 
 //*! === Create New Mokepon => ID */
 class Mokepon {

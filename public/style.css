@@ -1,8 +1,8 @@
 /** === Import */
 /* @import url("./css/mediaQueries.css"); */
-@import url("./css/btnComponent.css");
-@import url("./css/mainMokepon.css");
-@import url("./css/canvasCSS.css");
+@import url("./src/css/btnComponent.css");
+@import url(".src/css/mainMokepon.css");
+@import url(".src/css/canvasCSS.css");
 
 /** === Root */
 :root {
