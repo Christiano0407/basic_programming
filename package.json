@@ -22,6 +22,7 @@
   "homepage": "https://github.com/Christiano0407/basic_programming#readme",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "jshint": "^2.13.5"
   }
 }
