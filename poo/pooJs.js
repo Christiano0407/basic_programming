@@ -23,7 +23,7 @@ Person.prototype.add = function () {
   return `I am the best and right now my name ${this.name}`;
 };
 
-//** === CLASS < */
+//** === CLASS > Sugar Syntax < === */
 class Player {
   constructor(name, firstName, country, age, title, teams) {
     (this.name = name),
