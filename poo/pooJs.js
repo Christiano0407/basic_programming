@@ -32,7 +32,7 @@ class Player {
       (this.country = country),
       (this.age = age),
       (this.title = title),
-      (this.teams = team);
+      (this.team = team);
   }
   // === Method ===
   addGoals() {
