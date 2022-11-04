@@ -1,6 +1,8 @@
 //** === POO */
 //*? > new ==> Instance New */
+let playerSoccer = [];
 
+//** === FUNCTION < */
 const user = {
   name: "Chris",
   country: "Mexico City",
@@ -21,7 +23,7 @@ Person.prototype.add = function () {
   return `I am the best and right now my name ${this.name}`;
 };
 
-//** ===  */
+//** === CLASS < */
 class Player {
   constructor(name, firstName, country, age, title, teams) {
     (this.name = name),
@@ -37,13 +39,7 @@ class Player {
   }
 }
 
-//*! === Call === */
-console.log(Object.keys(user));
-const chris = new Person({ name: "Chris", country: "Mexico" });
-console.log(chris);
-chris.showName();
-console.log(chris.add());
-//*! === Call Player */
+//*! === new Player */
 const christiano = new Player(
   "Cristiano",
   "Ronaldo",
@@ -52,5 +48,24 @@ const christiano = new Player(
   "Ball Oro",
   "Manchester United"
 );
-console.log(christiano);
-christiano.addGoals();
+const messi = new Player(
+  "Messi",
+  "Lionel",
+  "Argentina",
+  35,
+  "Ball Oro",
+  "Paris Saint German"
+);
+//*! === Call Player Soccer === */
+playerSoccer.push(christiano, messi);
+
+//*! === Call === */
+console.log(Object.keys(user));
+const chris = new Person({ name: "Chris", country: "Mexico" });
+console.log(chris);
+chris.showName();
+console.log(chris.add());
+
+//console.log(christiano);
+//christiano.addGoals();
+console.log(playerSoccer);
