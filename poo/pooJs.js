@@ -1,6 +1,7 @@
 //** === POO */
 //*? > new ==> Instance New */
 let playerSoccer = [];
+let coachSoccer = [];
 
 //** === FUNCTION < */
 const user = {
@@ -25,17 +26,25 @@ Person.prototype.add = function () {
 
 //** === CLASS > Sugar Syntax < === */
 class Player {
-  constructor(name, firstName, country, age, title, teams) {
+  constructor(name, firstName, country, age, title, team) {
     (this.name = name),
       (this.firstName = firstName),
       (this.country = country),
       (this.age = age),
-      (this.title = title);
-    this.teams = teams;
+      (this.title = title),
+      (this.teams = team);
   }
   // === Method ===
   addGoals() {
     console.log("Goal!!");
+  }
+}
+
+//** ==> Extend */
+class Coach extends Player {
+  constructor(experience, name, country) {
+    super(name, country);
+    this.experience = experience;
   }
 }
 
@@ -56,8 +65,16 @@ const messi = new Player(
   "Ball Oro",
   "Paris Saint German"
 );
+
+const guardiola = new Coach(
+  "Barcelona, Manchester City y Bayer Munich",
+  "Spain",
+  "Guardiola"
+);
+
 //*! === Call Player Soccer === */
 playerSoccer.push(christiano, messi);
+coachSoccer.push(guardiola);
 
 //*! === Call === */
 console.log(Object.keys(user));
@@ -69,3 +86,4 @@ console.log(chris.add());
 //console.log(christiano);
 //christiano.addGoals();
 console.log(playerSoccer);
+console.log(coachSoccer);
