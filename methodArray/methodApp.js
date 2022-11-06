@@ -37,6 +37,39 @@ const videoGames = [
     level: "Medium",
   },
 ];
+
+const peopleGammer = [
+  {
+    name: "Natasha",
+    consoleGaming: "Sony-PlayStation",
+    age: 25,
+    country: "British",
+  },
+  {
+    name: "Elizabeth",
+    consoleGaming: "Microsoft-XBOX",
+    age: 20,
+    country: "United-State",
+  },
+  {
+    name: "Chris",
+    consoleGaming: "Nintendo-Switch",
+    age: 32,
+    country: "Australia",
+  },
+  {
+    name: "Pedro",
+    consoleGaming: "Microsoft-XBOX",
+    age: 19,
+    country: "Mexico-City",
+  },
+  {
+    name: "Juliette",
+    consoleGaming: "Sony-PlayStation",
+    age: 22,
+    country: "United-State",
+  },
+];
 //console.log(videoGames);
 let fullGames = [];
 
@@ -85,6 +118,20 @@ const addFilter = videoGames.filter((addPlayer) => {
 
 const plusFilter = videoGames.filter((plus) => plus.level === "Expert");
 
+//*? ==> Reduce() === > (Acumulador, Elemento) < ===  */
+const reduceAge = peopleGammer.reduce((total, ages) => {
+  return total + ages.age;
+}, 0);
+//*? ==> acumulador ==> 0 */
+
+const consoles = peopleGammer.reduce((allConsoles, gammerPerson) => {
+  return [...allConsoles, gammerPerson.consoleGaming];
+}, []);
+
+//*? ==> Sort() === > Order < === */
+
+//*? ==> Recibe 2 Obj and Compare (ObjBefore and ObjAfter) <== */
+
 //*! === Call ForEach() */
 //console.log(`FullGames:`, fullGames);
 
@@ -95,6 +142,12 @@ const plusFilter = videoGames.filter((plus) => plus.level === "Expert");
 //console.log(fullGamer);
 
 //*! === Call Filter() */
-console.log(filterGammer);
-console.log(addFilter);
-console.log(plusFilter);
+//console.log(filterGammer);
+//console.log(addFilter);
+//console.log(plusFilter);
+
+//*! === Call Reduce() */
+//console.log("Reduce Total Age: ", reduceAge);
+//console.log("All Consoles Gammers: ", consoles);
+
+//*! ===  Call Sort() */
