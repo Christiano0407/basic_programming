@@ -79,6 +79,8 @@ const peopleGammer = [
 //console.log(videoGames);
 let fullGames = [];
 
+//*TODO === === === === === ==> METHODS === === === === === === ARRAY <== === === === === === === */
+
 //*? ==> ForEach() */
 names.forEach((name) => console.log(`Hello, I am ${name}`));
 
@@ -145,7 +147,7 @@ const consoles = peopleGammer.reduce((allConsoles, gammerPerson) => {
 const compareAge = peopleGammer.sort((a, b) => (a.age > b.age ? 1 : -1));
 
 //*? ==> Recibe 2 Obj and Compare (ObjBefore = first and ObjAfter = Second) <== */
-//*? ==> Validar:  Operador Ternario (?, :) casi igual a if() <== */
+//*? ==> Validar:  Operador Ternario ==> (?, :) casi igual a if() <== */
 
 //*? ==> Find() === Search */
 const searchCountry = peopleGammer.find((nation) => {
@@ -165,6 +167,24 @@ const trueGamer = peopleGammer.some((student) => {
 const gamerTrue = peopleGammer.some((studentTrue) =>
   studentTrue.name === "Pablo" ? true : false
 );
+
+//*? ==> Every()  */
+const allCondition = peopleGammer.every((element) =>
+  element.age > 18 ? true : false
+);
+const students = peopleGammer.every((studentGamer) =>
+  studentGamer.name.includes("N") ? true : false
+);
+//*? === Todos cumplan con la "condición" === */
+
+//*? ==> Combine Methods */
+const resultGamers = peopleGammer.map(
+  ({ name, consoleGaming, country, age }) => ({
+    personExpertGamer: `${name}, ${consoleGaming} and origin: ${country}`,
+    personAge: `${age}`,
+  })
+);
+//*? === Desestructurar Elementos ({name, consoleGaming, country}) === */
 
 //*! === Call ForEach() */
 //console.log(`FullGames:`, fullGames);
@@ -192,5 +212,12 @@ const gamerTrue = peopleGammer.some((studentTrue) =>
 //console.log(searchCountry);
 
 //*! === Call Some() */
-console.log(trueGamer);
-console.log(gamerTrue);
+//console.log(trueGamer);
+//console.log("True Condition ", gamerTrue);
+
+//*! === Call Every() */
+//console.log("All Conditions: ", allCondition);
+//console.log("All Conditions: ", students);
+
+//*!===  Combine Methods ===  */
+console.log(resultGamers);
