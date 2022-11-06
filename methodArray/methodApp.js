@@ -37,9 +37,9 @@ const videoGames = [
     level: "Expert",
   },
 ];
-
-let fullGames = [];
 //console.log(videoGames);
+let fullGames = [];
+
 //*? ==> ForEach() */
 names.forEach((name) => console.log(`Hello, I am ${name}`));
 
@@ -47,8 +47,29 @@ videoGames.forEach((play) => console.log(play));
 videoGames.forEach((player) => {
   fullGames.push(player);
 });
+//*! === Call ForEach() */
 console.log(`FullGames:`, fullGames);
 
 //*? ==> MAP() */
-names.map((friend) => console.log(`Friend: ${friend}`));
-//console.log(names);
+const peopleFriend = names.map((friend) => `Hello my friend ${friend}`);
+
+const newGamer = videoGames.map((gamer) => {
+  return {
+    gamerLevel: gamer.level,
+  };
+});
+
+const addGamer = videoGames.map((personGamer) => {
+  return {
+    /* videoGame: personGamer.videoGame,
+    company: personGamer.company,
+    level: personGamer.level, */
+    ...personGamer,
+    plusGamer: `${personGamer.videoGame} - ${personGamer.company}`,
+  };
+});
+
+//*! === Call Map() */
+console.log(peopleFriend);
+console.log(newGamer);
+console.log(addGamer);
