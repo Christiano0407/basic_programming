@@ -77,11 +77,13 @@ const filterGammer = videoGames.filter(
   (personFilter) => personFilter.level === "Basic"
 );
 
-const plusFilter = videoGames.filter((plus) => {
-  if (plus.level === "Expert") {
-    return plus;
+const addFilter = videoGames.filter((addPlayer) => {
+  if (addPlayer.level === "Medium") {
+    return addPlayer;
   }
 });
+
+const plusFilter = videoGames.filter((plus) => plus.level === "Expert");
 
 //*! === Call ForEach() */
 //console.log(`FullGames:`, fullGames);
@@ -94,4 +96,5 @@ const plusFilter = videoGames.filter((plus) => {
 
 //*! === Call Filter() */
 console.log(filterGammer);
+console.log(addFilter);
 console.log(plusFilter);
