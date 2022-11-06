@@ -155,7 +155,16 @@ const searchCountry = peopleGammer.find((nation) => {
   }
 });
 
-//*? ==> Sond() */
+//*? ==> Some() === True or False === */
+const trueGamer = peopleGammer.some((student) => {
+  if (student.age < 22) {
+    return true;
+  }
+});
+
+const gamerTrue = peopleGammer.some((studentTrue) =>
+  studentTrue.name === "Pablo" ? true : false
+);
 
 //*! === Call ForEach() */
 //console.log(`FullGames:`, fullGames);
@@ -182,4 +191,6 @@ const searchCountry = peopleGammer.find((nation) => {
 //*! === Call  Find() */
 //console.log(searchCountry);
 
-//*! === Call Sond() */
+//*! === Call Some() */
+console.log(trueGamer);
+console.log(gamerTrue);
