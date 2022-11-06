@@ -61,13 +61,19 @@ const peopleGammer = [
     name: "Pedro",
     consoleGaming: "Microsoft-XBOX",
     age: 19,
-    country: "Mexico-City",
+    country: "Mexico",
   },
   {
     name: "Juliette",
     consoleGaming: "Sony-PlayStation",
     age: 22,
     country: "United-State",
+  },
+  {
+    name: "Pablo",
+    consoleGaming: "Nintendo-Switch",
+    age: 24,
+    country: "Mexico",
   },
 ];
 //console.log(videoGames);
@@ -129,8 +135,27 @@ const consoles = peopleGammer.reduce((allConsoles, gammerPerson) => {
 }, []);
 
 //*? ==> Sort() === > Order < === */
+/* const ageGamer = peopleGammer.sort((first, second) => {
+  if (first.age < second.age) {
+    return 1;
+  }
+  return -1;
+}); */
 
-//*? ==> Recibe 2 Obj and Compare (ObjBefore and ObjAfter) <== */
+const compareAge = peopleGammer.sort((a, b) => (a.age > b.age ? 1 : -1));
+
+//*? ==> Recibe 2 Obj and Compare (ObjBefore = first and ObjAfter = Second) <== */
+//*? ==> Validar:  Operador Ternario (?, :) casi igual a if() <== */
+
+//*? ==> Find() === Search */
+const searchCountry = peopleGammer.find((nation) => {
+  //nation.country === "Mexico" ? 1 : console.log("Sorry")
+  if (nation.country === "Mexico") {
+    return 1;
+  }
+});
+
+//*? ==> Sond() */
 
 //*! === Call ForEach() */
 //console.log(`FullGames:`, fullGames);
@@ -151,3 +176,10 @@ const consoles = peopleGammer.reduce((allConsoles, gammerPerson) => {
 //console.log("All Consoles Gammers: ", consoles);
 
 //*! ===  Call Sort() */
+//console.log(ageGamer);
+//console.log(compareAge);
+
+//*! === Call  Find() */
+//console.log(searchCountry);
+
+//*! === Call Sond() */
