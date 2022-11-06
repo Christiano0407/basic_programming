@@ -184,6 +184,9 @@ const resultGamers = peopleGammer.map(
     personAge: `${age}`,
   })
 );
+//.filter((result) => result.age > 22)
+//.sort((a, b) => a.age - b.age)
+
 //*? === Desestructurar Elementos ({name, consoleGaming, country}) === */
 
 //*! === Call ForEach() */
