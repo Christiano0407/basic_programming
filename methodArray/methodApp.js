@@ -19,22 +19,22 @@ const videoGames = [
   {
     videoGame: "Mario",
     company: "Nintendo",
-    level: "Expert",
+    level: "Expert Plus",
   },
   {
     videoGame: "Crash",
     company: "Sony",
-    level: "Expert",
+    level: "Medium",
   },
   {
-    videoGame: "Fifa Football",
+    videoGame: "Fifa-Football",
     company: "EASport",
-    level: "Expert",
+    level: "Basic",
   },
   {
     videoGame: "Gears Of Wars",
     company: "Microsoft",
-    level: "Expert",
+    level: "Medium",
   },
 ];
 //console.log(videoGames);
@@ -47,8 +47,6 @@ videoGames.forEach((play) => console.log(play));
 videoGames.forEach((player) => {
   fullGames.push(player);
 });
-//*! === Call ForEach() */
-console.log(`FullGames:`, fullGames);
 
 //*? ==> MAP() */
 const peopleFriend = names.map((friend) => `Hello my friend ${friend}`);
@@ -69,7 +67,31 @@ const addGamer = videoGames.map((personGamer) => {
   };
 });
 
+const fullGamer = videoGames.map((gamerPlayer) => ({
+  ...gamerPlayer,
+  fullGammer: `${gamerPlayer.company} - ${gamerPlayer.level} - ${gamerPlayer.videoGame}`,
+}));
+
+//*? ==> Filter() */
+const filterGammer = videoGames.filter(
+  (personFilter) => personFilter.level === "Basic"
+);
+
+const plusFilter = videoGames.filter((plus) => {
+  if (plus.level === "Expert") {
+    return plus;
+  }
+});
+
+//*! === Call ForEach() */
+//console.log(`FullGames:`, fullGames);
+
 //*! === Call Map() */
-console.log(peopleFriend);
-console.log(newGamer);
-console.log(addGamer);
+//console.log(peopleFriend);
+//console.log(newGamer);
+//console.log(addGamer);
+//console.log(fullGamer);
+
+//*! === Call Filter() */
+console.log(filterGammer);
+console.log(plusFilter);
