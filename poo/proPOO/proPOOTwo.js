@@ -22,11 +22,22 @@ class soccerPlayer {
 const playerOchoa = new soccerPlayer(
   "Ochoa",
   "Guillermo",
-  "Mexico",
+  "México",
   "Guadalajara Jalisco",
   "América",
   1,
   1,
+  "Nike"
+);
+
+const playerChicharito = new soccerPlayer(
+  "Javier",
+  "Hernández",
+  "México",
+  "Guadalajara Jalisco",
+  "LaGalaxy",
+  14,
+  6,
   "Nike"
 );
 
@@ -39,10 +50,21 @@ console.log(Object.entries(playerOchoa));
 console.log(Object.entries(playerOchoa)[0]);
 console.log(Object.entries(playerOchoa)[4]);
 console.log(Object.getOwnPropertyDescriptors(playerOchoa));
+//console.log(Object.getOwnPropertyDescriptors(playerChicharito));
 
+//** >>> Test DefineProperty <<< */
 Object.defineProperty(playerOchoa, "PlayerMexican", {
   value: "Player Soccer Pro Mexican",
   enumerable: true,
-  writable: false,
+  writable: true,
+  configurable: true,
 });
 //console.log(Object.getOwnPropertyDescriptors(playerOchoa));
+
+Object.defineProperty(playerChicharito, "MLSTournament", {
+  value: "SoccerPlayer Tournament MLS",
+  enumerable: false,
+  writable: false,
+  configurable: false,
+});
+//console.log(Object.getOwnPropertyDescriptors(playerChicharito));

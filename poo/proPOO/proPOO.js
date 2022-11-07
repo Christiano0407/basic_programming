@@ -37,6 +37,12 @@ const player = {
 
 //*! ==> Object.defineProperty() <== Create & Edit ==> */
 Object.defineProperty();
+/* Object.defineProperty(playerOchoa, "PlayerMexican", {
+  value: "Player Soccer Pro Mexican",
+  enumerable: true,
+  configurable: false,
+  writable: false,
+}); */
 
 //**TODO === === === === Call === === === === */
 //*? Call Static */
