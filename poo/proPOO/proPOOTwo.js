@@ -32,7 +32,17 @@ const playerOchoa = new soccerPlayer(
 
 //** ==> Call <=== */
 console.log(playerOchoa);
+playerOchoa.addGoal();
 console.log(Object.keys(playerOchoa));
 console.log(Object.getOwnPropertyNames(playerOchoa));
 console.log(Object.entries(playerOchoa));
+console.log(Object.entries(playerOchoa)[0]);
+console.log(Object.entries(playerOchoa)[4]);
 console.log(Object.getOwnPropertyDescriptors(playerOchoa));
+
+Object.defineProperty(playerOchoa, "PlayerMexican", {
+  value: "Player Soccer Pro Mexican",
+  enumerable: true,
+  writable: false,
+});
+//console.log(Object.getOwnPropertyDescriptors(playerOchoa));

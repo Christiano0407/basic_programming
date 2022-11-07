@@ -35,6 +35,9 @@ const player = {
   age: 28,
 };
 
+//*! ==> Object.defineProperty() <== Create & Edit ==> */
+Object.defineProperty();
+
 //**TODO === === === === Call === === === === */
 //*? Call Static */
 console.log(Hello.sound());
@@ -46,3 +49,4 @@ console.log(Object.getOwnPropertyNames(people));
 console.log(Object.entries(person));
 //*? Call Object.getOwnPropertyDescriptors  */
 console.log(Object.getOwnPropertyDescriptors(player));
+//*? */
