@@ -48,6 +48,12 @@ Programming and javascript Vanilla.
 
 - [EJS](https://ejs.co/#install)
 
+## POO (Programming Oriented Object / Programación Orientado a Objetos)
+
+> Método estático del prototipo Object
+
+- [MDN_Object]("https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object");
+
 ## MIT LICENSE
 
 MIT License

@@ -18,7 +18,7 @@ const object = {
 const people = {
   name: "Alma",
   country: "Germany",
-  age: 25
+  age: 25,
 };
 
 //*! === Object.entries() === */
@@ -28,6 +28,12 @@ const person = {
   age: 35,
 };
 
+//*! === > Object.getOwnPropertyDescriptors < === Limit Access === */
+const player = {
+  name: "Chris",
+  country: "Mexican",
+  age: 28,
+};
 
 //**TODO === === === === Call === === === === */
 //*? Call Static */
@@ -38,3 +44,5 @@ console.log(Object.keys(object));
 console.log(Object.getOwnPropertyNames(people));
 //*? Call Object.entries() */
 console.log(Object.entries(person));
+//*? Call Object.getOwnPropertyDescriptors  */
+console.log(Object.getOwnPropertyDescriptors(player));
