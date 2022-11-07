@@ -44,6 +44,10 @@ Object.defineProperty();
   writable: false,
 }); */
 
+//*! ==> Seal() & freeze() <== Not Edit and Not Delete === */
+Object.seal();
+Object.freeze();
+
 //**TODO === === === === Call === === === === */
 //*? Call Static */
 console.log(Hello.sound());
