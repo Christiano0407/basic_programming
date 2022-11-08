@@ -6,9 +6,9 @@ Programming and javascript Vanilla.
 
 - [Platzi](https://platzi.com/home)
 
-## Design System
+## Design System VideoGame
 
-### Palette Color
+### Palette Color 
 
 > Palette Color
     --clr-white: #fff;
@@ -52,7 +52,14 @@ Programming and javascript Vanilla.
 
 > Método estático del prototipo Object
 
-- [MDN_Object]("https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object");
+- [MDN_Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object);
+
+> Cómo Funciona la memoria en Javascript / Memory In Javascript
+
+ Las variables son referencias a un espacio en memoria.
+🎩 Los navegadores web usan dos tipos de memorias: Stack y Heap.
+📁 La memoria Stack es muy rápida, pero sin tanto espacio. Aquí se guardan los valores primitivos (booleanos, strings, números…).
+🌪 La memoria Heap es más lenta, pero permite guardar enormes cantidades de información (son como los tornados: grandes, lentos y desordenados). En esta memoria guardamos los valores de los objetos. 
 
 ## MIT LICENSE
 
