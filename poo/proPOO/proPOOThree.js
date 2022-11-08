@@ -7,7 +7,11 @@ const people01 = {
     city: "New York",
     work: "Journalist",
   },
+  addNewCountry() {
+    this.country = "United-State";
+  },
 };
+//console.log(people01);
 
 const people02 = {};
 
@@ -38,11 +42,20 @@ const people04 = Object.create(people01);
 //console.log(people04);
 //console.log(people01);
 
-//*? === > JSON.parse ("text" Format => JSON) & JSON.stringify (JSON => String = "text") < === */
+//*? === Method JSON === > JSON.parse ("text" Format => JSON) & JSON.stringify (JSON => String = "text") < === */
 const modifyOne = JSON.stringify(people01);
-console.log(modifyOne);
+//console.log(modifyOne);
 
 const modifyTwo = JSON.parse(modifyOne);
-console.log(modifyTwo);
+//console.log(modifyTwo);
 
-//*? === > */
+//*? === > Recursividad (Call Inside other function) < === */
+
+const loop = (number) => {
+  if (number < 5) {
+    return loop(number + 1);
+  }
+  return 5;
+};
+
+console.log(loop(2));
