@@ -1,5 +1,5 @@
 //*TODO === ===  === Part 03 ===  === ===  */
-//*? === Shallow Copy */
+//*? === > Shallow Copy */
 const people01 = {
   name: "Luisa",
   country: "Mexico-City",
@@ -37,3 +37,12 @@ const people04 = Object.create(people01);
 //console.log((people04.name = "Pamela"));
 //console.log(people04);
 //console.log(people01);
+
+//*? === > JSON.parse ("text" Format => JSON) & JSON.stringify (JSON => String = "text") < === */
+const modifyOne = JSON.stringify(people01);
+console.log(modifyOne);
+
+const modifyTwo = JSON.parse(modifyOne);
+console.log(modifyTwo);
+
+//*? === > */
